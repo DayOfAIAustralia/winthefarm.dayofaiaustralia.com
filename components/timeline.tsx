@@ -1,5 +1,3 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Card } from "@/components/ui/card"
 import { Calendar, Clock, Trophy, Users, Rocket, Flag } from "lucide-react"
 
 export function Timeline() {
@@ -9,42 +7,42 @@ export function Timeline() {
       event: "Day of AI Australia's Media Literacy and AI lesson available to registered teachers",
       icon: Rocket,
       color: "text-green-600",
-      bgColor: "bg-green-50",
+      bgColor: "bg-green-600",
     },
     {
-      date: "Fri 27 Sep – Fri 31 Oct, 2025",
+      date: "Mon 27 Oct – Fri 31 Oct, 2025",
       event: "Media Literacy Week! Deliver the Media Literacy and AI lesson, students register for the competition and build their bots.",
       icon: Users,
       color: "text-purple-600",
-      bgColor: "bg-purple-50",
+      bgColor: "bg-purple-600",
     },
     {
       date: "Mon 3 Nov, 2025",
       event: "Animal Farm election campaigns kick-off and bots commence their activities.",
       icon: Flag,
       color: "text-blue-600",
-      bgColor: "bg-blue-50",
+      bgColor: "bg-blue-600",
     },
     {
-      date: "Mon 3 – Fri 14 Nov, 2025",
+      date: "Mon 3 Nov – Fri 14 Nov, 2025",
       event: "Election campaign unfolds in Animal Farm world - media covers the race, citizens are polled, and public opinion shifts. Students can change their strategy throughout the two week competition period.",
       icon: Clock,
       color: "text-orange-600",
-      bgColor: "bg-orange-50",
+      bgColor: "bg-orange-600",
     },
     {
       date: "Fri 14 Nov, 2025",
       event: "Election held in Animal Farm world. Who has won? Which team had the most effective strategy?",
       icon: Flag,
       color: "text-red-600",
-      bgColor: "bg-red-50",
+      bgColor: "bg-red-600",
     },
     {
       date: "Mon 17 Nov, 2025",
       event: "Winning team announced",
       icon: Trophy,
       color: "text-yellow-600",
-      bgColor: "bg-yellow-50",
+      bgColor: "bg-yellow-600",
     },
   ]
 
@@ -62,41 +60,35 @@ export function Timeline() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="shadow-lg rounded-none">
-            <div className="p-6">
-              <Table>
-                <TableHeader>
-                  <TableRow className="">
-                    <TableHead className="font-bold font-dm-serif text-lg w-2/5 md:w-1/3">Date</TableHead>
-                    <TableHead className="font-bold font-dm-serif text-lg">Event</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {timelineEvents.map((item, index) => (
-                    <TableRow
-                      key={index}
-                      className="hover:bg-gray-50 transition-colors duration-200 border-b border-gray-100"
-                    >
-                      <TableCell className="py-6 align-top">
-                        <div className="flex items-start space-x-3">
-                          <div className={`p-2 rounded-full ${item.bgColor} shrink-0`}>
-                            <item.icon className={`w-5 h-5 ${item.color}`} />
-                          </div>
-                          <div className="min-w-[140px]">
-                            <div className="font-semibold text-gray-900 text-base">{item.date}</div>
-                          </div>
-                        </div>
-                      </TableCell>
-                      <TableCell className="py-6">
-                        <div className="text-base text-gray-800">{item.event}</div>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+          <div className="relative">
+            {/* Vertical timeline */}
+            <div className="absolute left-[28px] md:left-[32px] top-0 bottom-0 w-1 bg-gray-300" />
+            
+            <div className="space-y-8 md:space-y-12">
+              {timelineEvents.map((item, index) => (
+                <div key={index} className="relative flex items-start gap-6 md:gap-8">
+                  {/* Timeline dot with icon */}
+                  <div className="relative z-10 flex-shrink-0">
+                    <div className={`${item.bgColor} w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center border-4 border-gray-50 shadow-lg`}>
+                      <item.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="flex-1 pb-8 pt-2">
+                    <div className="bg-white rounded-lg shadow-md p-5 md:p-6 hover:shadow-lg transition-shadow duration-200">
+                      <div className={`font-bold ${item.color} text-sm md:text-base mb-2 font-dm-serif`}>
+                        {item.date}
+                      </div>
+                      <p className="text-gray-800 text-base md:text-lg leading-relaxed">
+                        {item.event}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          </Card>
-
+          </div>
         </div>
       </div>
     </section>

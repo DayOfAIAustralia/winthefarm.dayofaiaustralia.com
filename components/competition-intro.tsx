@@ -2,25 +2,8 @@
 
 import { Button } from "@/components/ui/button"
 import { BarTicker } from "./bar-ticker";
-import { useEffect, useState } from "react";
 
 export function CompetitionIntro() {
-  const [daysRemaining, setDaysRemaining] = useState<number | null>(null);
-
-  useEffect(() => {
-    const calculateDays = () => {
-      const launchDate = new Date('2025-10-13T00:00:00+11:00'); // Sydney time
-      const now = new Date();
-      const diff = launchDate.getTime() - now.getTime();
-      const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-      setDaysRemaining(days > 0 ? days : 0);
-    };
-
-    calculateDays();
-    const interval = setInterval(calculateDays, 86400000); // Update daily
-    return () => clearInterval(interval);
-  }, [])
-
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 text-center">
@@ -32,11 +15,6 @@ export function CompetitionIntro() {
           <span className="text-gray-600 text-sm ">
             <span className="block">Lesson available to registered teachers Monday 13 October, 2025</span>
             <span className="block">Teach the lesson during Media Literacy Week, 27-31 October, 2025</span>
-            {daysRemaining !== null && daysRemaining > 0 && (
-              <span className="block mt-1 font-semibold text-red-600">
-                {daysRemaining} {daysRemaining === 1 ? 'day' : 'days'} to go
-              </span>
-            )}
           </span>
         </div>
         <div className="flex justify-center">

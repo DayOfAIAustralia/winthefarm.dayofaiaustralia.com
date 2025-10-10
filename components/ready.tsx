@@ -17,12 +17,18 @@ export function ReadySection() {
         Years 7-10 who have completed the Day of AI Australia &quot;Media Literacy and AI&quot;
         lesson with their registered teacher.
       </p>
-      <Button
-        size="lg"
-        className="bg-red-600 hover:bg-red-700 text-lg px-8 py-3 rounded-none"
+      <a
+        href="https://dayofaiaustralia.com/register-2025/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        Register as a teacher now
-      </Button>
+        <Button
+          size="lg"
+          className="bg-[#FDC300] hover:bg-yellow-500 text-black text-lg px-8 py-3 rounded-none"
+        >
+          Register as a teacher now
+        </Button>
+      </a>
     </div>
   );
 }

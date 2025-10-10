@@ -6,7 +6,7 @@ const stepsData = [
     step: "1",
     title: "Deliver the lesson",
     description:
-      "Your first step is to deliver Day of AI Australia's Media Literacy and AI lesson. Register as a teacher to access the materials for free online.",
+      "Deliver the lesson Deliver Day of AI Australia's Media Literacy, AI and Misinformation lesson during Media Literacy Week (27-31 Oct). Register to access the free materials.",
     imageSrc: "/deliver-lesson.png",
     imageAlt: "Teacher delivering a lesson to students",
   },
@@ -15,7 +15,7 @@ const stepsData = [
     title: "Join the platform",
     description:
       "Students register for the competition. Students can enter as individuals or teams of up to 4.",
-    imageSrc: "/new-signup.png",
+    imageSrc: "/platform-join.png",
     imageAlt: "Person using an old style computer",
   },
   {
@@ -23,7 +23,7 @@ const stepsData = [
     title: "Receive your assignments",
     description:
       "Practice in a safe, artificial social media landscape designed specifically for learning and competition.",
-    imageSrc: "/new-assignments.png",
+    imageSrc: "/assignment-receive.png",
     imageAlt: "A list of new assignments in the platform",
   },
   {
@@ -31,7 +31,7 @@ const stepsData = [
     title: "Build your bots",
     description:
       "Access your election control panel and craft AI bots that read and react to the system's content. Your bots can post, repost, reply, like, follow, unfollow, search and #tag.",
-    imageSrc: "/new-bots.png",
+    imageSrc: "/build-bots.png",
     imageAlt: "An interface for building and configuring bots",
   },
   {
@@ -39,7 +39,7 @@ const stepsData = [
     title: "Influence the outcome",
     description:
       "Your bots score points based on their activity, competing to influence the populace of Animal Farm. The team with the most effective bot strategy and influence will win!",
-    imageSrc: "/new-victory.png",
+    imageSrc: "/influence-outcome.png",
     imageAlt: "A trophy",
   },
 ];
