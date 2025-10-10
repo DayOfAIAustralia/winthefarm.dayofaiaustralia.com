@@ -61,13 +61,13 @@ export function Timeline() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto overflow-x-auto">
+        <div className="max-w-4xl mx-auto">
           <Card className="shadow-lg rounded-none">
             <div className="p-6">
               <Table>
                 <TableHeader>
                   <TableRow className="">
-                    <TableHead className="font-bold font-dm-serif text-lg whitespace-nowrap">Date</TableHead>
+                    <TableHead className="font-bold font-dm-serif text-lg w-2/5 md:w-1/3">Date</TableHead>
                     <TableHead className="font-bold font-dm-serif text-lg">Event</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -83,7 +83,7 @@ export function Timeline() {
                             <item.icon className={`w-5 h-5 ${item.color}`} />
                           </div>
                           <div className="min-w-[140px]">
-                            <div className="font-semibold text-gray-900 text-base whitespace-nowrap">{item.date}</div>
+                            <div className="font-semibold text-gray-900 text-base">{item.date}</div>
                           </div>
                         </div>
                       </TableCell>

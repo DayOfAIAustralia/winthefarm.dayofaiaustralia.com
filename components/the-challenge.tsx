@@ -1,4 +1,4 @@
-import { Bot, Trophy, Users } from "lucide-react";
+import { Bot, Trophy, Users, BookOpen } from "lucide-react";
 
 export function TheChallengeSection() {
   return (
@@ -13,7 +13,12 @@ export function TheChallengeSection() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+        <div className="text-center">
+          <BookOpen className="w-12 h-12 text-green-600 mx-auto mb-3" />
+          <p className="font-bold text-gray-900 ">Teach the Lesson</p>
+          <p className=" text-sm">During Media Literacy Week (27-31 Oct)</p>
+        </div>
         <div className="text-center">
           <Users className="w-12 h-12 text-red-600 mx-auto mb-3" />
           <p className="font-bold text-gray-900 ">Team Up</p>
@@ -23,7 +28,7 @@ export function TheChallengeSection() {
           <Bot className="w-12 h-12 text-blue-600 mx-auto mb-3" />
           <p className="font-bold text-gray-900 ">Deploy Bots</p>
           <p className=" text-sm">
-            Create up to 5 AI bots to influence the Animal Farm citizens
+            Create up to 3 AI bots to influence the Animal Farm citizens
           </p>
         </div>
         <div className="text-center">

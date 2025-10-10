@@ -29,16 +29,7 @@ export const Logos = () => (
           />
         </div>
 
-        {/* Middle - Google.org support */}
         <div className="flex items-center justify-center gap-12 flex-wrap">
-          <Image
-            src="/logos/logo_Google.org_Support_FullColor_cmyk coated_regular.png"
-            alt="with support from Google.org"
-            width={330}
-            height={80}
-            className="object-contain mx-auto"
-          />
-
           <div className="text-center">
             <div className="flex items-center justify-center gap-12 flex-wrap mb-4">
               <Image

@@ -28,23 +28,26 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6 font-sans uppercase">
-            <Link href="/about" className="font-bold hover:text-red-600 ">
-              About
-            </Link>
             <Link href="/#how-to-play" className="font-bold hover:text-red-600 ">
               How to play
             </Link>
             <Link href="/#timeline" className="font-bold hover:text-red-600 ">
               Timeline
             </Link>
-            <a href="/setting" className="font-bold hover:text-red-600 ">
+            <Link href="/setting" className="font-bold hover:text-red-600 ">
               Setting
-            </a>
-            <a href="/rules" className="font-bold hover:text-red-600 ">
+            </Link>
+            <Link href="/rules" className="font-bold hover:text-red-600 ">
               Rules
-            </a>
-            <Button className="font-bold rounded-none bg-red-600 hover:bg-red-900">
-              Register now
+            </Link>
+            <Link href="/ethics" className="font-bold hover:text-red-600 ">
+              Ethics
+            </Link>
+            <Link href="/about" className="font-bold hover:text-red-600 ">
+              About us
+            </Link>
+            <Button className="font-bold text-black rounded-none bg-[#FDC300] hover:bg-yellow-500">
+              REGISTER NOW
             </Button>
           </nav>
 

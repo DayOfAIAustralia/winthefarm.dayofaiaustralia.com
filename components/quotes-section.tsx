@@ -9,14 +9,14 @@ export function QuotesSection() {
       title: "AI and Elections",
     },
     {
+      text: "In the lead up to the 2025 Australian federal election, 17% of X accounts engaging in election conversations were fake, actively driving political narratives and coordinating attacks on both major parties.",
+      author: "Cyabra Report",
+      title: "Online Manipulation Ahead of Australia's 2025 Elections",
+    },
+    {
       text: "On X alone, 10,000 bot accounts rapidly posted tens of thousands of messages of pro-Kremlin content attributed to US and European celebrities.",
       author: "Dr Jake Renzella, Dr Vlada Rozova",
       title: "The Dead Internet Theory",
-    },
-    {
-      text: "This scale of the influence is significant. Some reports have even found that nearly half of all internet traffic in 2022 was made by bots",
-      author: "Imperva",
-      title: "2023 Bad Bot Report",
     },
   ];
 

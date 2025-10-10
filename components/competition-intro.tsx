@@ -30,7 +30,8 @@ export function CompetitionIntro() {
         </h2>
         <div className="pb-6">
           <span className="text-gray-600 text-sm ">
-            Launching October 13, 2025
+            <span className="block">Lesson available to registered teachers Monday 13 October, 2025</span>
+            <span className="block">Teach the lesson during Media Literacy Week, 27-31 October, 2025</span>
             {daysRemaining !== null && daysRemaining > 0 && (
               <span className="block mt-1 font-semibold text-red-600">
                 {daysRemaining} {daysRemaining === 1 ? 'day' : 'days'} to go
@@ -48,16 +49,9 @@ export function CompetitionIntro() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            className="bg-red-600 hover:bg-red-700 rounded-none text-lg px-8 py-3"
+            className="bg-[#FDC300] hover:bg-yellow-500 text-black rounded-none text-lg px-8 py-3"
           >
-            Join the competition
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className=" border-red-600 rounded-none text-red-600 hover:bg-red-50 text-lg px-8 py-3 bg-transparent"
-          >
-            Learn more
+            JOIN THE COMPETITION
           </Button>
         </div>
       </div>

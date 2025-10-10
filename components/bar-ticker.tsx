@@ -65,10 +65,10 @@ export const BarTicker = () => {
       <div className="mb-2 flex justify-between items-center text-lg font-semibold uppercase">
         <div className="text-blue-900 font-black flex items-center gap-2">
           <Image
-            src="/hetty-square.svg"
+            src="/hetty-square.png"
             alt="Hetty"
-            width={32}
-            height={32}
+            width={100}
+            height={100}
             className="rounded"
           />
           <span className="text-md md:text-xl">Hetty</span>
@@ -83,10 +83,10 @@ export const BarTicker = () => {
           </span>
           <span className="text-md md:text-xl">Napoleon</span>
           <Image
-            src="/napoleon-square.svg"
+            src="/napoleon-square-revised.jfif"
             alt="Napoleon"
-            width={32}
-            height={32}
+            width={100}
+            height={100}
             className="rounded"
           />
         </div>
