@@ -318,13 +318,13 @@ export default function SettingPage() {
                 {/* Story Image 3 - A New Election */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="mb-4">
-                    <Image
+                    {/* <Image
                       src="/story/5-battle.png"
                       alt="A New Election"
                       width={800}
                       height={400}
                       className="w-full rounded-lg"
-                    />
+                    /> */}
                   </div>
                   <h3 className="text-2xl font-bold mb-3">A New Election</h3>
                   <p className="text-lg leading-relaxed">
@@ -338,13 +338,13 @@ export default function SettingPage() {
                 {/* Story Image 4 - The Battle for Hearts and Minds */}
                 <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
                   <div className="mb-4">
-                    <Image
+                    {/* <Image
                       src="/story/5-battle.png"
                       alt="The Battle for Hearts and Minds"
                       width={800}
                       height={400}
                       className="w-full rounded-lg"
-                    />
+                    /> */}
                   </div>
                   <h3 className="text-2xl font-bold mb-3">
                     The Battle for Hearts and Minds

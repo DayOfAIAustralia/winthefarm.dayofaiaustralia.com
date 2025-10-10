@@ -43,12 +43,19 @@ export function Header() {
             <Link href="/ethics" className="font-bold hover:text-red-600 ">
               Ethics
             </Link>
-            <Link href="/about" className="font-bold hover:text-red-600 ">
+            {/* Hiding '/about' */}
+            {/* <Link href="/about" className="font-bold hover:text-red-600 ">
               About us
-            </Link>
-            <Button className="font-bold text-black rounded-none bg-[#FDC300] hover:bg-yellow-500">
-              REGISTER NOW
-            </Button>
+            </Link> */}
+            <a
+              href="https://dayofaiaustralia.com/register-2025/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="font-bold text-black rounded-none bg-[#FDC300] hover:bg-yellow-500">
+                REGISTER NOW
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -70,13 +77,6 @@ export function Header() {
           <nav className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <div className="flex flex-col space-y-4 font-sans uppercase">
               <Link
-                href="/about"
-                className="font-bold hover:text-red-600 py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
                 href="/#how-to-play"
                 className="font-bold hover:text-red-600 py-2"
                 onClick={() => setMobileMenuOpen(false)}
@@ -90,23 +90,44 @@ export function Header() {
               >
                 Timeline
               </Link>
-              <a
+              <Link
                 href="/setting"
                 className="font-bold hover:text-red-600 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Setting
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/rules"
                 className="font-bold hover:text-red-600 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Rules
+              </Link>
+              <Link 
+                href="/ethics" 
+                className="font-bold hover:text-red-600 py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Ethics
+              </Link>
+              {/* Hiding '/about' */}
+              {/* <Link
+                href="/about"
+                className="font-bold hover:text-red-600 py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About us
+              </Link> */}
+              <a
+                href="https://dayofaiaustralia.com/register-2025/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="font-bold text-black rounded-none bg-[#FDC300] hover:bg-yellow-500 w-full">
+                  REGISTER NOW
+                </Button>
               </a>
-              <Button className="font-bold rounded-none bg-red-600 hover:bg-red-900 w-full">
-                Register now
-              </Button>
             </div>
           </nav>
         )}

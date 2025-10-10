@@ -50,20 +50,21 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="https://dayofaiaustralia.com/register-2025/" className="hover:text-white">
                   Register as a teacher
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="https://dayofaiaustralia.com/lessons/additional-lesson-media-literacy-week/" className="hover:text-white">
                   Access the lesson
                 </a>
               </li>
-              <li>
+              {/* FAQ Hidden */}
+              {/* <li>
                 <a href="#" className="hover:text-white">
                   FAQ
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div>
