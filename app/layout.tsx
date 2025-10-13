@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Serif_Text, Figtree } from "next/font/google";
 import Script from 'next/script'; // Import Script
 import GTMAnalytics from '@/components/GTMAnalytics'; // Import our new component
+import { Suspense } from 'react';
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -60,7 +61,9 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         
-        <GTMAnalytics />
+        <Suspense fallback={null}>
+          <GTMAnalytics />
+        </Suspense>
 
         {children}
       </body>
