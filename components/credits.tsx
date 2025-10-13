@@ -55,7 +55,7 @@ export function Credits() {
                 Developer (Capture the Narrative), UNSW Sydney
               </p>
               <p>
-                <span className="font-bold">Hammond Pearce</span> - Lead organiser (Capture the Narrative), UNSW Sydney
+                <span className="font-bold">Dr. Hammond Pearce</span> - Lead organiser (Capture the Narrative), UNSW Sydney
               </p>
             </div>
           </div>
@@ -112,7 +112,7 @@ export function Credits() {
               <p>Dr. Sue Keay</p>
               <p>Tracey Lee-Joe</p>
               <p>Maria Kameko</p>
-              <p>Rahat Masood</p>
+              <p>Dr. Rahat Masood</p>
               <p>Jason Sandler</p>
               <p>Wayne Sun</p>
               <p>Gladine Tan</p>
