@@ -57,13 +57,14 @@ export function HowToPlay() {
           </p>
         </div>
 
-        {/* This main container now just stacks the steps vertically */}
-        <div className="flex flex-col gap-y-16 md:gap-y-4 xl:px-20 2xl:px-120">
+        {/* Mobile: Single column stack, Desktop: Alternating layout, Very wide: Multi-column */}
+        <div className="flex flex-col gap-y-16 md:gap-y-4 2xl:grid 2xl:grid-cols-2 2xl:gap-8">
           {stepsData.map((step, index) => (
-            // Each step is now its own grid, creating a single row with two columns on desktop
             <div
               key={step.step}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center ${
+                index >= 4 ? "2xl:col-span-2" : ""
+              }`}
             >
               {/* Image Block: Centered on mobile. Alternates position on desktop. */}
               <div
@@ -73,7 +74,7 @@ export function HowToPlay() {
               >
                 <Image
                   src={step.imageSrc}
-                  width={300} // Increased size slightly for better visuals in a full row
+                  width={300}
                   height={300}
                   alt={step.imageAlt}
                   className="mb-0"

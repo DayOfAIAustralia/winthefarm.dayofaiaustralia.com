@@ -11,7 +11,7 @@ export default function TeacherDashboardPage() {
             Teacher Dashboard Coming Soon
           </h1>
           <p className="text-lg text-gray-600">
-            We're working on bringing the Win the Farm experience soon!
+            We&apos;re working on bringing the Win the Farm experience soon!
           </p>
         </div>
       </main>
