@@ -11,7 +11,7 @@ export function Timeline() {
     },
     {
       date: "Mon 27 Oct – Fri 31 Oct, 2025",
-      event: "Media Literacy Week! Deliver the Media Literacy and AI lesson, students register for the competition and build their bots.",
+      event: "Media Literacy Week! Deliver the Media Literacy and AI lesson, students in Years 7-10 register for the competition and build their bots.",
       icon: Users,
       color: "text-purple-600",
       bgColor: "bg-purple-600",

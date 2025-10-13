@@ -14,9 +14,9 @@ const stepsData = [
     step: "2",
     title: "Join the platform",
     description:
-      "Students register for the competition. Students can enter as individuals or teams of up to 4.",
+      "Students register for the competition. Students can enter as individuals or in teams.",
     imageSrc: "/platform-join.png",
-    imageAlt: "Person using an old style computer",
+    imageAlt: "A boy and girl using a computer",
   },
   {
     step: "3",
