@@ -21,7 +21,7 @@ export default function SettingPage() {
                 </p>
                 <p>
                   <span className="font-semibold">
-                    🏝️ The place is Animal Farm
+                    🚜 The place is Animal Farm
                   </span>
                   , a small (and fictional!) farm in a quiet country setting.
                 </p>
@@ -70,7 +70,7 @@ export default function SettingPage() {
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-16 h-16 flex-shrink-0">
                       <Image
-                        src="/hetty-square.svg"
+                        src="/hetty-square.png"
                         alt="Hetty"
                         width={64}
                         height={64}
@@ -78,12 +78,16 @@ export default function SettingPage() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold">☑️ Hetty</h3>
+                      <h3 className="text-2xl font-bold">Hetty</h3>
                       <p className="text-lg font-semibold">
                         Party: Animal Resistance
                       </p>
                     </div>
                   </div>
+
+                  <p className="text-xl font-bold text-blue-700">
+                    Together, We Build a Better Farm.
+                  </p>
 
                   <div className="space-y-4">
                     <p>
@@ -121,18 +125,10 @@ export default function SettingPage() {
                         <li>🗓️ Four day work week</li>
                         <li>🌾 Food security for farm animals</li>
                         <li>🐥 Equality and fair distribution of resources</li>
-                        <li>
-                          💡 Innovation for productivity: &quot;Work smarter,
-                          not harder.&quot;
-                        </li>
                         <li>💬 Freedom and voice for every animal</li>
                       </ul>
                     </div>
 
-                    <p className="text-xl font-bold text-blue-700">
-                      Campaign Slogan: &quot;Together, We Build a Better
-                      Farm.&quot;
-                    </p>
                     <p>
                       <strong>Persona:</strong> A newcomer to politics, Hetty is
                       a passionate voice for all animals.
@@ -145,7 +141,7 @@ export default function SettingPage() {
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-16 h-16 flex-shrink-0">
                       <Image
-                        src="/napoleon-square.svg"
+                        src="/napoleon-square.png"
                         alt="Napoleon"
                         width={64}
                         height={64}
@@ -153,12 +149,16 @@ export default function SettingPage() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold">☑️ Napoleon</h3>
+                      <h3 className="text-2xl font-bold">Napoleon</h3>
                       <p className="text-lg font-semibold">
                         Party: Pig Directorate
                       </p>
                     </div>
                   </div>
+                
+                  <p className="text-xl font-bold text-red-700">
+                    One Farm, One Vision, One Leader.
+                  </p>
 
                   <div className="space-y-4">
                     <p>
@@ -202,10 +202,6 @@ export default function SettingPage() {
                       </ul>
                     </div>
 
-                    <p className="text-xl font-bold text-red-700">
-                      Campaign Slogan: &quot;One Farm, One Vision, One
-                      Leader.&quot;
-                    </p>
                     <p>
                       <strong>Persona:</strong> A polished, confident, ruthless
                       executive.

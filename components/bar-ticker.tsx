@@ -83,7 +83,7 @@ export const BarTicker = () => {
           </span>
           <span className="text-md md:text-xl">Napoleon</span>
           <Image
-            src="/napoleon-square-revised.jfif"
+            src="/napoleon-square.png"
             alt="Napoleon"
             width={100}
             height={100}

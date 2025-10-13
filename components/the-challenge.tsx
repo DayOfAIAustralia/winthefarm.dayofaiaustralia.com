@@ -6,7 +6,7 @@ export function TheChallengeSection() {
       <div className="text-center mb-8">
         <h3 className="text-3xl font-bold text-gray-900 mb-4">The Challenge</h3>
         <p className="text-lg max-w-2xl text-balance mx-auto leading-relaxed">
-          Through a controlled, artificial social media landscape, students will
+          Through a controlled, artificial social media landscape, Years 7-10 students will
           be charged with the manipulation of social media narratives by
           developing and deploying bots that amplify and suppress target
           messages on the fictional Barn Wall social media platform.
@@ -21,14 +21,14 @@ export function TheChallengeSection() {
         </div>
         <div className="text-center">
           <Users className="w-12 h-12 text-red-600 mx-auto mb-3" />
-          <p className="font-bold text-gray-900 ">Team Up</p>
-          <p className=" text-sm">Form teams in your classroom, or play solo</p>
+          <p className="font-bold text-gray-900 ">Students Team Up</p>
+          <p className=" text-sm">Students form teams in your classroom, or play solo</p>
         </div>
         <div className="text-center">
           <Bot className="w-12 h-12 text-blue-600 mx-auto mb-3" />
           <p className="font-bold text-gray-900 ">Deploy Bots</p>
           <p className=" text-sm">
-            Create up to 3 AI bots to influence the Animal Farm citizens
+            Students create up to 3 AI bots to influence the Animal Farm citizens
           </p>
         </div>
         <div className="text-center">

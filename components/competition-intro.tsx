@@ -22,7 +22,9 @@ export function CompetitionIntro() {
         </div>
 
         <p className="text-base leading-6 text-center max-w-3xl mx-auto my-8 text-balance">
-          Can your students tell what&apos;s real in an era of deepfakes and viral misinformation? Join Win the Farm, a national competition exploring the intersection of AI, media literacy, and elections. In this hands-on challenge, student teams create and deploy their own AI agents in a simulated election, learning to combat disinformation, analyse media bias, and strategically shape public opinion.
+            <span className="block">Can your students tell what's real in an era of deepfakes and viral misinformation?</span>
+            <span className="block">Join Win the Farm, a national competition for students in Years 7-10, exploring the intersection of AI, media literacy, and elections.</span>
+            <span className="block">In this hands-on challenge, student teams create and deploy their own AI agents in a simulated election, learning to combat disinformation, analyse media bias, and strategically shape public opinion.</span>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
