@@ -32,7 +32,7 @@ export function Credits() {
                 Director, Day of AI Australia
               </p>
               <p>
-                <span className="font-bold">Dr. Jake Renzella</span> - Senior Lecturer in Computer Science, UNSW Sydney
+                <span className="font-bold">Dr Jake Renzella</span> - Senior Lecturer in Computer Science, UNSW Sydney
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export function Credits() {
                 Developer (Capture the Narrative), UNSW Sydney
               </p>
               <p>
-                <span className="font-bold">Dr. Hammond Pearce</span> - Lead organiser (Capture the Narrative), UNSW Sydney
+                <span className="font-bold">Dr Hammond Pearce</span> - Lead organiser (Capture the Narrative), UNSW Sydney
               </p>
             </div>
           </div>
@@ -105,14 +105,14 @@ export function Credits() {
           <div className="mb-8">
             <h3 className="text-2xl font-bold mb-4">With Special Thanks To</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              <p>Dr. Debi Ashenden</p>
+              <p>Dr Debi Ashenden</p>
               <p>Jetha Chan</p>
               <p>Roly Clifton-Bligh</p>
               <p>Simon Freedman</p>
-              <p>Dr. Sue Keay</p>
+              <p>Dr Sue Keay</p>
               <p>Tracey Lee-Joe</p>
               <p>Maria Kameko</p>
-              <p>Dr. Rahat Masood</p>
+              <p>Dr Rahat Masood</p>
               <p>Jason Sandler</p>
               <p>Wayne Sun</p>
               <p>Gladine Tan</p>
