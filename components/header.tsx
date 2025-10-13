@@ -43,10 +43,9 @@ export function Header() {
             <Link href="/ethics" className="font-bold hover:text-red-600 ">
               Ethics
             </Link>
-            {/* Hiding '/about' */}
-            {/* <Link href="/about" className="font-bold hover:text-red-600 ">
+            <Link href="/about" className="font-bold hover:text-red-600 ">
               About us
-            </Link> */}
+            </Link>
             <a
               href="https://dayofaiaustralia.com/register-2025/"
               target="_blank"
@@ -111,14 +110,13 @@ export function Header() {
               >
                 Ethics
               </Link>
-              {/* Hiding '/about' */}
-              {/* <Link
+              <Link
                 href="/about"
                 className="font-bold hover:text-red-600 py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About us
-              </Link> */}
+              </Link>
               <a
                 href="https://dayofaiaustralia.com/register-2025/"
                 target="_blank"
