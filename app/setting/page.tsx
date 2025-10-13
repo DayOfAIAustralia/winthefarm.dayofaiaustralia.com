@@ -267,6 +267,16 @@ export default function SettingPage() {
               </h2>
 
               <div className="space-y-8">
+                 {/* Item 0 - Introduction (No Illustration) */}
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <p className="text-lg leading-relaxed">
+                    You may be familiar with the story of Animal Farm. It's a famous
+                    allegory by George Orwell, where the characters and events are
+                    symbols for real people and historical moments. The farm
+                    represents Russia during the Russian Revolution of 1917.
+                  </p>
+                </div>
+
                 {/* Story Image 1 - Major's Vision */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="mb-4">
@@ -282,10 +292,9 @@ export default function SettingPage() {
                     Major&apos;s Vision
                   </h3>
                   <p className="text-lg leading-relaxed">
-                    Old Major, the wise boar, calls the animals together to
-                    share his revolutionary dream of freedom from human
-                    oppression. His powerful speech ignites the flame of
-                    rebellion that will change Animal Farm forever...
+                    The story begins on Manor Farm, a neglected place run by Mr. Jones,
+                    where the animals are overworked and miserable until an old pig,
+                    Major, inspires a dream of rebellion.
                   </p>
                 </div>
 
@@ -304,54 +313,93 @@ export default function SettingPage() {
                     The Animals Revolt
                   </h3>
                   <p className="text-lg leading-relaxed">
-                    Inspired by Major&apos;s words, the animals rise up against
-                    their human oppressors. The revolution has begun, and the
-                    farm will never be the same. But with freedom comes new
-                    challenges and power struggles...
+                    That dream catches fire. Fed up with neglect, the animals
+                    successfully revolt, kicking Mr. Jones off the property for good.
+                    They rename it &quot;Animal Farm&quot; and establish their core
+                    principles: the Seven Commandments, with the most important being,
+                    &quot;All animals are equal.&quot; In our world, they add a crucial
+                    eighth commandment: &quot;The leader of Animal Farm must be
+                    elected by the animals,&quot; to safeguard their future.
                   </p>
                 </div>
 
-                {/* Story Image 3 - A New Election */}
+                {/* Story Image 3 - Snowball */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="mb-4">
-                    {/* <Image
-                      src="/story/5-battle.png"
+                    <Image
+                      src="/story/3-snowball.png"
                       alt="A New Election"
                       width={800}
                       height={400}
                       className="w-full rounded-lg"
-                    /> */}
+                    />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">A New Election</h3>
+                  <h3 className="text-2xl font-bold mb-3">A Farm Divided</h3>
                   <p className="text-lg leading-relaxed">
-                    Years have passed since the revolution. Napoleon rules with
-                    an iron hoof, but change is coming. Hetty the hen, a brave
-                    new voice, challenges the established order. An election
-                    will decide the farm&apos;s future.
+                    Now Snowball is a charismatic
+                    visionary with innovative ideas, like a windmill to modernize the
+                    farm. Napoleon is a quiet schemer, building his power behind the
+                    scenes and arguing for a focus on immediate needs. The farm becomes
+                    split between two camps.
                   </p>
                 </div>
 
                 {/* Story Image 4 - The Battle for Hearts and Minds */}
-                <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
+                <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="mb-4">
-                    {/* <Image
-                      src="/story/5-battle.png"
+                    <Image
+                      src="/story/4-napoleon.png"
                       alt="The Battle for Hearts and Minds"
                       width={800}
                       height={400}
                       className="w-full rounded-lg"
-                    /> */}
+                    />
                   </div>
                   <h3 className="text-2xl font-bold mb-3">
-                    The Battle for Hearts and Minds
+                    Napoleon Seizes Power
                   </h3>
                   <p className="text-lg leading-relaxed">
-                    Your journey begins now. Use your Bot Forge to create
-                    persuasive campaign messages, engage with fellow animals on
-                    the Barn Wall, and help determine who will lead Animal Farm
-                    into its next chapter.
+                    Their rivalry comes to a head during the vote on the windmill. Just
+                    as Snowball wins the debate, Napoleon unleashes nine vicious dogs
+                    that chase Snowball off the farm forever. Napoleon immediately
+                    seizes control and uses his slick-talking PR pig, Squealer, to
+                    convince everyone that Snowball was a traitor from the start.
                   </p>
                 </div>
+
+                {/* Item 6 - A Surprising Challenger */}
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <div className="mb-4">
+                    <Image
+                      src="/story/6-battle.png"
+                      alt="Hetty the hen stands against Napoleon"
+                      width={800}
+                      height={400}
+                      className="w-full rounded-lg"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">A Surprising Challenger</h3>
+                  <p className="text-lg leading-relaxed">
+                    And this is where our story begins. The idealist has been violently
+                    chased away, and Napoleon intends to rule as a dictator. But he
+                    didn&apos;t count on the eighth commandment. As the time for the
+                    first election approaches, a courageous hen, Hetty, stands against
+                    him as a candidate for leader. The dream of a free society is on
+                    shaky ground, but it isn&apos;t dead yet.
+                  </p>
+                </div>
+
+                {/* Item 7 - Call to Action (Outro) */}
+                <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
+                  <p className="text-lg leading-relaxed">
+                    That&apos;s where you come in. Can you sway the story?
+                    Supporting either Hetty or Napoleon, you&apos;ll create an
+                    AI bot to engage in this Animal Farm world and have its
+                    citizens vote for your candidate... The fate of the
+                    revolution rests on your strategy. Can you Win the Farm?
+                  </p>
+                </div>
+
               </div>
             </section>
 
