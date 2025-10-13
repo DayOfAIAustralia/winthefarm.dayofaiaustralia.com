@@ -113,17 +113,15 @@ export function Credits() {
               <p>Dr. Debi Ashenden</p>
               <p>Jetha Chan</p>
               <p>Roly Clifton-Bligh</p>
-              <p>Gaëlle Feghali</p>
               <p>Simon Freedman</p>
-              <p>Nathaniel Fruchter</p>
               <p>Dr. Sue Keay</p>
               <p>Tracey Lee-Joe</p>
-              <p>Stef Lovett</p>
+              <p>Maria Kameko</p>
               <p>Rahat Masood</p>
               <p>Jason Sandler</p>
+              <p>Wayne Sun</p>
               <p>Gladine Tan</p>
               <p>Oscar Wahltinez</p>
-              <p>Andrew Zaldivar</p>
             </div>
           </div>
 
