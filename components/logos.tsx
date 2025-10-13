@@ -46,6 +46,17 @@ export const Logos = () => (
           together with <span className="font-bold">ABC Education</span> and{" "}
           <span className="font-bold">Australian Media Literacy Alliance</span>
         </p>
+
+        <div className="flex flex-col items-center justify-center gap-4 pt-8">
+          <p className="text-gray-700 text-sm">Win the Farm is powered by</p>
+          <Image
+            src="/logos/ctn-logo.png"
+            alt="Capture The Narrative"
+            width={120}
+            height={100}
+            className="object-contain"
+          />
+        </div>
       </div>
     </div>
   </section>

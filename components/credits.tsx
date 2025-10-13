@@ -20,7 +20,7 @@ export function Credits() {
               rel="noopener noreferrer"
               className="text-red-600 hover:text-red-700 underline"
             >
-              Win the Farm
+              Capture the Narrative
             </a>.
           </p>
 
@@ -52,15 +52,10 @@ export function Credits() {
               <p className="py-2 italic">With thanks to</p>
               <p>
                 <span className="font-bold">Hamish Cox</span> - Software
-                Developer, Capture the Narrative, UNSW Sydney
+                Developer (Capture the Narrative), UNSW Sydney
               </p>
               <p>
-                <span className="font-bold">Thomas McTavish</span> - Software
-                Developer, Capture the Narrative, UNSW Sydney
-              </p>
-              <p>
-                <span className="font-bold">Hammond Pearce</span> - Core
-                Platform Advisor, UNSW Sydney
+                <span className="font-bold">Hammond Pearce</span> - Lead organiser (Capture the Narrative), UNSW Sydney
               </p>
             </div>
           </div>
