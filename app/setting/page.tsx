@@ -270,7 +270,7 @@ export default function SettingPage() {
                  {/* Item 0 - Introduction (No Illustration) */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p className="text-lg leading-relaxed">
-                    You may be familiar with the story of Animal Farm. It's a famous
+                    You may be familiar with the story of Animal Farm. It&apos;s a famous
                     allegory by George Orwell, where the characters and events are
                     symbols for real people and historical moments. The farm
                     represents Russia during the Russian Revolution of 1917.
