@@ -6,7 +6,7 @@ const stepsData = [
     step: "1",
     title: "Deliver the lesson",
     description:
-      "Deliver the lesson Deliver Day of AI Australia's Media Literacy, AI and Misinformation lesson during Media Literacy Week (27-31 Oct). Register to access the free materials.",
+      "Deliver Day of AI Australia's Media Literacy, AI and Misinformation lesson during Media Literacy Week (27-31 Oct). Register to access the free materials.",
     imageSrc: "/deliver-lesson.png",
     imageAlt: "Teacher delivering a lesson to students",
   },
@@ -87,9 +87,9 @@ export function HowToPlay() {
                   index % 2 !== 0 ? "lg:text-right" : "lg:text-left"
                 } max-w-xl mx-auto lg:mx-0`}
               >
-                <h4 className="text-2xl font-bold text-gray-900 mb-4 uppercase">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 uppercase">
                   {step.step} - {step.title}
-                </h4>
+                </h3>
                 <p className="text-md text-gray-800 leading-relaxed">
                   {step.description}
                 </p>
