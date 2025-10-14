@@ -48,7 +48,7 @@ export const BarTicker = () => {
           style={{ width: `${hettyPercentage}%` }}
         >
           {/* Mobile Hetty Info */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-1 rounded-full bg-black/30 pl-1 pr-3 py-1 md:hidden">
             <Image
               src="/hetty-square.png"
               alt="Hetty"
@@ -66,7 +66,7 @@ export const BarTicker = () => {
         {/* Napoleon's Bar */}
         <div className="flex-1 flex items-center justify-end p-2 bg-[#FE5F40] transition-all duration-1000 ease-out">
           {/* Mobile Napoleon Info */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-1 rounded-full bg-black/30 pr-1 pl-3 py-1 md:hidden">
             <div className="text-white font-black leading-tight text-right">
               <span className="text-lg">{Math.round(napoleonPercentage)}% </span>
               <span className="hidden sm:inline text-sm">NAPOLEON </span>

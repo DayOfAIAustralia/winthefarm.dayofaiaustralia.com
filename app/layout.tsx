@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Serif_Text, Figtree } from "next/font/google";
 import Script from 'next/script'; // Import Script
-import GTMAnalytics from '@/components/GTMAnalytics'; // Import our new component
+import GTMAnalytics from '@/components/gtm-analytics';
 import { Suspense } from 'react';
 import "./globals.css";
 
