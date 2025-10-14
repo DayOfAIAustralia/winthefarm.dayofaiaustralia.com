@@ -21,9 +21,7 @@ export const BarTicker = () => {
         const noise = (Math.random() - 0.5) * 2 * NOISE_RANGE;
 
         velocityRef.current = DAMP * velocityRef.current + force + noise;
-
         let next = prev + velocityRef.current;
-
         if (next < MIN) {
           next = MIN + (MIN - next) * 0.25;
           velocityRef.current *= -0.35;
@@ -43,26 +41,65 @@ export const BarTicker = () => {
 
   return (
     <div className="w-full max-w-4xl relative">
-      <div className="flex h-12 w-full overflow-hidden rounded-none border-black border-2 relative">
-        {/* Hetty */}
+      <div className="flex h-14 w-full overflow-hidden rounded-none border-black border-2 relative">
+        {/* Hetty's Bar */}
         <div
-          className="flex items-center justify-center bg-[#3571C0] transition-all duration-1000 ease-out"
+          className="flex items-center justify-start p-2 bg-[#3571C0] transition-all duration-1000 ease-out"
           style={{ width: `${hettyPercentage}%` }}
-        />
-        {/* Napoleon fills remainder */}
-        <div className="flex-1 flex items-center justify-center bg-[#FE5F40] transition-all duration-1000 ease-out" />
+        >
+          {/* Mobile Hetty Info */}
+          <div className="flex items-center gap-2 md:hidden">
+            <Image
+              src="/hetty-square.png"
+              alt="Hetty"
+              width={100}
+              height={100}
+              className="rounded-full w-10 h-10"
+            />
+            <div className="text-white font-black leading-tight">
+              <span className="hidden sm:inline text-sm">HETTY </span>
+              <span className="text-lg">{Math.round(hettyPercentage)}%</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Napoleon's Bar */}
+        <div className="flex-1 flex items-center justify-end p-2 bg-[#FE5F40] transition-all duration-1000 ease-out">
+          {/* Mobile Napoleon Info */}
+          <div className="flex items-center gap-2 md:hidden">
+            <div className="text-white font-black leading-tight text-right">
+              <span className="text-lg">{Math.round(napoleonPercentage)}% </span>
+              <span className="hidden sm:inline text-sm">NAPOLEON </span>
+            </div>
+            <Image
+              src="/napoleon-square.png"
+              alt="Napoleon"
+              width={100}
+              height={100}
+              className="rounded-full w-10 h-10"
+            />
+          </div>
+        </div>
 
         {/* Center win line */}
         <div
           className="absolute top-0 bottom-0 w-[2px] bg-white pointer-events-none"
-          style={{
-            left: "50%",
-            transform: "translateX(-50%)",
-          }}
+          style={{ left: "50%", transform: "translateX(-50%)" }}
         />
       </div>
 
-      <div className="mb-2 flex justify-between items-center text-lg font-semibold uppercase">
+      {/* Mobile names below bar */}
+      <div className="flex justify-between items-center mt-2 px-1 sm:hidden">
+        <span className="text-blue-900 font-black uppercase text-sm">
+          Hetty
+        </span>
+        <span className="text-red-900 font-black uppercase text-sm">
+          Napoleon
+        </span>
+      </div>
+
+      {/* Desktop Labels */}
+      <div className="hidden mb-2 md:flex justify-between items-center text-lg font-semibold uppercase">
         <div className="text-blue-900 font-black flex items-center gap-2">
           <Image
             src="/hetty-square.png"

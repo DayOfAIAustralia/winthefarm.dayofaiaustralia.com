@@ -26,14 +26,20 @@ export function CompetitionIntro() {
             <span className="block">Join Win the Farm, a national competition for students in Years 7-10, exploring the intersection of AI, media literacy, and elections.</span>
             <span className="block">In this hands-on challenge, student teams create and deploy their own AI agents in a simulated election, learning to combat disinformation, analyse media bias, and strategically shape public opinion.</span>
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            size="lg"
-            className="bg-[#FDC300] hover:bg-yellow-500 text-black rounded-none text-lg px-8 py-3"
-          >
-            JOIN THE COMPETITION
-          </Button>
-        </div>
+        <a
+          href="https://dayofaiaustralia.com/register-2025/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-[#FDC300] hover:bg-yellow-500 text-black rounded-none text-lg px-8 py-3"
+            >
+              JOIN THE COMPETITION
+            </Button>
+          </div>
+        </a>
       </div>
     </section>
   );
