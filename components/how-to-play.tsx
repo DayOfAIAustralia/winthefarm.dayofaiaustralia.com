@@ -6,7 +6,7 @@ const stepsData = [
     step: "1",
     title: "Deliver the lesson",
     description:
-      "Deliver the lesson Deliver Day of AI Australia's Media Literacy, AI and Misinformation lesson during Media Literacy Week (27-31 Oct). Register to access the free materials.",
+      "Deliver Day of AI Australia's Media Literacy, AI and Misinformation lesson during Media Literacy Week (27-31 Oct). Register to access the free materials.",
     imageSrc: "/deliver-lesson.png",
     imageAlt: "Teacher delivering a lesson to students",
   },
