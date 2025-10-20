@@ -19,8 +19,8 @@ export default function RulesPage() {
       <Header />
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
               Competition Terms & Conditions
             </h1>
           </div>
