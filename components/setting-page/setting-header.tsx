@@ -5,7 +5,7 @@ export function SettingHeader() {
         Competition Setting
       </h1>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        Welcome to Animal Farm, where an election is underway and the future hangs in the balance.
+        Welcome to Animal Farm, where an election has been called and the future hangs in the balance.
       </p>
     </div>
   );

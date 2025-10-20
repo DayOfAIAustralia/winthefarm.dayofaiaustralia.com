@@ -38,7 +38,7 @@ export function Timeline() {
       bgColor: "bg-red-600",
     },
     {
-      date: "Mon 17 Nov, 2025",
+      date: "Mon 18 Nov, 2025",
       event: "Winning team announced",
       icon: Trophy,
       color: "text-yellow-700",
