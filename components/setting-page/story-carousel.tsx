@@ -109,13 +109,18 @@ export function StoryCarousel() {
         </Carousel>
 
         {/* Carousel Indicators */}
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-1.5 mt-5">
           {Array.from({ length: count }).map((_, index) => (
             <button
               key={index}
               onClick={() => api?.scrollTo(index)}
-              className={`h-2 w-2 rounded-full transition-all duration-300 ${current === index ? 'w-6 bg-gray-900' : 'bg-gray-400'}`}
               aria-label={`Go to slide ${index + 1}`}
+              className={`
+                transition-all duration-300 focus:outline-none
+                ${current === index 
+                  ? 'h-3 md:h-4 w-8 md:w-10 bg-gray-900 rounded-full'
+                  : 'h-3 md:h-4 w-3 md:w-4 bg-gray-400 rounded-full'}
+              `}
             />
           ))}
         </div>
