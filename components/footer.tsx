@@ -44,6 +44,16 @@ export function Footer() {
                   About Us
                 </a>
               </li>
+              <li>
+                <a href="/pedagogy" className="hover:text-white">
+                  Pedagogy
+                </a>
+              </li>
+              <li>
+                <a href="/scoring" className="hover:text-white">
+                  Scoring
+                </a>
+              </li>
             </ul>
           </div>
           <div>
