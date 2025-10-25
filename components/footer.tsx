@@ -49,6 +49,11 @@ export function Footer() {
                   Pedagogy
                 </a>
               </li>
+              <li>
+                <a href="/scoring" className="hover:text-white">
+                  Scoring
+                </a>
+              </li>
             </ul>
           </div>
           <div>

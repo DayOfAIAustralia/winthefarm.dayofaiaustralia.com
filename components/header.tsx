@@ -25,7 +25,8 @@ const allNavLinks = [
   { href: "/rules", text: "Rules" },
   { href: "/ethics", text: "Ethics" },
   { href: "/about", text: "About us" },
-  { href: "/pedagogy", text: "Pedagogy"}
+  { href: "/pedagogy", text: "Pedagogy"},
+  { href: "/scoring", text: "Scoring"}
 ];
 
 export function Header() {
