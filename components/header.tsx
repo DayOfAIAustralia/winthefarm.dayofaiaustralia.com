@@ -129,7 +129,6 @@ export function Header() {
           ))}
         </ul>
       </div>
-
       <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between gap-3">
           <Link
@@ -157,16 +156,15 @@ export function Header() {
                 <NavigationMenuList>
                   {visibleLinks.map((link) => (
                     <NavigationMenuItem key={link.href}>
-                      <Link href={link.href} legacyBehavior passHref>
-                        <NavigationMenuLink
-                          className={cn(
-                            navigationMenuTriggerStyle(),
-                            "font-bold uppercase"
-                          )}
-                        >
-                          {link.text}
-                        </NavigationMenuLink>
-                      </Link>
+                      <NavigationMenuLink
+                        asChild
+                        className={cn(
+                          navigationMenuTriggerStyle(),
+                          "font-bold uppercase"
+                        )}
+                      >
+                        <Link href={link.href}>{link.text}</Link>
+                      </NavigationMenuLink>
                     </NavigationMenuItem>
                   ))}
 
