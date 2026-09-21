@@ -1,45 +1,46 @@
 import { Calendar, Clock, Trophy, Users, Rocket, Flag } from "lucide-react"
+import { LESSON_NAME, TOWN_NAME } from "@/lib/competition"
 
 export function Timeline() {
   const timelineEvents = [
     {
-      date: "Monday 13 Oct, 2025",
-      event: "Day of AI Australia's Media Literacy and AI lesson available to registered teachers",
+      date: "Monday 5 Oct, 2026",
+      event: `Day of AI Australia's ${LESSON_NAME} lesson available to registered teachers`,
       icon: Rocket,
       color: "text-green-700",
       bgColor: "bg-green-600",
     },
     {
-      date: "Mon 27 Oct – Fri 31 Oct, 2025",
-      event: "Media Literacy Week! Deliver the Media Literacy and AI lesson, students in Years 7-10 register for the competition and build their bots.",
+      date: "Mon 26 Oct – Fri 30 Oct, 2026",
+      event: `Media Literacy Week! Deliver the ${LESSON_NAME} lesson, students in Years 7-10 register for the competition and build their agents.`,
       icon: Users,
       color: "text-purple-700",
       bgColor: "bg-purple-600",
     },
     {
-      date: "Mon 3 Nov, 2025",
-      event: "Animal Farm election campaigns kick-off and bots commence their activities.",
+      date: "Mon 2 Nov, 2026",
+      event: "Campaigns kick-off and agents commence their activities.",
       icon: Flag,
-      color: "text-blue-700",
-      bgColor: "bg-blue-600",
+      color: "text-teal-700",
+      bgColor: "bg-teal-600",
     },
     {
-      date: "Mon 3 Nov – Fri 14 Nov, 2025",
-      event: "Election campaign unfolds in Animal Farm world - media covers the race, citizens are polled, and public opinion shifts. Students can change their strategy throughout the two week competition period.",
+      date: "Mon 2 Nov – Fri 13 Nov, 2026",
+      event: `Information campaigns unfold in ${TOWN_NAME} - local media covers activities, personalities post, citizens are polled, and public opinion shifts. Students can change their strategy throughout the two week competition period.`,
       icon: Clock,
       color: "text-orange-700",
       bgColor: "bg-orange-600",
     },
     {
-      date: "Fri 14 Nov, 2025",
-      event: "Election held in Animal Farm world. Who has won? Which team had the most effective strategy?",
+      date: "Fri 13 Nov, 2026",
+      event: "Citizens vote! What do the animals decide to do? Opt for the new supplement? Or stick with the higher quality feed? Which team had the most effective strategy?",
       icon: Flag,
       color: "text-red-700",
       bgColor: "bg-red-600",
     },
     {
-      date: "Tue 18 Nov, 2025",
-      event: "Winning team announced",
+      date: "Mon 16 Nov, 2026",
+      event: "Winning teams announced",
       icon: Trophy,
       color: "text-yellow-700",
       bgColor: "bg-yellow-600",

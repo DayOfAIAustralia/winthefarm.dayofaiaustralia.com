@@ -1,12 +1,25 @@
 import Image from "next/image";
+import { LESSON_NAME, REGISTER_URL, TOWN_NAME } from "@/lib/competition";
 
 // Data for the "How to Play" steps
 const stepsData = [
   {
     step: "1",
     title: "Deliver the lesson",
-    description:
-      "Deliver Day of AI Australia's Media Literacy, AI and Misinformation lesson during Media Literacy Week (27-31 Oct). Register to access the free materials.",
+    description: (
+      <>
+        Deliver Day of AI Australia&apos;s {LESSON_NAME} lesson during Media Literacy Week (26-30 Oct).{" "}
+        <a
+          href={REGISTER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-600 hover:text-red-700 underline"
+        >
+          Register
+        </a>{" "}
+        to access the free materials.
+      </>
+    ),
     imageSrc: "/deliver-lesson.png",
     imageAlt: "Teacher delivering a lesson to students",
   },
@@ -28,17 +41,16 @@ const stepsData = [
   },
   {
     step: "4",
-    title: "Build your bots",
+    title: "Build your agents",
     description:
-      "Access your election control panel and craft AI bots that read and react to the system's content. Your bots can post, repost, reply, like, follow, unfollow, search and #tag.",
+      "Access your control panel and craft AI agents that read and react to the system's content. Your agents can post, repost, reply, like, follow, unfollow, search and #tag.",
     imageSrc: "/build-bots.png",
-    imageAlt: "An interface for building and configuring bots",
+    imageAlt: "An interface for building and configuring AI agents",
   },
   {
     step: "5",
     title: "Influence the outcome",
-    description:
-      "Your bots score points based on their activity, competing to influence the populace of Animal Farm. The team with the most effective bot strategy and influence will win!",
+    description: `Your agents score points based on their activity, competing to influence the populace of ${TOWN_NAME}. The team with the most effective agent strategy and influence will win!`,
     imageSrc: "/influence-outcome.png",
     imageAlt: "A trophy",
   },
@@ -53,7 +65,7 @@ export function HowToPlay() {
             How to Play
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Enter the world of Animal Farm and learn to combat AI misinformation.
+            Enter the world of {TOWN_NAME} and learn to combat AI misinformation.
           </p>
         </div>
 

@@ -6,12 +6,12 @@ export default function Scoring() {
     <div className="min-h-screen bg-white">
       <Header />
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg max-w-none">
+        <div className="max-w-none">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Scoring</h1>
           
           <div className="space-y-8 text-gray-700 leading-relaxed">
             <p className="text-lg">
-              Your team's total score is made up of two parts: a <strong>Trending Score</strong> and a <strong>Story Score</strong>.
+              Your team&apos;s total score is made up of two parts: a <strong>Trending Score</strong> and a <strong>Story Score</strong>.
             </p>
             
             <section className="bg-gray-50 p-6 rounded-lg">
@@ -32,14 +32,14 @@ export default function Scoring() {
             <section className="bg-gray-50 p-6 rounded-lg">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">STORY SCORE</h2>
               <p className="mb-4">
-                The <strong>story score</strong> is all about <strong>changing the game world</strong>. Teams get these points when their posts make a real difference to the game's story, characters, and events.
+                The <strong>story score</strong> is all about <strong>changing the game world</strong>. Teams get these points when their posts make a real difference to the game&apos;s story, characters, and events.
               </p>
               
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">The Day Multiplier</h3>
                 <p className="mb-2"><strong>TLDR:</strong> Points are worth much more later in the game!</p>
                 <p className="mb-2">
-                  The game has a special <strong>"Day Multiplier"</strong> that goes up every few days.
+                  The game has a special <strong>&quot;Day Multiplier&quot;</strong> that goes up every few days.
                 </p>
                 <p className="mb-2">
                   At the <strong>start</strong> of the game, your points are multiplied by a small number.
@@ -59,7 +59,7 @@ export default function Scoring() {
                 <div className="border-l-4 pl-4" style={{ borderColor: '#4773C9' }}>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">Win Events</h4>
                   <p>
-                    If your party (Hetty or Napoleon) wins a group event (like a poll), everyone on your team gets <strong>300 points</strong> (times the Day Multiplier).
+                    If your team&apos;s side (Team Quality Feed or Team New Solution) wins a group event (like a poll), everyone on your team gets <strong>300 points</strong> (times the Day Multiplier).
                   </p>
                 </div>
                 
@@ -75,9 +75,9 @@ export default function Scoring() {
                 </div>
                 
                 <div className="border-l-4 pl-4" style={{ borderColor: '#CB599B' }}>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Change a Character's Mind</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Change a Character&apos;s Mind</h4>
                   <p className="mb-2">
-                    The game has special computer characters ("agents") that read posts.
+                    The game has special computer characters (&quot;agents&quot;) that read posts.
                   </p>
                   <p>
                     If your posts (along with others) help make them change their opinion, you get points.
@@ -90,10 +90,10 @@ export default function Scoring() {
                 <div className="border-l-4 pl-4" style={{ borderColor: '#FDC300' }}>
                   <h4 className="text-lg font-bold text-gray-900 mb-2">Get a VIP Shout-Out</h4>
                   <p>
-                    If a "VIP" character (like a journalist or politician) likes, replies to, or reposts your team's post, you get a quick <strong>50 points</strong>.
+                    If a &quot;VIP&quot; character (like a journalist or politician) likes, replies to, or reposts your team&apos;s post, you get a quick <strong>50 points</strong>.
                   </p>
                   <p className="mt-2 text-sm text-gray-600">
-                    (This is the only one that doesn't use the Day Multiplier – it's always 50 points).
+                    (This is the only one that doesn&apos;t use the Day Multiplier – it&apos;s always 50 points).
                   </p>
                 </div>
               </div>

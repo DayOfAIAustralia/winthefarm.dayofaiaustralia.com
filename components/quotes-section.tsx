@@ -4,19 +4,19 @@ import { Quote } from "lucide-react";
 export function QuotesSection() {
   const quotes = [
     {
-      text: "During a federal election in Australia, it is reasonable to expect that there could be AI used in election communication... to mislead voters.",
-      author: "Australian Electoral Commission",
-      title: "AI and Elections",
+      text: "45% of medical advice found on TikTok was identified as false or misleading - rising to 67% for alternative medicine content.",
+      author: "The Intake (Tebra)",
+      title: "2026",
     },
     {
-      text: "In the lead up to the 2025 Australian federal election, 17% of X accounts engaging in election conversations were fake, actively driving political narratives and coordinating attacks on both major parties.",
-      author: "Cyabra Report",
-      title: "Online Manipulation Ahead of Australia's 2025 Elections",
+      text: "Nearly two-thirds (63%) of teens get health information from social media.",
+      author: "Royal Children's Hospital",
+      title: "National Child Health Poll, 2025",
     },
     {
-      text: "On X alone, 10,000 bot accounts rapidly posted tens of thousands of messages of pro-Kremlin content attributed to US and European celebrities.",
-      author: "Dr Jake Renzella, Dr Vlada Rozova",
-      title: "The Dead Internet Theory",
+      text: "Scammers have created deepfake videos of some of Australia's most trusted doctors to sell fraudulent products online.",
+      author: "Medical Republic",
+      title: "2026",
     },
   ];
 
@@ -25,7 +25,7 @@ export function QuotesSection() {
       <div className="container mx-auto px-4 ">
         <div className="text-center mb-12 ">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-dm-serif">
-            AI bots are being used to manipulate elections
+            AI agents are being used to manipulate young people
           </h2>
         </div>
 

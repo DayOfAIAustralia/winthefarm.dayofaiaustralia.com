@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { cn } from "@/lib/utils";
+import { COMPETITION_NAME, REGISTER_URL } from "@/lib/competition";
 
 // Navigation Links
 const allNavLinks = [
@@ -95,8 +96,8 @@ export function Header() {
     if (navContainerRef.current) ro.observe(navContainerRef.current);
 
     const onFonts = () => update(navContainerRef.current);
-    if ((document as any).fonts?.ready) {
-      (document as any).fonts.ready.then(onFonts).catch(() => {});
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(onFonts).catch(() => {});
     } else {
       setTimeout(onFonts, 250);
     }
@@ -143,7 +144,7 @@ export function Header() {
               className="object-contain"
             />
             <h1 className="text-2xl font-bold text-gray-900 font-dm-serif">
-              Win the Farm
+              {COMPETITION_NAME}
             </h1>
           </Link>
 
@@ -236,7 +237,7 @@ export function Header() {
 
             <div ref={registerBtnRef} className="pl-3 shrink-0">
               <a
-                href="https://dayofaiaustralia.com/register-2025/"
+                href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -270,7 +271,7 @@ export function Header() {
                 </Link>
               ))}
               <a
-                href="https://dayofaiaustralia.com/register-2025/"
+                href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4"

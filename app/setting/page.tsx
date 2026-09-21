@@ -2,9 +2,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { SettingHeader } from "@/components/setting-page/setting-header";
 import { Overview } from "@/components/setting-page/overview";
-import { Candidates } from "@/components/setting-page/candidates";
-import { StoryCarousel } from "@/components/setting-page/story-carousel";
-import { AboutSection } from "@/components/setting-page/about";
+import { Debate } from "@/components/setting-page/debate";
 
 export default function SettingPage() {
   return (
@@ -14,9 +12,7 @@ export default function SettingPage() {
         <div className="max-w-6xl mx-auto space-y-16 md:space-y-24">
           <SettingHeader />
           <Overview />
-          <StoryCarousel />
-          <Candidates />
-          <AboutSection />
+          <Debate />
         </div>
       </main>
       <Footer />

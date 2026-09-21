@@ -6,12 +6,12 @@ export default function Pedagogy() {
     <div className="min-h-screen bg-white">
       <Header />
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg max-w-none">
+        <div className="max-w-none">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Pedagogy</h1>
           
           <div className="space-y-6 text-gray-700 leading-relaxed">
             <p>
-              Win the Farm employs a proven educational approach: teaching critical AI, media, and digital literacy by having students practice the very techniques they need to recognise and resist. Just like cybersecurity's well-established "Capture the Flag" competitions, where students learn defence by practicing offensive techniques in safe environments, or marketing courses where students create persuasive campaigns to understand consumer psychology, the Win the Farm competition provides students with safe AI tools to manipulate a fictional election within a completely artificial social media landscape.
+              On the Fence employs a proven educational approach: teaching critical AI, media, as well as health and digital literacy, by having students practice the very techniques they need to recognise and resist. Just like cybersecurity&apos;s well-established &quot;Capture the Flag&quot; competitions, where students learn defence by practicing offensive techniques in safe environments, or marketing courses where students create persuasive campaigns to understand consumer psychology, the On the Fence competition provides students with safe AI tools to manipulate a community decision within a completely artificial social media landscape.
             </p>
             
             <p>
@@ -19,11 +19,11 @@ export default function Pedagogy() {
             </p>
             
             <p>
-              The methodology draws on psychological inoculation theory, a framework that shows how exposure to weakened examples of manipulation builds resistance. Research demonstrates that prebunking interventions (where students are pre-emptively exposed to weakened examples of manipulation techniques) can significantly reduce susceptibility to misinformation across cultures and demographics, improving people's ability to recognise manipulation techniques and discern trustworthy from untrustworthy content <a href="#ref2" className="text-blue-600 hover:text-blue-800 underline">[2]</a>. By actively designing bot strategies and crafting narratives, students develop a deep, embodied understanding of algorithmic manipulation that transforms them from potential victims into critical analysts.
+              The methodology draws on psychological inoculation theory, a framework that shows how exposure to weakened examples of manipulation builds resistance. Research demonstrates that prebunking interventions (where students are pre-emptively exposed to weakened examples of manipulation techniques) can significantly reduce susceptibility to misinformation across cultures and demographics, improving people&apos;s ability to recognise manipulation techniques and discern trustworthy from untrustworthy content <a href="#ref2" className="text-blue-600 hover:text-blue-800 underline">[2]</a>. By actively designing agent strategies and crafting narratives, students develop a deep, embodied understanding of algorithmic manipulation that transforms them from potential victims into critical analysts.
             </p>
             
             <p>
-              This hands-on approach doesn't teach students to be manipulators; rather, it demystifies manipulation itself, inoculating young Australians against these tactics when deployed against them in real democratic processes.
+              This hands-on approach doesn&apos;t teach students to be manipulators; rather, it demystifies manipulation itself, inoculating young Australians against these tactics when deployed against them in real life situations.
             </p>
           </div>
           
@@ -43,7 +43,7 @@ export default function Pedagogy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Additional Reading</h2>
             <div className="text-sm text-gray-600">
               <p>
-                Wenting Z, Amanda D, Philipp K. M, Janis W, Natalie B, Examining learners' engagement patterns and knowledge outcome in an experiential learning intervention for youth's social media literacy. Computers & Education. 216(2024). <a href="https://doi.org/10.1016/j.compedu.2024.105046" className="text-blue-600 hover:text-blue-800 underline">https://doi.org/10.1016/j.compedu.2024.105046</a>
+                Wenting Z, Amanda D, Philipp K. M, Janis W, Natalie B, Examining learners&apos; engagement patterns and knowledge outcome in an experiential learning intervention for youth&apos;s social media literacy. Computers & Education. 216(2024). <a href="https://doi.org/10.1016/j.compedu.2024.105046" className="text-blue-600 hover:text-blue-800 underline">https://doi.org/10.1016/j.compedu.2024.105046</a>
               </p>
             </div>
           </div>

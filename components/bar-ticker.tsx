@@ -2,9 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { TEAMS } from "@/lib/competition";
+
+const left = TEAMS.newSolution;
+const right = TEAMS.qualityFeed;
 
 export const BarTicker = () => {
-  const [hettyPercentage, setHettyPercentage] = useState(50);
+  const [leftPercentage, setLeftPercentage] = useState(50);
   const velocityRef = useRef(0);
 
   useEffect(() => {
@@ -16,7 +20,7 @@ export const BarTicker = () => {
     const MAX = 58;
 
     const interval = setInterval(() => {
-      setHettyPercentage((prev) => {
+      setLeftPercentage((prev) => {
         const force = PULL * (CENTER - prev);
         const noise = (Math.random() - 0.5) * 2 * NOISE_RANGE;
 
@@ -37,43 +41,41 @@ export const BarTicker = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const napoleonPercentage = 100 - hettyPercentage;
+  const rightPercentage = 100 - leftPercentage;
 
   return (
     <div className="w-full max-w-4xl relative">
       <div className="flex h-14 w-full overflow-hidden rounded-none border-black border-2 relative">
-        {/* Hetty's Bar */}
+        {/* Left bar: Team New Solution */}
         <div
-          className="flex items-center justify-start p-2 bg-[#3571C0] transition-all duration-1000 ease-out"
-          style={{ width: `${hettyPercentage}%` }}
+          className="flex items-center justify-start p-2 bg-teal-600 transition-all duration-1000 ease-out"
+          style={{ width: `${leftPercentage}%` }}
         >
-          {/* Mobile Hetty Info */}
           <div className="flex items-center gap-1 rounded-full bg-black/30 pl-1 pr-3 py-1 md:hidden">
             <Image
-              src="/hetty-square.png"
-              alt="Hetty"
+              src={left.imageSrc}
+              alt={left.imageAlt}
               width={100}
               height={100}
               className="rounded-full w-10 h-10"
             />
             <div className="text-white font-black leading-tight">
-              <span className="hidden sm:inline text-sm">HETTY </span>
-              <span className="text-lg">{Math.round(hettyPercentage)}%</span>
+              <span className="hidden sm:inline text-sm uppercase">{left.shortName} </span>
+              <span className="text-lg">{Math.round(leftPercentage)}%</span>
             </div>
           </div>
         </div>
 
-        {/* Napoleon's Bar */}
-        <div className="flex-1 flex items-center justify-end p-2 bg-[#FE5F40] transition-all duration-1000 ease-out">
-          {/* Mobile Napoleon Info */}
+        {/* Right bar: Team Quality Feed */}
+        <div className="flex-1 flex items-center justify-end p-2 bg-purple-600 transition-all duration-1000 ease-out">
           <div className="flex items-center gap-1 rounded-full bg-black/30 pr-1 pl-3 py-1 md:hidden">
             <div className="text-white font-black leading-tight text-right">
-              <span className="text-lg">{Math.round(napoleonPercentage)}% </span>
-              <span className="hidden sm:inline text-sm">NAPOLEON </span>
+              <span className="text-lg">{Math.round(rightPercentage)}% </span>
+              <span className="hidden sm:inline text-sm uppercase">{right.shortName} </span>
             </div>
             <Image
-              src="/napoleon-square.png"
-              alt="Napoleon"
+              src={right.imageSrc}
+              alt={right.imageAlt}
               width={100}
               height={100}
               className="rounded-full w-10 h-10"
@@ -90,38 +92,38 @@ export const BarTicker = () => {
 
       {/* Mobile names below bar */}
       <div className="flex justify-between items-center mt-2 px-1 sm:hidden">
-        <span className="text-blue-900 font-black uppercase text-sm">
-          Hetty
+        <span className="text-teal-900 font-black uppercase text-sm">
+          {left.shortName}
         </span>
-        <span className="text-red-900 font-black uppercase text-sm">
-          Napoleon
+        <span className="text-purple-900 font-black uppercase text-sm">
+          {right.shortName}
         </span>
       </div>
 
       {/* Desktop Labels */}
       <div className="hidden mb-2 md:flex justify-between items-center text-lg font-semibold uppercase">
-        <div className="text-blue-900 font-black flex items-center gap-2">
+        <div className="text-teal-900 font-black flex items-center gap-2">
           <Image
-            src="/hetty-square.png"
-            alt="Hetty"
+            src={left.imageSrc}
+            alt={left.imageAlt}
             width={100}
             height={100}
             className="rounded"
           />
-          <span className="text-md md:text-xl">Hetty</span>
+          <span className="text-md md:text-xl">{left.shortName}</span>
           <span className="text-lg md:text-2xl">
-            {Math.round(hettyPercentage)}%
+            {Math.round(leftPercentage)}%
           </span>
         </div>
 
-        <div className="text-red-900 font-black flex items-center gap-2">
+        <div className="text-purple-900 font-black flex items-center gap-2">
           <span className="text-lg md:text-2xl">
-            {Math.round(napoleonPercentage)}%
+            {Math.round(rightPercentage)}%
           </span>
-          <span className="text-md md:text-xl">Napoleon</span>
+          <span className="text-md md:text-xl">{right.shortName}</span>
           <Image
-            src="/napoleon-square.png"
-            alt="Napoleon"
+            src={right.imageSrc}
+            alt={right.imageAlt}
             width={100}
             height={100}
             className="rounded"

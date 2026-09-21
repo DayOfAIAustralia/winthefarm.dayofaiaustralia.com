@@ -6,9 +6,10 @@ import { Suspense } from 'react';
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Win the Farm | Day of AI Australia",
+  metadataBase: new URL("https://ctn-doai.vercel.app"),
+  title: "On the Fence | Day of AI Australia",
   description:
-    "Register now for Australia's ultimate election challenge. Create AI bots to win the farm in a simulated election over three weeks.",
+    "Register now for Australia's ultimate health information challenge. Students in Years 7-10 create AI agents to shape public opinion in a simulated health literacy debate.",
 };
 
 const dmserif = DM_Serif_Text({

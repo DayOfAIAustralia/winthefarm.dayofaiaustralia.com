@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { COMPETITION_NAME, LESSON_URL, REGISTER_URL } from "@/lib/competition";
 
 export function Footer() {
   return (
@@ -6,9 +7,9 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Win the Farm</h3>
+            <h3 className="text-lg font-semibold mb-4">{COMPETITION_NAME}</h3>
             <p className="text-gray-400 text-sm">
-              Australia&apos;s most innovative national competition exploring the intersection of AI, media literacy, and elections.
+              Australia&apos;s most innovative national competition exploring the intersection of AI, media literacy, and health literacy.
             </p>
           </div>
           <div>
@@ -25,34 +26,34 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="/rules" className="hover:text-white">
+                <Link href="/rules" className="hover:text-white">
                   Competition terms and conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/ethics" className="hover:text-white">
+                <Link href="/ethics" className="hover:text-white">
                   Ethics
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/setting" className="hover:text-white">
+                <Link href="/setting" className="hover:text-white">
                   Setting
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="hover:text-white">
+                <Link href="/about" className="hover:text-white">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/pedagogy" className="hover:text-white">
+                <Link href="/pedagogy" className="hover:text-white">
                   Pedagogy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/scoring" className="hover:text-white">
+                <Link href="/scoring" className="hover:text-white">
                   Scoring
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -60,12 +61,12 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="https://dayofaiaustralia.com/register-2025/" className="hover:text-white">
+                <a href={REGISTER_URL} className="hover:text-white">
                   Register as a teacher
                 </a>
               </li>
               <li>
-                <a href="https://dayofaiaustralia.com/lessons/additional-lesson-media-literacy-week/" className="hover:text-white">
+                <a href={LESSON_URL} className="hover:text-white">
                   Access the lesson
                 </a>
               </li>
@@ -74,14 +75,18 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>hello@dayofaiaustralia.com</li>
+              <li>
+                <a href="mailto:hello@dayofaiaustralia.com" className="hover:text-white">
+                  hello@dayofaiaustralia.com
+                </a>
+              </li>
               <li>Follow @dayofaiaustral1</li>
-              <li>#winthefarm25</li>
+              {/* TODO: add the 2026 competition hashtag once confirmed. */}
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2025 Win the Farm Competition. All rights reserved.</p>
+          <p>&copy; 2026 {COMPETITION_NAME} Competition. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,62 +1,52 @@
 import Image from "next/image";
 
+// Lockup order per the 2026 brief: DOAI, UNSW, USYD, SHLL, DLCLF, UNSW AI, UNSW IFCYBER.
+// TODO: add the University of Sydney, SHLL and DLCLF logos to /public/logos and
+// uncomment their entries once the files are supplied.
+const partnerLogos = [
+  {
+    src: "/logos/doai-logo-colour.png",
+    alt: "Day of AI Australia",
+    width: 90,
+    height: 112,
+  },
+  {
+    src: "/logos/new-UNSW-logo-png-vertical-crest.png",
+    alt: "UNSW Sydney",
+    width: 100,
+    height: 100,
+  },
+  // { src: "/logos/usyd.png", alt: "The University of Sydney", width: 200, height: 100 },
+  // { src: "/logos/shll.png", alt: "SHLL", width: 200, height: 100 },
+  // { src: "/logos/dlclf.png", alt: "DLCLF", width: 200, height: 100 },
+  {
+    src: "/logos/unsw-ai-institute.jpg",
+    alt: "UNSW AI Institute",
+    width: 220,
+    height: 100,
+  },
+  {
+    src: "/logos/Logo__IFCYBER_Landscape_Colour Positive (2).png",
+    alt: "UNSW Institute for Cyber Security",
+    width: 200,
+    height: 100,
+  },
+];
+
 export const Logos = () => (
   <section className="bg-white py-12 border-t">
     <div className="container mx-auto px-4">
-      <div className="flex flex-col items-center justify-center gap-8">
-        {/* Top row - UNSW logos */}
-        <div className="flex items-center justify-center gap-12 flex-wrap">
+      <div className="flex items-center justify-center gap-12 flex-wrap">
+        {partnerLogos.map((logo) => (
           <Image
-            src="/logos/new-UNSW-logo-png-vertical-crest.png"
-            alt="UNSW Sydney"
-            width={100}
-            height={100}
+            key={logo.src}
+            src={logo.src}
+            alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
             className="object-contain"
           />
-          <Image
-            src="/logos/unsw-ai-institute.jpg"
-            alt="UNSW AI Institute"
-            width={220}
-            height={100}
-            className="object-contain"
-          />
-          <Image
-            src="/logos/Logo__IFCYBER_Landscape_Colour Positive (2).png"
-            alt="UNSW Institute for Cyber Security"
-            width={200}
-            height={100}
-            className="object-contain"
-          />
-        </div>
-
-        <div className="flex items-center justify-center gap-12 flex-wrap">
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-12 flex-wrap mb-4">
-              <Image
-                src="/logos/TDMFOUNDATION_PRIMARYLOGO.png"
-                alt="TDM Foundation"
-                width={120}
-                height={80}
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
-        <p className="text-gray-700 text-sm">
-          together with <span className="font-bold">ABC Education</span> and{" "}
-          <span className="font-bold">Australian Media Literacy Alliance</span>
-        </p>
-
-        <div className="flex flex-col items-center justify-center gap-4 pt-8">
-          <p className="text-gray-700 text-sm">Win the Farm is powered by</p>
-          <Image
-            src="/logos/ctn-logo.png"
-            alt="Capture The Narrative"
-            width={120}
-            height={100}
-            className="object-contain"
-          />
-        </div>
+        ))}
       </div>
     </div>
   </section>

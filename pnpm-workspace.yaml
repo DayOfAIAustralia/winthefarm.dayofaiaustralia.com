@@ -1,0 +1,8 @@
+allowBuilds:
+  '@tailwindcss/oxide': true
+  sharp: true
+  unrs-resolver: true
+
+# Next.js 15.5 pins an old postcss internally; lift it to the patched line.
+overrides:
+  postcss: ^8.5.28

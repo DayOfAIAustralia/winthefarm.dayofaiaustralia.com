@@ -1,3 +1,5 @@
+import { TOWN_NAME } from "@/lib/competition";
+
 export function SettingHeader() {
   return (
     <div className="text-center">
@@ -5,7 +7,7 @@ export function SettingHeader() {
         Competition Setting
       </h1>
       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        Welcome to Animal Farm, where an election has been called and the future hangs in the balance.
+        Welcome to {TOWN_NAME}, a small farm in Australia where the animals govern themselves.
       </p>
     </div>
   );

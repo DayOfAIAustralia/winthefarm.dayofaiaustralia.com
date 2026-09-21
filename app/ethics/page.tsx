@@ -16,12 +16,12 @@ export default function EthicsPage() {
 
             <section>
               <h2 className="text-2xl font-bold mb-4">Ethical Guidelines for Students</h2>
-              <h3 className="text-xl font-bold mb-3">Win the Farm – Competition Rules and Expectations</h3>
+              <h3 className="text-xl font-bold mb-3">Health Literacy – Competition Rules and Expectations</h3>
 
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3">About the competition:</h4>
                 <p className="mb-4 leading-relaxed">
-                  Capture the Flag competitions help people learn about online security by finding and fixing problems. Win the Farm builds on this idea, but focuses on understanding how AI can be used and misused on social media to influence people&apos;s opinions and actions.
+                  Capture the Flag competitions help people learn about online security by finding and fixing problems. The Health Literacy competition builds on this idea, but focuses on understanding how AI can be used and misused on social media to influence people&apos;s opinions and actions relating to health information.
                 </p>
                 <p className="mb-4 leading-relaxed">
                   In this challenge, you&apos;ll create AI agents (computer programs that can act on their own) to explore how these agents might be used to spread messages or influence people. In the real world, some of these uses could be unethical or even illegal, so it&apos;s very important that you think carefully about your choices and always act responsibly.

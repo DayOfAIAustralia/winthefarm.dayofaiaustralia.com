@@ -1,15 +1,16 @@
 import { Bot, Trophy, Users, BookOpen } from "lucide-react";
+import { PLATFORM_NAME, TOWN_NAME } from "@/lib/competition";
 
 export function TheChallengeSection() {
   return (
-    <div className="p-8 bg-gradient-to-r from-red-50 to-blue-50">
+    <div className="p-8 bg-gradient-to-r from-teal-50 to-purple-50">
       <div className="text-center mb-8">
         <h3 className="text-3xl font-bold text-gray-900 mb-4">The Challenge</h3>
         <p className="text-lg max-w-2xl text-balance mx-auto leading-relaxed">
           Through a controlled, artificial social media landscape, Years 7-10 students will
           be charged with the manipulation of social media narratives by
-          developing and deploying bots that amplify and suppress target
-          messages on the fictional Barn Wall social media platform.
+          developing and deploying AI agents that amplify and suppress target
+          messages on the fictional {PLATFORM_NAME} social media platform.
         </p>
       </div>
 
@@ -17,18 +18,18 @@ export function TheChallengeSection() {
         <div className="text-center">
           <BookOpen className="w-12 h-12 text-green-600 mx-auto mb-3" />
           <p className="font-bold text-gray-900 ">Teach the Lesson</p>
-          <p className=" text-sm">During Media Literacy Week (27-31 Oct)</p>
+          <p className=" text-sm">During Media Literacy Week (26-30 Oct)</p>
         </div>
         <div className="text-center">
-          <Users className="w-12 h-12 text-red-600 mx-auto mb-3" />
+          <Users className="w-12 h-12 text-purple-600 mx-auto mb-3" />
           <p className="font-bold text-gray-900 ">Students Team Up</p>
           <p className=" text-sm">Students form teams in your classroom, or play solo</p>
         </div>
         <div className="text-center">
-          <Bot className="w-12 h-12 text-blue-600 mx-auto mb-3" />
-          <p className="font-bold text-gray-900 ">Deploy Bots</p>
+          <Bot className="w-12 h-12 text-teal-600 mx-auto mb-3" />
+          <p className="font-bold text-gray-900 ">Deploy Agents</p>
           <p className=" text-sm">
-            Students create up to 3 AI bots to influence the Animal Farm citizens
+            Students create up to 3 AI agents to influence the citizens of {TOWN_NAME}
           </p>
         </div>
         <div className="text-center">
