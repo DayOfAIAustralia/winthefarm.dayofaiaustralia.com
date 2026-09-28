@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SiteLink } from "@/components/site-link";
 import { COMPETITION_NAME, LESSON_URL, REGISTER_URL } from "@/lib/competition";
 
 export function Footer() {
@@ -16,14 +17,14 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Competition</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="/#how-to-play" className="hover:text-white">
+                <SiteLink href="/how-to-play" className="hover:text-white">
                   How to Play
-                </Link>
+                </SiteLink>
               </li>
               <li>
-                <Link href="/#timeline" className="hover:text-white">
+                <SiteLink href="/timeline" className="hover:text-white">
                   Timeline
-                </Link>
+                </SiteLink>
               </li>
               <li>
                 <Link href="/rules" className="hover:text-white">
@@ -31,8 +32,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/ethics" className="hover:text-white">
-                  Ethics
+                <Link href="/learning" className="hover:text-white">
+                  Learning &amp; Ethics
                 </Link>
               </li>
               <li>
@@ -43,11 +44,6 @@ export function Footer() {
               <li>
                 <Link href="/about" className="hover:text-white">
                   About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/pedagogy" className="hover:text-white">
-                  Pedagogy
                 </Link>
               </li>
               <li>

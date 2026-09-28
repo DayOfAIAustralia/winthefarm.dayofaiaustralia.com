@@ -16,7 +16,7 @@ const debateCards = [
     style: "Steady and traditional.",
   },
   {
-    ...TEAMS.newSolution,
+    ...TEAMS.omni01,
     position:
       "Spend this season's resources on the new supplement, promising faster, bigger results.",
     theCase: [

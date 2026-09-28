@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { TEAMS } from "@/lib/competition";
 
-const left = TEAMS.newSolution;
+const left = TEAMS.omni01;
 const right = TEAMS.qualityFeed;
 
 export const BarTicker = () => {
@@ -49,7 +49,7 @@ export const BarTicker = () => {
         aria-hidden="true"
         className="relative flex h-5 w-full overflow-hidden sm:h-6"
       >
-        {/* Left bar: Team New Solution */}
+        {/* Left bar: Team OMNI-01 */}
         <div
           className={`${left.colors.bar} transition-[width] duration-1000 ease-out motion-reduce:transition-none`}
           style={{ width: `${leftPercentage}%` }}

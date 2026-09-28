@@ -1,96 +1,125 @@
 import { COMPETITION_NAME, LESSON_NAME } from "@/lib/competition";
 
+type CreditPersonProps = {
+  name: string;
+  role?: string;
+};
+
+function CreditPerson({ name, role }: CreditPersonProps) {
+  return (
+    <li className="min-w-0">
+      <p className="text-lg font-semibold leading-7 text-gray-900">{name}</p>
+      {role && <p className="mt-1 text-base leading-6 text-gray-600">{role}</p>}
+    </li>
+  );
+}
+
 export function Credits() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">About Us</h1>
-
-        <div className="mb-12">
-          <p className="mb-4">
+    <div className="mx-auto max-w-6xl px-6 py-14 sm:py-20 lg:px-8">
+      <div className="grid gap-8 md:grid-cols-[1fr_2fr] md:gap-12">
+        <div>
+          <div aria-hidden="true" className="mb-6 h-1.5 w-12 bg-[#FDC300]" />
+          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 sm:text-6xl">
+            About Us
+          </h1>
+        </div>
+        <div className="space-y-5">
+          <p className="text-xl leading-8 text-gray-900">
             Day of AI Australia&apos;s &quot;{LESSON_NAME}&quot; lesson
             and {COMPETITION_NAME} wouldn&apos;t be possible without the hard work and
             dedication of an exceptional team.
           </p>
-          <p className="mb-4">
-            This initiative was made possible with funding from Google.org as
-            part of the 2025 GenAI Accelerator program, and with support of UNSW&apos;s{" "}
-            <a
-              href="https://capturethenarrative.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-red-600 hover:text-red-700 underline"
-            >
-              Capture the Narrative
-            </a>.
+          <p className="text-base leading-7 text-gray-600">
+            The new Health literacy and AI lesson and {COMPETITION_NAME} game
+            are a collaboration with UNSW School of Computer Science and Engineering,
+            Sydney Health Literacy Lab from University of Sydney, and Digital Lies
+            and Cyber Literacy. This initiative was made possible with support from
+            Google.org as part of the GenAI Accelerator program.
           </p>
-
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mt-8 mb-4">Leads</h3>
-            <div className="space-y-2">
-              <p>
-                <span className="font-bold">Natasha Banks</span> - Program
-                Director, Day of AI Australia
-              </p>
-              <p>
-                <span className="font-bold">Dr Jake Renzella</span> - Senior Lecturer in Computer Science, UNSW Sydney
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">{COMPETITION_NAME} Developers</h3>
-            <div className="space-y-2">
-              <p>
-                <span className="font-bold">Joel Paul</span> - Software
-                Developer, Day of AI Australia
-              </p>
-              <p>
-                <span className="font-bold">Oliver Xu</span> - Software
-                Developer, Day of AI Australia
-              </p>
-
-              <p className="py-2 italic">With thanks to</p>
-              <p>
-                <span className="font-bold">Dr Hammond Pearce</span> - Lead organiser (Capture the Narrative), UNSW Sydney
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">Media Literacy Lesson</h3>
-            <p>
-              <span className="font-bold">Jac Manison</span> - Curriculum Lead,
-              Day of AI Australia
-            </p>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">
-              Illustrations for {COMPETITION_NAME}
-            </h3>
-            <p>
-              <span className="font-bold">Moli Bagmar Jain</span>
-            </p>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">With Special Thanks To</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              <p>Prof Debi Ashenden</p>
-              <p>Dr Sue Keay</p>
-              <p>Dr Rahat Masood</p>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t">
-            <p>
-              And perhaps most importantly, a very special thanks to all the teachers and students who helped
-              shape &quot;{LESSON_NAME}&quot; and {COMPETITION_NAME} - without
-              your input this would not have been possible!
-            </p>
-          </div>
         </div>
+      </div>
+
+      <section aria-labelledby="credits-leads" className="mt-12 rounded-xl bg-[#FCF8EB] p-6 sm:mt-16 sm:p-8">
+        <h2 id="credits-leads" className="mb-6 text-3xl leading-tight text-gray-900">
+          Leads
+        </h2>
+        <ul className="grid gap-6 md:grid-cols-2 md:gap-12">
+          <CreditPerson name="Natasha Banks" role="Program Director, Day of AI Australia" />
+          <CreditPerson name="Dr Jake Renzella" role="Senior Lecturer in Computer Science, UNSW Sydney" />
+        </ul>
+      </section>
+
+      <div className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2 md:gap-y-12">
+        <section aria-labelledby="credits-developers" className="border-t border-gray-200 pt-6">
+          <h2 id="credits-developers" className="mb-6 text-2xl leading-snug text-gray-900">
+            {COMPETITION_NAME} Developers
+          </h2>
+          <ul className="space-y-5">
+            <CreditPerson name="Joel Paul" role="Software Developer, Day of AI Australia" />
+            <CreditPerson name="Oliver Xu" role="Software Developer, Day of AI Australia" />
+          </ul>
+          <div className="mt-6 border-l-2 border-[#FDC300] pl-4">
+            <p className="mb-2 text-sm italic text-gray-600">With thanks to</p>
+            <ul>
+              <CreditPerson name="Dr Hammond Pearce" role="Lead organiser (Capture the Narrative), UNSW Sydney" />
+            </ul>
+          </div>
+        </section>
+
+        <section aria-labelledby="credits-lesson" className="border-t border-gray-200 pt-6">
+          <h2 id="credits-lesson" className="mb-6 text-2xl leading-snug text-gray-900">
+            Health Literacy Lesson
+          </h2>
+          <ul className="space-y-5">
+            <CreditPerson name="Jac Manison" role="Curriculum Lead, Day of AI Australia" />
+            <CreditPerson name="Natasha Banks" role="Program Director, Day of AI Australia" />
+          </ul>
+        </section>
+
+        <section aria-labelledby="credits-illustrations" className="border-t border-gray-200 pt-6">
+          <h2 id="credits-illustrations" className="mb-6 text-2xl leading-snug text-gray-900">
+            Illustrations for {COMPETITION_NAME}
+          </h2>
+          <ul>
+            <CreditPerson name="Olivia Mack" />
+          </ul>
+        </section>
+
+        <section aria-labelledby="credits-health-lab" className="border-t border-gray-200 pt-6">
+          <h2 id="credits-health-lab" className="mb-6 text-2xl leading-snug text-gray-900">
+            Sydney Health Literacy Lab{" "}
+            <span className="mt-2 block font-sans text-base font-normal leading-6 text-gray-600">
+              from University of Sydney
+            </span>
+          </h2>
+          <ul className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
+            <CreditPerson name="Dr Julie Ayre" />
+            <CreditPerson name="Mariah Issa" />
+            <CreditPerson name="Dr Kirsten McCaffery" />
+            <CreditPerson name="Dr Melody Taba" />
+          </ul>
+        </section>
+      </div>
+
+      <section aria-labelledby="credits-special-thanks" className="mt-12 border-y border-gray-200 py-8 sm:mt-14">
+        <h2 id="credits-special-thanks" className="mb-6 text-2xl leading-snug text-gray-900">
+          With Special Thanks To
+        </h2>
+        <ul className="grid gap-3 sm:grid-cols-3 sm:gap-6">
+          <CreditPerson name="Prof Debi Ashenden" />
+          <CreditPerson name="Dr Sue Keay" />
+          <CreditPerson name="Dr Rahat Masood" />
+        </ul>
+      </section>
+
+      <div className="mx-auto max-w-3xl pt-12 text-center sm:pt-14">
+        <div aria-hidden="true" className="mx-auto mb-6 h-1 w-10 bg-[#FDC300]" />
+        <p className="font-dm-serif text-xl leading-8 text-gray-700 sm:text-2xl sm:leading-9">
+          And perhaps most importantly, a very special thanks to all the teachers and students who helped
+          shape the lesson and game - without
+          your input this would not have been possible!
+        </p>
       </div>
     </div>
   );

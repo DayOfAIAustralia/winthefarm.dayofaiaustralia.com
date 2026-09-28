@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import ShadowHtml from "@/components/shadow-html";
 
 export default function RulesPage() {
@@ -15,8 +13,7 @@ export default function RulesPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Header />
+    <div className="flex-1 bg-gray-50 flex flex-col">
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-4 mb-12">
@@ -30,7 +27,6 @@ export default function RulesPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

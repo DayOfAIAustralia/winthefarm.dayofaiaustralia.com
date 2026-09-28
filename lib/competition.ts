@@ -8,12 +8,12 @@ export const TOWN_NAME = "Coolabah Creek";
 export const PLATFORM_NAME = "GumDrop";
 
 export const TEAMS = {
-  newSolution: {
-    name: "Team New Solution",
-    shortName: "New Solution",
+  omni01: {
+    name: "Team OMNI-01",
+    shortName: "Team OMNI-01",
     slogan: "Better Results, Faster.",
     imageSrc: "/team-new-solution.png",
-    imageAlt: "Team New Solution: a sheep, snake and emu",
+    imageAlt: "Team OMNI-01: a sheep, snake and emu",
     colors: {
       bar: "bg-[#E74043]",
       bg: "bg-[#E74043]/5",

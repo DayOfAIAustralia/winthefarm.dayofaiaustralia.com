@@ -65,7 +65,7 @@ export function HowToPlay() {
             How to Play
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Enter the world of {TOWN_NAME} and learn to combat AI misinformation.
+            Enter the world of {TOWN_NAME} and learn to combat AI misinformation and disinformation.
           </p>
         </div>
 

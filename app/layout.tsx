@@ -3,6 +3,9 @@ import { DM_Serif_Text, Figtree } from "next/font/google";
 import Script from 'next/script'; // Import Script
 import GTMAnalytics from '@/components/gtm-analytics';
 import { Suspense } from 'react';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
+import { HomeSectionScroll } from '@/components/site-link';
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -51,7 +54,7 @@ export default function RootLayout({
           `,
         }}
       />
-      <body>
+      <body className="flex min-h-screen flex-col">
         {/* GTM Noscript */}
         <noscript>
           <iframe
@@ -64,9 +67,12 @@ export default function RootLayout({
         
         <Suspense fallback={null}>
           <GTMAnalytics />
+          <HomeSectionScroll />
         </Suspense>
 
-        {children}
+        <Header />
+        <div className="flex flex-1 flex-col">{children}</div>
+        <Footer />
       </body>
     </html>
   );

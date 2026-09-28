@@ -135,6 +135,11 @@ h6 {
 }
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+    scroll-padding-top: 6rem;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }

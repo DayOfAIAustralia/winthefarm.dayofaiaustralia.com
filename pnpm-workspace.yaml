@@ -3,6 +3,14 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
 
-# Next.js 15.5 pins an old postcss internally; lift it to the patched line.
+# Keep Next.js's internal PostCSS on the current patched release.
 overrides:
   postcss: ^8.5.28
+
+# eslint.config.mjs wraps these legacy rule APIs with @eslint/compat.
+# Scope the compatibility exceptions to the versions verified with ESLint 10.
+peerDependencyRules:
+  allowedVersions:
+    'eslint-plugin-import@2.32.0>eslint': ^10.11.0
+    'eslint-plugin-jsx-a11y@6.10.2>eslint': ^10.11.0
+    'eslint-plugin-react@7.37.5>eslint': ^10.11.0

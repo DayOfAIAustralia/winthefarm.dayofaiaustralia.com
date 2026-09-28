@@ -3,285 +3,187 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import * as React from "react";
-
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-
+import { SiteLink } from "@/components/site-link";
 import { cn } from "@/lib/utils";
 import { COMPETITION_NAME, REGISTER_URL } from "@/lib/competition";
 
-// Navigation Links
 const allNavLinks = [
-  { href: "/#how-to-play", text: "How to play" },
-  { href: "/#timeline", text: "Timeline" },
+  { href: "/how-to-play", text: "How to play" },
+  { href: "/timeline", text: "Timeline" },
   { href: "/setting", text: "Setting" },
   { href: "/rules", text: "Rules" },
-  { href: "/ethics", text: "Ethics" },
+  { href: "/learning", text: "Learning & ethics" },
   { href: "/about", text: "About us" },
-  { href: "/pedagogy", text: "Pedagogy"},
-  { href: "/scoring", text: "Scoring"}
+  { href: "/scoring", text: "Scoring" },
 ];
 
+const linkClassName =
+  "inline-flex items-center whitespace-nowrap rounded-md px-3 py-2 text-sm font-bold uppercase text-gray-900 transition-colors hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 aria-[current=page]:bg-amber-50 aria-[current=page]:text-red-700";
+
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [visibleLinksCount, setVisibleLinksCount] = useState(allNavLinks.length);
-  const [moreOpen, setMoreOpen] = useState(false);
-
-  const navContainerRef = useRef<HTMLDivElement>(null);
-  const linkItemRefs = useRef<(HTMLLIElement | null)[]>([]);
-  const registerBtnRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const [openMenu, setOpenMenu] = useState<"more" | "mobile" | null>(null);
   const moreRef = useRef<HTMLDivElement>(null);
-  const firstMoreItemRef = useRef<HTMLAnchorElement>(null);
+  const moreButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileButtonRef = useRef<HTMLButtonElement>(null);
+  const closeMenus = () => setOpenMenu(null);
 
   useEffect(() => {
-    const onDocClick = (e: MouseEvent) => {
-      if (!moreRef.current) return;
-      if (!moreRef.current.contains(e.target as Node)) setMoreOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setMoreOpen(false);
-    };
-    document.addEventListener("click", onDocClick);
-    document.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("click", onDocClick);
-      document.removeEventListener("keydown", onKey);
-    };
-  }, []);
-
-  // Width Calculation
-  useEffect(() => {
-    const measure = () => linkItemRefs.current.map((el) => el?.offsetWidth ?? 0);
-
-    const update = (containerEl: Element | null) => {
-      if (!containerEl) return;
-
-      const linkWidths = measure();
-      if (linkWidths.some((w) => w === 0)) return;
-
-      const containerWidth = (containerEl as HTMLElement).clientWidth;
-      const registerBtnWidth = registerBtnRef.current?.offsetWidth ?? 0;
-      const moreMenuTriggerWidth = 100;
-
-      let current = registerBtnWidth;
-      let count = 0;
-
-      for (const w of linkWidths) {
-        if (current + w < containerWidth) {
-          current += w;
-          count++;
-        } else {
-          if (current + moreMenuTriggerWidth > containerWidth) {
-            count = Math.max(0, count - 1);
-          }
-          break;
-        }
+    const onPointerDown = (event: PointerEvent) => {
+      if (moreRef.current && !moreRef.current.contains(event.target as Node)) {
+        setOpenMenu((current) => current === "more" ? null : current);
       }
-
-      setVisibleLinksCount(count);
     };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      if (openMenu === "more") moreButtonRef.current?.focus();
+      if (openMenu === "mobile") mobileButtonRef.current?.focus();
+      setOpenMenu(null);
+    };
+    const onPopState = () => setOpenMenu(null);
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    window.addEventListener("popstate", onPopState);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("popstate", onPopState);
+    };
+  }, [openMenu]);
 
-    const ro = new ResizeObserver((entries) => {
-      update(entries[0]?.target ?? null);
+  useEffect(() => {
+    if (openMenu !== "more") return;
+    const frame = requestAnimationFrame(() => {
+      const firstLink = [...(moreRef.current?.querySelectorAll<HTMLAnchorElement>("a") ?? [])]
+        .find((link) => link.getClientRects().length > 0);
+      firstLink?.focus();
     });
-
-    if (navContainerRef.current) ro.observe(navContainerRef.current);
-
-    const onFonts = () => update(navContainerRef.current);
-    if (document.fonts?.ready) {
-      document.fonts.ready.then(onFonts).catch(() => {});
-    } else {
-      setTimeout(onFonts, 250);
-    }
-
-    // Initial measure
-    update(navContainerRef.current);
-
-    return () => ro.disconnect();
-  }, []);
-
-  const visibleLinks = allNavLinks.slice(0, visibleLinksCount);
-  const hiddenLinks = allNavLinks.slice(visibleLinksCount);
-  const hasHidden = hiddenLinks.length > 0;
+    return () => cancelAnimationFrame(frame);
+  }, [openMenu]);
 
   return (
-    <header className="bg-white shadow sticky top-0 z-50">
-      <div className="absolute top-[-9999px] left-[-9999px] opacity-0 pointer-events-none">
-        <ul className="flex items-center space-x-2 font-sans">
-          {allNavLinks.map((link, index) => (
-            <li
-              key={link.href}
-              ref={(el) => {
-                linkItemRefs.current[index] = el;
-              }}
-              className="font-bold uppercase px-4 py-2"
-            >
-              {link.text}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8 py-4">
+    <header className="sticky top-0 z-50 shrink-0 bg-white shadow-sm">
+      <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-3">
           <Link
             href="/"
-            className="flex-shrink-0 flex items-center space-x-4 hover:opacity-80 transition-opacity"
+            onNavigate={closeMenus}
+            className="flex shrink-0 items-center gap-4 rounded-sm transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500"
+            aria-label={`${COMPETITION_NAME} home`}
           >
             <Image
               src="/logos/dayofai.webp"
               alt="Day of AI Australia"
               width={50}
               height={50}
-              className="object-contain"
+              className="h-[50px] w-[50px] object-contain"
+              preload
             />
-            <h1 className="text-2xl font-bold text-gray-900 font-dm-serif">
+            <span className="font-dm-serif text-2xl font-bold text-gray-900">
               {COMPETITION_NAME}
-            </h1>
+            </span>
           </Link>
 
-          <div
-            ref={navContainerRef}
-            className="hidden md:flex flex-grow justify-end items-center gap-2"
-          >
-            <nav className="flex items-center">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  {visibleLinks.map((link) => (
-                    <NavigationMenuItem key={link.href}>
-                      <NavigationMenuLink
-                        asChild
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "font-bold uppercase"
-                        )}
-                      >
-                        <Link href={link.href}>{link.text}</Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  ))}
-
-                  {/* "More" popover */}
-                  {hasHidden && (
-                    <NavigationMenuItem asChild>
-                      <div className="relative" ref={moreRef}>
-                        <button
-                          type="button"
-                          aria-haspopup="menu"
-                          aria-expanded={moreOpen}
-                          aria-controls="more-menu"
-                          onClick={() => {
-                            setMoreOpen((s) => !s);
-                            setTimeout(() => firstMoreItemRef.current?.focus(), 0);
-                          }}
-                          onKeyDown={(e) => {
-                            if (e.key === "ArrowDown") {
-                              e.preventDefault();
-                              setMoreOpen(true);
-                              setTimeout(() => firstMoreItemRef.current?.focus(), 0);
-                            }
-                          }}
-                          className={cn(
-                            navigationMenuTriggerStyle(),
-                            "font-bold uppercase inline-flex items-center"
-                          )}
-                        >
-                          More
-                          <ChevronDown
-                            className={cn(
-                              "ml-2 h-4 w-4 transition-transform duration-200",
-                              moreOpen && "rotate-180"
-                            )}
-                            aria-hidden="true"
-                          />
-                        </button>
-
-                        {moreOpen && (
-                          <div
-                            id="more-menu"
-                            role="menu"
-                            className="absolute right-0 mt-2 w-[250px] rounded-md border bg-white shadow-lg focus:outline-none"
-                          >
-                            <ul className="grid gap-1 p-2">
-                              {hiddenLinks.map((link, idx) => (
-                                <li key={link.href} role="none">
-                                  <Link
-                                    href={link.href}
-                                    role="menuitem"
-                                    ref={idx === 0 ? firstMoreItemRef : undefined}
-                                    className="block rounded-md px-3 py-2 text-sm uppercase font-bold hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
-                                    onClick={() => setMoreOpen(false)}
-                                  >
-                                    {link.text}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-                    </NavigationMenuItem>
-                  )}
-                </NavigationMenuList>
-              </NavigationMenu>
+          <div className="hidden items-center gap-4 md:flex">
+            <nav aria-label="Main navigation">
+              <ul className="flex items-center gap-1">
+                {allNavLinks.map((link, index) => (
+                  <li
+                    key={link.href}
+                    className={index < 2 ? undefined : index < 4 ? "hidden lg:block" : "hidden xl:block"}
+                  >
+                    <SiteLink
+                      href={link.href}
+                      aria-current={pathname === link.href ? "page" : undefined}
+                      className={linkClassName}
+                      onNavigate={closeMenus}
+                    >
+                      {link.text}
+                    </SiteLink>
+                  </li>
+                ))}
+                <li className="xl:hidden">
+                  <div className="relative" ref={moreRef}>
+                    <button
+                      ref={moreButtonRef}
+                      type="button"
+                      aria-expanded={openMenu === "more"}
+                      aria-controls="more-navigation"
+                      onClick={() => setOpenMenu(openMenu === "more" ? null : "more")}
+                      onKeyDown={(event) => {
+                        if (event.key === "ArrowDown") {
+                          event.preventDefault();
+                          setOpenMenu("more");
+                        }
+                      }}
+                      className={cn(linkClassName, "gap-1")}
+                    >
+                      More
+                      <ChevronDown className={cn("h-4 w-4", openMenu === "more" && "rotate-180")} aria-hidden="true" />
+                    </button>
+                    {openMenu === "more" && (
+                      <ul id="more-navigation" className="absolute right-0 top-full mt-2 w-56 rounded-lg border border-gray-200 bg-white p-2 shadow-lg">
+                        {allNavLinks.slice(2).map((link, index) => (
+                          <li key={link.href} className={index < 2 ? "lg:hidden" : undefined}>
+                            <SiteLink
+                              href={link.href}
+                              aria-current={pathname === link.href ? "page" : undefined}
+                              className={cn(linkClassName, "w-full")}
+                              onNavigate={closeMenus}
+                            >
+                              {link.text}
+                            </SiteLink>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </li>
+              </ul>
             </nav>
-
-            <div ref={registerBtnRef} className="pl-3 shrink-0">
-              <a
-                href={REGISTER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="font-bold text-black rounded-none bg-[#FDC300] hover:bg-yellow-500">
-                  REGISTER NOW
-                </Button>
-              </a>
-            </div>
+            <Button asChild className="rounded-none bg-[#FDC300] font-bold text-black hover:bg-yellow-500">
+              <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">REGISTER NOW</a>
+            </Button>
           </div>
 
           <button
-            className="md:hidden p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            ref={mobileButtonRef}
+            type="button"
+            className="rounded-sm p-2 focus-visible:outline-2 focus-visible:outline-amber-500 md:hidden"
+            onClick={() => setOpenMenu(openMenu === "mobile" ? null : "mobile")}
+            aria-label={openMenu === "mobile" ? "Close menu" : "Open menu"}
+            aria-expanded={openMenu === "mobile"}
+            aria-controls="mobile-navigation"
           >
-            {mobileMenuOpen ? <X /> : <Menu />}
+            {openMenu === "mobile" ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </button>
         </div>
+      </div>
 
-        {mobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t pt-4">
-            <div className="flex flex-col space-y-4 font-sans uppercase">
-              {allNavLinks.map((link) => (
-                <Link
-                  key={link.href}
+      {openMenu === "mobile" && (
+        <nav id="mobile-navigation" aria-label="Mobile navigation" className="absolute inset-x-0 top-full max-h-[calc(100dvh-82px)] overflow-y-auto border-t border-b border-gray-200 bg-white px-4 py-4 shadow-md md:hidden">
+          <ul className="space-y-1">
+            {allNavLinks.map((link) => (
+              <li key={link.href}>
+                <SiteLink
                   href={link.href}
-                  className="font-bold hover:text-red-600 py-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className={cn(linkClassName, "w-full py-3")}
+                  onNavigate={closeMenus}
                 >
                   {link.text}
-                </Link>
-              ))}
-              <a
-                href={REGISTER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4"
-              >
-                <Button className="font-bold text-black rounded-none bg-[#FDC300] hover:bg-yellow-500 w-full">
-                  REGISTER NOW
-                </Button>
-              </a>
-            </div>
-          </nav>
-        )}
-      </div>
+                </SiteLink>
+              </li>
+            ))}
+          </ul>
+          <Button asChild className="mt-4 w-full rounded-none bg-[#FDC300] font-bold text-black hover:bg-yellow-500">
+            <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">REGISTER NOW</a>
+          </Button>
+        </nav>
+      )}
     </header>
   );
 }

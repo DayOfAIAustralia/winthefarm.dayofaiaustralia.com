@@ -1,10 +1,7 @@
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 
 export default function TeacherDashboardPage() {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      <Header />
+    <div className="flex-1 bg-white flex flex-col">
       <main className="flex-1 flex items-center justify-center py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -15,7 +12,6 @@ export default function TeacherDashboardPage() {
           </p>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
