@@ -44,90 +44,62 @@ export const BarTicker = () => {
   const rightPercentage = 100 - leftPercentage;
 
   return (
-    <div className="w-full max-w-4xl relative">
-      <div className="flex h-14 w-full overflow-hidden rounded-none border-black border-2 relative">
+    <div className="w-full max-w-4xl">
+      <div
+        aria-hidden="true"
+        className="relative flex h-5 w-full overflow-hidden sm:h-6"
+      >
         {/* Left bar: Team New Solution */}
         <div
-          className="flex items-center justify-start p-2 bg-teal-600 transition-all duration-1000 ease-out"
+          className={`${left.colors.bar} transition-[width] duration-1000 ease-out motion-reduce:transition-none`}
           style={{ width: `${leftPercentage}%` }}
-        >
-          <div className="flex items-center gap-1 rounded-full bg-black/30 pl-1 pr-3 py-1 md:hidden">
-            <Image
-              src={left.imageSrc}
-              alt={left.imageAlt}
-              width={100}
-              height={100}
-              className="rounded-full w-10 h-10"
-            />
-            <div className="text-white font-black leading-tight">
-              <span className="hidden sm:inline text-sm uppercase">{left.shortName} </span>
-              <span className="text-lg">{Math.round(leftPercentage)}%</span>
-            </div>
-          </div>
-        </div>
+        />
 
         {/* Right bar: Team Quality Feed */}
-        <div className="flex-1 flex items-center justify-end p-2 bg-purple-600 transition-all duration-1000 ease-out">
-          <div className="flex items-center gap-1 rounded-full bg-black/30 pr-1 pl-3 py-1 md:hidden">
-            <div className="text-white font-black leading-tight text-right">
-              <span className="text-lg">{Math.round(rightPercentage)}% </span>
-              <span className="hidden sm:inline text-sm uppercase">{right.shortName} </span>
-            </div>
-            <Image
-              src={right.imageSrc}
-              alt={right.imageAlt}
-              width={100}
-              height={100}
-              className="rounded-full w-10 h-10"
-            />
-          </div>
-        </div>
+        <div className={`flex-1 ${right.colors.bar}`} />
 
         {/* Center win line */}
         <div
-          className="absolute top-0 bottom-0 w-[2px] bg-white pointer-events-none"
-          style={{ left: "50%", transform: "translateX(-50%)" }}
+          className="pointer-events-none absolute inset-y-0 left-1/2 w-0.5 -translate-x-1/2 bg-white"
         />
       </div>
 
-      {/* Mobile names below bar */}
-      <div className="flex justify-between items-center mt-2 px-1 sm:hidden">
-        <span className="text-teal-900 font-black uppercase text-sm">
-          {left.shortName}
-        </span>
-        <span className="text-purple-900 font-black uppercase text-sm">
-          {right.shortName}
-        </span>
-      </div>
-
-      {/* Desktop Labels */}
-      <div className="hidden mb-2 md:flex justify-between items-center text-lg font-semibold uppercase">
-        <div className="text-teal-900 font-black flex items-center gap-2">
+      {/* Keep both teams separate from the bar, with the artwork facing inward. */}
+      <div className="mt-5 grid grid-cols-2 gap-6 border-b border-gray-200 pb-6 sm:mt-6 sm:gap-10 sm:pb-8">
+        <div className="flex min-w-0 flex-col items-start gap-3 text-left sm:flex-row sm:items-center sm:gap-4">
           <Image
             src={left.imageSrc}
             alt={left.imageAlt}
-            width={100}
-            height={100}
-            className="rounded"
+            width={160}
+            height={90}
+            className="h-auto w-28 flex-none rounded-sm sm:w-32 md:w-40"
           />
-          <span className="text-md md:text-xl">{left.shortName}</span>
-          <span className="text-lg md:text-2xl">
-            {Math.round(leftPercentage)}%
-          </span>
+          <div className={left.colors.text}>
+            <p className="text-xs font-extrabold uppercase tracking-wide sm:text-sm">
+              {left.shortName}
+            </p>
+            <p className="mt-1 text-4xl font-black leading-none tracking-tight tabular-nums md:text-5xl">
+              {Math.round(leftPercentage)}<span className="ml-0.5 text-2xl md:text-3xl">%</span>
+            </p>
+          </div>
         </div>
 
-        <div className="text-purple-900 font-black flex items-center gap-2">
-          <span className="text-lg md:text-2xl">
-            {Math.round(rightPercentage)}%
-          </span>
-          <span className="text-md md:text-xl">{right.shortName}</span>
+        <div className="flex min-w-0 flex-col items-end gap-3 text-right sm:flex-row-reverse sm:items-center sm:gap-4">
           <Image
             src={right.imageSrc}
             alt={right.imageAlt}
-            width={100}
-            height={100}
-            className="rounded"
+            width={160}
+            height={90}
+            className="h-auto w-28 flex-none rounded-sm sm:w-32 md:w-40"
           />
+          <div className={right.colors.text}>
+            <p className="text-xs font-extrabold uppercase tracking-wide sm:text-sm">
+              {right.shortName}
+            </p>
+            <p className="mt-1 text-4xl font-black leading-none tracking-tight tabular-nums md:text-5xl">
+              {Math.round(rightPercentage)}<span className="ml-0.5 text-2xl md:text-3xl">%</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>

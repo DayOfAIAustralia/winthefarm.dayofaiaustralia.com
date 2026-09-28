@@ -12,12 +12,26 @@ export function CompetitionIntro() {
           The ultimate
           <span className="text-red-700"> health information</span> challenge
         </h2>
-        <div className="pb-6">
-          <span className="text-gray-600 text-sm ">
-            <span className="block">Lesson available to registered teachers Monday 5 October, 2026</span>
-            <span className="block">Teach the lesson during Media Literacy Week, 26-30 October, 2026</span>
-          </span>
-        </div>
+        <dl className="mx-auto my-8 grid max-w-4xl divide-y divide-amber-200 border-y border-amber-200 bg-amber-50 sm:grid-cols-2 sm:divide-x sm:divide-y-0">
+          <div className="px-4 py-4 sm:px-6 sm:py-5">
+            <dt className="text-xs font-extrabold uppercase tracking-wide text-gray-700">
+              Lesson available
+            </dt>
+            <dd className="mt-1 text-xl font-bold text-gray-900">
+              <time dateTime="2026-10-05">Monday 5 October, 2026</time>
+            </dd>
+            <dd className="mt-1 text-sm text-gray-600">For registered teachers</dd>
+          </div>
+          <div className="px-4 py-4 sm:px-6 sm:py-5">
+            <dt className="text-xs font-extrabold uppercase tracking-wide text-gray-700">
+              Teach the lesson
+            </dt>
+            <dd className="mt-1 text-xl font-bold text-gray-900">
+              <time dateTime="2026-10-26">26</time>–<time dateTime="2026-10-30">30 October, 2026</time>
+            </dd>
+            <dd className="mt-1 text-sm text-gray-600">During Media Literacy Week</dd>
+          </div>
+        </dl>
         <div className="flex justify-center">
           <BarTicker />
         </div>

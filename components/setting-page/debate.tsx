@@ -14,12 +14,6 @@ const debateCards = [
       "Slow and steady wins the winter",
     ],
     style: "Steady and traditional.",
-    colors: {
-      bg: "bg-purple-50",
-      border: "border-purple-200",
-      text: "text-purple-800",
-      slogan: "text-purple-700",
-    },
   },
   {
     ...TEAMS.newSolution,
@@ -33,12 +27,6 @@ const debateCards = [
       "A smarter way to spend the same money",
     ],
     style: "Bold and fast-moving.",
-    colors: {
-      bg: "bg-teal-50",
-      border: "border-teal-200",
-      text: "text-teal-800",
-      slogan: "text-teal-700",
-    },
   },
 ];
 
@@ -58,14 +46,14 @@ export function Debate() {
                 src={team.imageSrc}
                 alt={team.imageAlt}
                 width={64}
-                height={64}
-                className="rounded-full flex-shrink-0"
+                height={36}
+                className="h-auto rounded flex-shrink-0"
               />
               <h3 className={`text-3xl font-bold ${team.colors.text}`}>{team.name}</h3>
             </div>
 
             {/* Slogan */}
-            <p className={`text-xl font-bold ${team.colors.slogan} mb-6`}>
+            <p className={`text-xl font-bold ${team.colors.text} mb-6`}>
               &quot;{team.slogan}&quot;
             </p>
 

@@ -12,16 +12,26 @@ export const TEAMS = {
     name: "Team New Solution",
     shortName: "New Solution",
     slogan: "Better Results, Faster.",
-    // TODO: swap for the sheep + supplement artwork when it arrives.
-    imageSrc: "/team-new-solution.svg",
-    imageAlt: "Team New Solution",
+    imageSrc: "/team-new-solution.png",
+    imageAlt: "Team New Solution: a sheep, snake and emu",
+    colors: {
+      bar: "bg-[#E74043]",
+      bg: "bg-[#E74043]/5",
+      border: "border-[#E74043]/30",
+      text: "text-[#A51D20]",
+    },
   },
   qualityFeed: {
     name: "Team Quality Feed",
     shortName: "Quality Feed",
     slogan: "Trusted Feed, Healthy Herd.",
-    // TODO: swap for the wombat + feed artwork when it arrives.
-    imageSrc: "/team-quality-feed.svg",
-    imageAlt: "Team Quality Feed",
+    imageSrc: "/team-quality-feed.png",
+    imageAlt: "Team Quality Feed: a wombat, cow and kookaburra",
+    colors: {
+      bar: "bg-[#8CD5EC]",
+      bg: "bg-[#8CD5EC]/10",
+      border: "border-[#8CD5EC]",
+      text: "text-[#21647A]",
+    },
   },
 } as const;
