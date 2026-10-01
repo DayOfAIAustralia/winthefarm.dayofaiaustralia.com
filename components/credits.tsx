@@ -1,4 +1,4 @@
-import { COMPETITION_NAME, LESSON_NAME } from "@/lib/competition";
+import { COMPETITION_NAME } from "@/lib/competition";
 import { Card } from "@/components/ui/card";
 import { PageHeading, pageLayoutClassName } from "@/components/page-heading";
 
@@ -19,13 +19,7 @@ function CreditPerson({ name, role }: CreditPersonProps) {
 export function Credits() {
   return (
     <div className={pageLayoutClassName}>
-      <PageHeading description={
-        <>
-            Day of AI Australia&apos;s &quot;{LESSON_NAME}&quot; lesson
-            and {COMPETITION_NAME} wouldn&apos;t be possible without the hard work and
-            dedication of an exceptional team.
-        </>
-      }>
+      <PageHeading>
         About Us
       </PageHeading>
       <div className="max-w-3xl space-y-5">
@@ -88,10 +82,10 @@ export function Credits() {
             Health Literacy Experts and Research Team
           </h2>
           <ul className="space-y-5">
+            <CreditPerson name="Prof Kirsten McCaffery" role="Professor of Public Health and Director of Sydney Health Literacy Lab" />
+            <CreditPerson name="Dr Melody Taba" role="Research Fellow, Sydney Health Literacy Lab" />
             <CreditPerson name="Dr Julie Ayre" role="Research Fellow, Sydney Health Literacy Lab" />
             <CreditPerson name="Mariah Issa" role="Research Assistant, Sydney Health Literacy Lab" />
-            <CreditPerson name="Dr Kirsten McCaffery" role="Professor of Public Health and Director of Sydney Health Literacy Lab" />
-            <CreditPerson name="Dr Melody Taba" role="Research Fellow, Sydney Health Literacy Lab" />
           </ul>
         </section>
 
