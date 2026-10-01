@@ -8,12 +8,12 @@ export const TOWN_NAME = "Coolabah Creek";
 export const PLATFORM_NAME = "GumDrop";
 
 export const TEAMS = {
-  omni01: {
-    name: "Team OMNI-01",
-    shortName: "Team OMNI-01",
+  emuLabs: {
+    name: "EmuLabs SuperHealth",
+    shortName: "EmuLabs SuperHealth",
     slogan: "Better Results, Faster.",
     imageSrc: "/team-new-solution.png",
-    imageAlt: "Team OMNI-01: a sheep, snake and emu",
+    imageAlt: "EmuLabs SuperHealth: a sheep, snake and emu",
     colors: {
       bar: "bg-[#E74043]",
       bg: "bg-[#E74043]/5",

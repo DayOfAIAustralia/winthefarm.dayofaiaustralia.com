@@ -1,114 +1,100 @@
 import Image from "next/image";
 import { LESSON_NAME, REGISTER_URL, TOWN_NAME } from "@/lib/competition";
 
-// Data for the "How to Play" steps
-const stepsData = [
+const steps = [
   {
-    step: "1",
     title: "Deliver the lesson",
     description: (
       <>
-        Deliver Day of AI Australia&apos;s {LESSON_NAME} lesson during Media Literacy Week (26-30 Oct).{" "}
+        Deliver Day of AI Australia&apos;s {LESSON_NAME} lesson during Media
+        Literacy Week (26–30 October).{" "}
         <a
           href={REGISTER_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-600 hover:text-red-700 underline"
+          className="rounded-sm font-semibold text-red-700 underline decoration-red-700/40 underline-offset-4 hover:decoration-red-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-700"
         >
-          Register
-        </a>{" "}
-        to access the free materials.
+          Register for the free materials
+        </a>.
       </>
     ),
-    imageSrc: "/deliver-lesson.png",
-    imageAlt: "Teacher delivering a lesson to students",
+    image: "/deliver-lesson.png",
   },
   {
-    step: "2",
     title: "Join the platform",
     description:
-      "Students register for the competition. Students can enter as individuals or in teams.",
-    imageSrc: "/platform-join.png",
-    imageAlt: "A boy and girl using a computer",
+      "Use the code provided by your teacher to join the competition. You can enter as an individual or as part of a team.",
+    image: "/platform-join.png",
   },
   {
-    step: "3",
     title: "Receive your assignments",
     description:
       "Practice in a safe, artificial social media landscape designed specifically for learning and competition.",
-    imageSrc: "/assignment-receive.png",
-    imageAlt: "A list of new assignments in the platform",
+    image: "/assignment-receive.png",
   },
   {
-    step: "4",
     title: "Build your agents",
     description:
-      "Access your control panel and craft AI agents that read and react to the system's content. Your agents can post, repost, reply, like, follow, unfollow, search and #tag.",
-    imageSrc: "/build-bots.png",
-    imageAlt: "An interface for building and configuring AI agents",
+      "Use your control panel to craft AI agents that read and react to the system’s content. Your agents can post, repost, reply, like, follow, unfollow, search and #tag.",
+    image: "/build-bots.png",
   },
   {
-    step: "5",
     title: "Influence the outcome",
-    description: `Your agents score points based on their activity, competing to influence the populace of ${TOWN_NAME}. The team with the most effective agent strategy and influence will win!`,
-    imageSrc: "/influence-outcome.png",
-    imageAlt: "A trophy",
+    description: `Your agents score points through their activity, competing to influence the community of ${TOWN_NAME}. Develop your strategy and compete for the most effective influence.`,
+    image: "/influence-outcome.png",
   },
 ];
 
 export function HowToPlay() {
   return (
-    <section id="how-to-play" className="py-16 md:py-24 bg-white">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <section
+      id="how-to-play"
+      aria-labelledby="how-to-play-title"
+      className="bg-white px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
+    >
+      <div className="mx-auto max-w-4xl">
+        <div className="mb-10 max-w-2xl sm:mx-auto sm:mb-14 sm:text-center">
+          <h2 id="how-to-play-title" className="text-4xl leading-tight text-gray-900 sm:text-5xl">
             How to Play
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Enter the world of {TOWN_NAME} and learn to combat AI misinformation and disinformation.
+          <p className="mt-4 text-lg leading-8 text-gray-600">
+            Enter the world of {TOWN_NAME} and learn to combat AI misinformation
+            and disinformation.
           </p>
         </div>
 
-        {/* Mobile: Single column stack, Desktop: Alternating layout, Very wide: Multi-column */}
-        <div className="flex flex-col gap-y-16 md:gap-y-4 2xl:grid 2xl:grid-cols-2 2xl:gap-8">
-          {stepsData.map((step, index) => (
-            <div
-              key={step.step}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center ${
-                index >= 4 ? "2xl:col-span-2" : ""
-              }`}
+        <ol role="list" className="isolate">
+          {steps.map((step, index) => (
+            <li
+              key={step.title}
+              className="group relative grid grid-cols-[2.5rem_minmax(0,1fr)] gap-x-4 pb-8 last:pb-0 sm:grid-cols-[3rem_minmax(0,1fr)_11rem] sm:gap-x-6 sm:pb-8 lg:grid-cols-[3rem_minmax(0,1fr)_14rem] before:absolute before:bottom-0 before:left-5 before:top-10 before:-z-10 before:w-px before:bg-gray-200 last:before:hidden sm:before:left-6 sm:before:top-12"
             >
-              {/* Image Block: Centered on mobile. Alternates position on desktop. */}
-              <div
-                className={`flex justify-center ${
-                  index % 2 !== 0 ? "lg:order-last lg:justify-start" : "lg:justify-end"
-                }`}
-              >
-                <Image
-                  src={step.imageSrc}
-                  width={300}
-                  height={300}
-                  alt={step.imageAlt}
-                  className="mb-0"
-                />
-              </div>
+              <span className="flex size-10 items-center justify-center rounded-full bg-[#FDC300] text-lg font-bold tabular-nums text-gray-900 sm:size-12 sm:text-xl">
+                <span className="sr-only">Step </span>{index + 1}
+              </span>
 
-              {/* Text Block: Centered on mobile. Alternates alignment on desktop. */}
-              <div
-                className={`text-center ${
-                  index % 2 !== 0 ? "lg:text-right" : "lg:text-left"
-                } max-w-xl mx-auto lg:mx-0`}
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 uppercase">
-                  {step.step} - {step.title}
+              <div className="min-w-0 pt-1 sm:pt-1.5">
+                <h3 className="text-2xl leading-tight text-gray-900 sm:text-3xl">
+                  {step.title}
                 </h3>
-                <p className="text-md text-gray-800 leading-relaxed">
+                <p className="mt-3 max-w-xl text-base leading-7 text-gray-700">
                   {step.description}
                 </p>
               </div>
-            </div>
+
+              <div className="col-start-2 mt-4 border-b border-gray-200 pb-7 group-last:border-0 group-last:pb-0 sm:col-start-3 sm:row-start-1 sm:mt-0 sm:border-0 sm:pb-0">
+                <Image
+                  src={step.image}
+                  width={256}
+                  height={256}
+                  alt=""
+                  sizes="(min-width: 1024px) 224px, (min-width: 640px) 176px, 160px"
+                  className="size-40 object-contain sm:size-44 lg:size-56"
+                />
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

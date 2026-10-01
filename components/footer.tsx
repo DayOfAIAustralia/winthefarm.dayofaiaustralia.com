@@ -76,7 +76,11 @@ export function Footer() {
                   hello@dayofaiaustralia.com
                 </a>
               </li>
-              <li>Follow @dayofaiaustral1</li>
+              <li>
+                <a href="https://www.instagram.com/dayofai_aus/" className="hover:text-white">
+                  Follow @dayofai_aus on Instagram
+                </a>
+              </li>
               {/* TODO: add the 2026 competition hashtag once confirmed. */}
             </ul>
           </div>

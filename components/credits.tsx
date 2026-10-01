@@ -19,7 +19,6 @@ export function Credits() {
     <div className="mx-auto max-w-6xl px-6 py-14 sm:py-20 lg:px-8">
       <div className="grid gap-8 md:grid-cols-[1fr_2fr] md:gap-12">
         <div>
-          <div aria-hidden="true" className="mb-6 h-1.5 w-12 bg-[#FDC300]" />
           <h1 className="text-5xl leading-tight tracking-tight text-gray-900 sm:text-6xl">
             About Us
           </h1>
@@ -33,8 +32,12 @@ export function Credits() {
           <p className="text-base leading-7 text-gray-600">
             The new Health literacy and AI lesson and {COMPETITION_NAME} game
             are a collaboration with UNSW School of Computer Science and Engineering,
-            Sydney Health Literacy Lab from University of Sydney, and Digital Lies
-            and Cyber Literacy. This initiative was made possible with support from
+            Sydney Health Literacy Lab from University of Sydney, and the Digital Lies
+            &amp; Cyber Literacy Foundation.
+          </p>
+          <p className="text-base leading-7 text-gray-600">
+            This initiative was supported as part of the NHMRC Synergy grant
+            &apos;NextGen: AI Health Literacy&apos; and was made possible with support from
             Google.org as part of the GenAI Accelerator program.
           </p>
         </div>
@@ -53,18 +56,13 @@ export function Credits() {
       <div className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2 md:gap-y-12">
         <section aria-labelledby="credits-developers" className="border-t border-gray-200 pt-6">
           <h2 id="credits-developers" className="mb-6 text-2xl leading-snug text-gray-900">
-            {COMPETITION_NAME} Developers
+            Software Development
           </h2>
           <ul className="space-y-5">
             <CreditPerson name="Joel Paul" role="Software Developer, Day of AI Australia" />
             <CreditPerson name="Oliver Xu" role="Software Developer, Day of AI Australia" />
+            <CreditPerson name="Dr Hammond Pearce" role="Lead organiser and developer (Capture the Narrative), UNSW Sydney" />
           </ul>
-          <div className="mt-6 border-l-2 border-[#FDC300] pl-4">
-            <p className="mb-2 text-sm italic text-gray-600">With thanks to</p>
-            <ul>
-              <CreditPerson name="Dr Hammond Pearce" role="Lead organiser (Capture the Narrative), UNSW Sydney" />
-            </ul>
-          </div>
         </section>
 
         <section aria-labelledby="credits-lesson" className="border-t border-gray-200 pt-6">
@@ -88,16 +86,13 @@ export function Credits() {
 
         <section aria-labelledby="credits-health-lab" className="border-t border-gray-200 pt-6">
           <h2 id="credits-health-lab" className="mb-6 text-2xl leading-snug text-gray-900">
-            Sydney Health Literacy Lab{" "}
-            <span className="mt-2 block font-sans text-base font-normal leading-6 text-gray-600">
-              from University of Sydney
-            </span>
+            Health Literacy Experts and Research Team
           </h2>
-          <ul className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
-            <CreditPerson name="Dr Julie Ayre" />
-            <CreditPerson name="Mariah Issa" />
-            <CreditPerson name="Dr Kirsten McCaffery" />
-            <CreditPerson name="Dr Melody Taba" />
+          <ul className="space-y-5">
+            <CreditPerson name="Dr Julie Ayre" role="Research Fellow, Sydney Health Literacy Lab" />
+            <CreditPerson name="Mariah Issa" role="Research Assistant, Sydney Health Literacy Lab" />
+            <CreditPerson name="Dr Kirsten McCaffery" role="Professor of Public Health and Director of Sydney Health Literacy Lab" />
+            <CreditPerson name="Dr Melody Taba" role="Research Fellow, Sydney Health Literacy Lab" />
           </ul>
         </section>
       </div>
@@ -114,9 +109,8 @@ export function Credits() {
       </section>
 
       <div className="mx-auto max-w-3xl pt-12 text-center sm:pt-14">
-        <div aria-hidden="true" className="mx-auto mb-6 h-1 w-10 bg-[#FDC300]" />
         <p className="font-dm-serif text-xl leading-8 text-gray-700 sm:text-2xl sm:leading-9">
-          And perhaps most importantly, a very special thanks to all the teachers and students who helped
+          And most importantly, a very special thanks to all the teachers and students who helped
           shape the lesson and game - without
           your input this would not have been possible!
         </p>
