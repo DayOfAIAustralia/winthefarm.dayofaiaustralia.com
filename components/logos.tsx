@@ -7,7 +7,6 @@ type PartnerLogo = {
   height: number;
 };
 
-// Add src paths for the placeholders when the remaining logos are supplied.
 const partnerLogoRows: PartnerLogo[][] = [
   [
     {
@@ -22,11 +21,26 @@ const partnerLogoRows: PartnerLogo[][] = [
       width: 100,
       height: 100,
     },
-    { alt: "SHLL", width: 200, height: 100 },
-    { alt: "DLCLF", width: 200, height: 100 },
+    {
+      src: "/logos/sydney-health-literacy-lab.png",
+      alt: "Sydney Health Literacy Lab",
+      width: 210,
+      height: 112,
+    },
+    {
+      src: "/logos/digital-lies-and-cyber-literacy.png",
+      alt: "Digital Lies and Cyber Literacy",
+      width: 176,
+      height: 129,
+    },
   ],
   [
-    { alt: "Sydney Uni", width: 200, height: 100 },
+    {
+      src: "/logos/university-of-sydney.png",
+      alt: "University of Sydney",
+      width: 210,
+      height: 98,
+    },
     {
       src: "/logos/unsw-ai-institute.jpg",
       alt: "UNSW AI Institute",
