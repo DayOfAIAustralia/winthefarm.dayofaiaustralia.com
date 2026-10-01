@@ -1,10 +1,7 @@
-import { PageHeading } from "@/components/page-heading";
-import { TOWN_NAME } from "@/lib/competition";
-
 export function SettingHeader() {
   return (
-    <PageHeading description={`Welcome to ${TOWN_NAME}, a small farm in Australia where the animals govern themselves.`}>
+    <h1 className="mb-6 text-left text-2xl leading-tight tracking-tight text-gray-900 sm:text-3xl">
       Competition Setting
-    </PageHeading>
+    </h1>
   );
 }

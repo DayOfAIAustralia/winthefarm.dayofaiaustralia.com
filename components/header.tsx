@@ -22,7 +22,7 @@ import { COMPETITION_NAME, REGISTER_URL } from "@/lib/competition";
 const allNavLinks = [
   { href: "/how-to-play", text: "How to play" },
   { href: "/timeline", text: "Timeline" },
-  { href: "/setting", text: "Setting" },
+  { href: "/setting", text: "Story" },
   { href: "/rules", text: "Rules" },
   { href: "/learning", text: "Learning & ethics" },
   { href: "/about", text: "About us" },

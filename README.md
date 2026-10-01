@@ -32,6 +32,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Shared names, dates and links (competition name, lesson name, register URL, town and platform names, team names and artwork) live in `lib/competition.ts`. The competition terms live in `public/terms.html`.
 
+The setting page's six story chapters live in `lib/setting-story.ts`. Its manual shadcn/Embla carousel supports swiping, arrow keys, direct chapter selection and reduced motion. The two sides use shadcn Tabs, with Dialog for enlarged artwork. `public/story` contains 2400 × 1350 WebP exports (quality 88) and 320 × 180 thumbnails (quality 80) from the supplied final artwork; preserve the full 16:9 compositions when replacing them. Original source PNGs are kept outside the repository.
+
 ## Navigation
 
 The header and footer live in the root layout so they stay mounted between pages. Header links use CSS breakpoints, avoiding a layout change after hydration. `/how-to-play` and `/timeline` are shareable homepage section routes; moving between them uses smooth scrolling without remounting the homepage or adding URL fragments.
@@ -53,7 +55,7 @@ The header and footer live in the root layout so they stay mounted between pages
 
 Reusable controls live in `components/ui` and use the current shadcn registry versions. Navigation uses `NavigationMenu` and `Collapsible`, actions use `Button`, content panels use `Card`, and scoring uses `Table`. The `cn` package provides class merging through `lib/utils.ts`.
 
-Page titles use `PageHeading` and `pageLayoutClassName` from `components/page-heading.tsx` for consistent typography, alignment and spacing. Homepage section routes use the same heading with `as="h2"`.
+Page titles use `PageHeading` and `pageLayoutClassName` from `components/page-heading.tsx` for consistent typography, alignment and spacing. Homepage section routes use the same heading with `as="h2"`. The setting page intentionally uses a smaller, compact title to prioritise the story artwork.
 
 To review upstream component updates before applying them:
 

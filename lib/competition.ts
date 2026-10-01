@@ -12,7 +12,7 @@ export const TEAMS = {
     name: "EmuLabs SuperHealth",
     shortName: "EmuLabs SuperHealth",
     slogan: "Better Results, Faster.",
-    imageSrc: "/team-new-solution.png",
+    imageSrc: "/story/emulabs.webp",
     imageAlt: "EmuLabs SuperHealth: a sheep, snake and emu",
     colors: {
       bar: "bg-[#E74043]",
@@ -25,7 +25,7 @@ export const TEAMS = {
     name: "Team Quality Feed",
     shortName: "Quality Feed",
     slogan: "Trusted Feed, Healthy Herd.",
-    imageSrc: "/team-quality-feed.png",
+    imageSrc: "/story/quality-feed.webp",
     imageAlt: "Team Quality Feed: a wombat, cow and kookaburra",
     colors: {
       bar: "bg-[#8CD5EC]",

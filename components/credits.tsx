@@ -94,6 +94,15 @@ export function Credits() {
             <CreditPerson name="Dr Melody Taba" role="Research Fellow, Sydney Health Literacy Lab" />
           </ul>
         </section>
+
+        <section aria-labelledby="credits-writer" className="border-t border-gray-200 pt-6">
+          <h2 id="credits-writer" className="mb-6 text-2xl leading-snug text-gray-900">
+            Writer
+          </h2>
+          <ul>
+            <CreditPerson name="Hannah Samuel" />
+          </ul>
+        </section>
       </div>
 
       <section aria-labelledby="credits-special-thanks" className="mt-12 border-y border-gray-200 py-8 sm:mt-14">
