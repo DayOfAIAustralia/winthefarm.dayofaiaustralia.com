@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PageHeading, pageLayoutClassName } from "@/components/page-heading";
 import { LESSON_NAME, REGISTER_URL, TOWN_NAME } from "@/lib/competition";
 
 const steps = [
@@ -50,20 +51,14 @@ export function HowToPlay() {
     <section
       id="how-to-play"
       aria-labelledby="how-to-play-title"
-      className="bg-white px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
+      className="bg-white"
     >
-      <div className="mx-auto max-w-4xl">
-        <div className="mb-10 max-w-2xl sm:mx-auto sm:mb-14 sm:text-center">
-          <h2 id="how-to-play-title" className="text-4xl leading-tight text-gray-900 sm:text-5xl">
-            How to Play
-          </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
-            Enter the world of {TOWN_NAME} and learn to combat AI misinformation
-            and disinformation.
-          </p>
-        </div>
+      <div className={pageLayoutClassName}>
+        <PageHeading as="h2" id="how-to-play-title" description={`Enter the world of ${TOWN_NAME} and learn to combat AI misinformation and disinformation.`}>
+          How to Play
+        </PageHeading>
 
-        <ol role="list" className="isolate">
+        <ol role="list" className="isolate max-w-4xl">
           {steps.map((step, index) => (
             <li
               key={step.title}

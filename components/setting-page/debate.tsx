@@ -1,20 +1,8 @@
 import Image from "next/image";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { TEAMS } from "@/lib/competition";
 
 const debateCards = [
-  {
-    ...TEAMS.qualityFeed,
-    position:
-      "Spend this season's resources on premium, proven high quality feed for the whole community.",
-    theCase: [
-      "Reliable nutrition every animal can count on",
-      "A track record that's proven and reliable",
-      "No mystery ingredients, no fine print",
-      "Full transparency on where the community's money goes",
-      "Slow and steady wins the winter",
-    ],
-    style: "Steady and traditional.",
-  },
   {
     ...TEAMS.emuLabs,
     position:
@@ -28,61 +16,67 @@ const debateCards = [
     ],
     style: "Bold and fast-moving.",
   },
+  {
+    ...TEAMS.qualityFeed,
+    position:
+      "Spend this season's resources on premium, proven high quality feed for the whole community.",
+    theCase: [
+      "Reliable nutrition every animal can count on",
+      "A track record that's proven and reliable",
+      "No mystery ingredients, no fine print",
+      "Full transparency on where the community's money goes",
+      "Slow and steady wins the winter",
+    ],
+    style: "Steady and traditional.",
+  },
 ];
 
 export function Debate() {
   return (
-    <section>
-      <h2 className="text-3xl font-bold mb-8 text-center">Get Across the Debate</h2>
-      <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <section aria-labelledby="setting-debate-title" className="mt-10 sm:mt-12">
+      <h2 id="setting-debate-title" className="text-2xl leading-tight text-gray-900 sm:text-3xl">
+        Get across the debate
+      </h2>
+      <div className="mt-6 grid gap-6 md:grid-cols-2 md:gap-x-8 md:gap-y-0">
         {debateCards.map((team) => (
-          <div
+          <Card
             key={team.name}
-            className={`p-6 md:p-8 rounded-lg shadow-sm border-2 ${team.colors.bg} ${team.colors.border}`}
+            className="gap-0 rounded-xl border-gray-200 bg-white p-6 shadow-none sm:p-8 md:row-span-4 md:grid md:grid-rows-subgrid"
           >
-            {/* Header */}
-            <div className="flex items-center gap-4 mb-4">
+            <CardHeader className="block px-0 pb-6">
               <Image
                 src={team.imageSrc}
                 alt={team.imageAlt}
-                width={64}
-                height={36}
-                className="h-auto rounded flex-shrink-0"
+                width={640}
+                height={360}
+                sizes="(min-width: 1152px) 480px, (min-width: 768px) calc((100vw - 144px) / 2), calc(100vw - 96px)"
+                className="mb-6 h-auto w-full rounded-lg"
               />
-              <h3 className={`text-3xl font-bold ${team.colors.text}`}>{team.name}</h3>
-            </div>
-
-            {/* Slogan */}
-            <p className={`text-xl font-bold ${team.colors.text} mb-6`}>
-              &quot;{team.slogan}&quot;
-            </p>
-
-            <div className="space-y-4 text-gray-800">
-              <p>
-                <span className="font-bold">Position: </span>
-                {team.position}
+              <h3 className="text-2xl leading-tight text-gray-900 sm:text-3xl">
+                {team.name}
+              </h3>
+              <p className="mt-3 text-base leading-7 text-gray-600">
+                &ldquo;{team.slogan}&rdquo;
               </p>
+            </CardHeader>
 
-              <div>
-                <p className="font-bold mb-1">The Case:</p>
-                <ul className="list-none space-y-1 pl-4">
-                  {team.theCase.map((point) => (
-                    <li
-                      key={point}
-                      className="relative before:content-['▸'] before:absolute before:left-[-1em] before:text-gray-400"
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <CardContent className="px-0 pb-6">
+              <h4 className="mb-2 font-sans text-base font-semibold text-gray-900">Their proposal</h4>
+              <p className="text-base leading-7 text-gray-700">{team.position}</p>
+            </CardContent>
 
-              <p>
-                <span className="font-bold">Style: </span>
-                {team.style}
-              </p>
-            </div>
-          </div>
+            <CardContent className="px-0 pb-6">
+              <h4 className="mb-3 font-sans text-base font-semibold text-gray-900">Their case</h4>
+              <ul className="list-disc space-y-2 pl-5 text-base leading-7 text-gray-700 marker:text-gray-400">
+                {team.theCase.map((point) => <li key={point}>{point}</li>)}
+              </ul>
+            </CardContent>
+
+            <CardFooter className="block border-t border-gray-200 px-0 [.border-t]:pt-5">
+              <h4 className="mb-1 font-sans text-base font-semibold text-gray-900">Their approach</h4>
+              <p className="text-base leading-7 text-gray-600">{team.style}</p>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </section>

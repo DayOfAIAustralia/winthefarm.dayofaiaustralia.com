@@ -6,6 +6,7 @@ import nextTs from "eslint-config-next/typescript";
 const config = defineConfig([
   // Next's bundled plugins still use rule APIs removed in ESLint 10.
   ...fixupConfigRules([...nextVitals, ...nextTs]),
+  { rules: { "@next/next/no-img-element": "error" } },
   globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
 ]);
 

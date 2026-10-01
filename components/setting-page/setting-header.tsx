@@ -1,14 +1,10 @@
+import { PageHeading } from "@/components/page-heading";
 import { TOWN_NAME } from "@/lib/competition";
 
 export function SettingHeader() {
   return (
-    <div className="text-center">
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        Competition Setting
-      </h1>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        Welcome to {TOWN_NAME}, a small farm in Australia where the animals govern themselves.
-      </p>
-    </div>
+    <PageHeading description={`Welcome to ${TOWN_NAME}, a small farm in Australia where the animals govern themselves.`}>
+      Competition Setting
+    </PageHeading>
   );
 }

@@ -1,4 +1,5 @@
-
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { PageHeading, pageLayoutClassName } from "@/components/page-heading";
 const scoringActions = [
   { action: "Reads a post", points: 1 },
   { action: "Likes it", points: 5 },
@@ -11,10 +12,10 @@ const scoringActions = [
 export default function Scoring() {
   return (
     <div className="flex-1 bg-white">
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Scoring</h1>
+      <main className={pageLayoutClassName}>
+        <PageHeading>Scoring</PageHeading>
 
-        <div className="space-y-8 text-gray-700 leading-relaxed">
+        <div className="max-w-4xl space-y-8 text-gray-700 leading-relaxed">
           <p className="text-lg">
             The system gives points to student teams when VIP characters (such as
             Dr Kiki, Sizzle) and citizens, the non-playable characters (NPCs),
@@ -23,31 +24,31 @@ export default function Scoring() {
           </p>
 
           <div className="overflow-hidden rounded-lg border border-gray-200">
-            <table className="w-full text-left">
-              <caption className="sr-only">Points earned for character actions</caption>
-              <thead className="bg-gray-100 text-gray-900">
-                <tr>
-                  <th scope="col" className="px-4 py-4 font-bold sm:px-6">
+            <Table className="text-left text-base">
+              <TableCaption className="sr-only">Points earned for character actions</TableCaption>
+              <TableHeader className="bg-gray-100 text-gray-900">
+                <TableRow>
+                  <TableHead scope="col" className="px-4 py-4 font-bold sm:px-6">
                     Character action
-                  </th>
-                  <th scope="col" className="px-4 py-4 text-right font-bold sm:px-6">
+                  </TableHead>
+                  <TableHead scope="col" className="px-4 py-4 text-right font-bold sm:px-6">
                     Points
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
+                  </TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
                 {scoringActions.map(({ action, points }) => (
-                  <tr key={action} className="even:bg-gray-50">
-                    <th scope="row" className="px-4 py-4 font-normal sm:px-6">
+                  <TableRow key={action} className="border-gray-200 even:bg-gray-50">
+                    <TableHead scope="row" className="whitespace-normal px-4 py-4 font-normal text-gray-700 sm:px-6">
                       {action}
-                    </th>
-                    <td className="px-4 py-4 text-right font-semibold tabular-nums text-gray-900 sm:px-6">
+                    </TableHead>
+                    <TableCell className="px-4 py-4 text-right font-semibold tabular-nums text-gray-900 sm:px-6">
                       {points}
-                    </td>
-                  </tr>
+                    </TableCell>
+                  </TableRow>
                 ))}
-              </tbody>
-            </table>
+              </TableBody>
+            </Table>
           </div>
 
           <p className="text-lg">

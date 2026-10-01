@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card, CardFooter } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 
 export function QuotesSection() {
@@ -33,16 +33,16 @@ export function QuotesSection() {
           {quotes.map((quote, index) => (
             <Card
               key={index}
-              className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow rounded-none"
+              className="p-6 bg-white shadow-lg hover:shadow-xl transition-shadow rounded-none md:row-span-3 md:grid md:grid-rows-subgrid"
             >
               <Quote className="w-8 h-8 text-red-600 mb-4" />
               <blockquote className="text-gray-700 mb-4 italic text-lg leading-6">
                 &quot;{quote.text}&quot;
               </blockquote>
-              <div className="border-t pt-4">
+              <CardFooter className="block border-t px-0 [.border-t]:pt-4">
                 <p className="font-semibold text-gray-900">{quote.author}</p>
                 <p className="text-sm text-gray-600">{quote.title}</p>
-              </div>
+              </CardFooter>
             </Card>
           ))}
         </div>

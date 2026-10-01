@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Card } from "@/components/ui/card";
+import { PageHeading, pageLayoutClassName } from "@/components/page-heading";
 
 export const metadata: Metadata = {
   title: "Learning & Ethics | On the Fence",
@@ -7,16 +9,13 @@ export const metadata: Metadata = {
 
 export default function LearningPage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-14 sm:py-20 lg:px-8">
-      <h1 className="text-4xl leading-tight tracking-tight text-gray-900 sm:text-6xl">
+    <main className={pageLayoutClassName}>
+      <PageHeading description="The learning approach behind On the Fence, and how students can take part safely, ethically and responsibly.">
         Learning &amp; Ethics
-      </h1>
-      <p className="mt-6 text-xl leading-8 text-gray-600">
-        The learning approach behind On the Fence, and how students can take part
-        safely, ethically and responsibly.
-      </p>
+      </PageHeading>
 
-      <section aria-labelledby="learning-approach" className="mt-12 border-t border-gray-200 pt-8 sm:mt-16">
+      <div className="max-w-4xl">
+      <section aria-labelledby="learning-approach" className="border-t border-gray-200 pt-8">
         <h2 id="learning-approach" className="mb-6 text-3xl leading-tight text-gray-900">
           Pedagogy
         </h2>
@@ -52,7 +51,7 @@ export default function LearningPage() {
           </p>
         </div>
 
-        <div className="mt-8 rounded-xl bg-[#FCF8EB] p-6 sm:p-8">
+        <Card className="mt-8 gap-0 border-0 rounded-xl bg-[#FCF8EB] p-6 shadow-none sm:p-8">
           <h3 className="mb-4 text-2xl leading-snug text-gray-900">Guidelines for students</h3>
           <p className="mb-5 leading-relaxed text-gray-700">
             Everyone taking part must agree to act ethically, safely, and respectfully throughout the competition. This means:
@@ -64,7 +63,7 @@ export default function LearningPage() {
             <li><strong className="text-gray-900">Follow the spirit of the rules, not just the words.</strong> If something seems wrong or unfair, even if it&apos;s not technically against the rules, don&apos;t do it.</li>
             <li><strong className="text-gray-900">Ask if you&apos;re unsure.</strong> If you&apos;re not certain whether something is okay, check with Day of AI Australia <a href="mailto:hello@dayofaiaustralia.com" className="wrap-anywhere text-red-700 underline hover:text-red-800">hello@dayofaiaustralia.com</a>.</li>
           </ul>
-        </div>
+        </Card>
 
         <h3 className="mb-3 mt-8 text-2xl leading-snug text-gray-900">Consequences</h3>
         <p className="leading-relaxed text-gray-700">
@@ -108,6 +107,7 @@ export default function LearningPage() {
           Wenting Z, Amanda D, Philipp K. M, Janis W, Natalie B, Examining learners&apos; engagement patterns and knowledge outcome in an experiential learning intervention for youth&apos;s social media literacy. Computers &amp; Education. 216(2024). <a href="https://doi.org/10.1016/j.compedu.2024.105046" className="text-blue-600 underline hover:text-blue-800">https://doi.org/10.1016/j.compedu.2024.105046</a>
         </p>
       </section>
+      </div>
     </main>
   );
 }

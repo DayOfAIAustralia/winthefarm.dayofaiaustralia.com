@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Serif_Text, Figtree } from "next/font/google";
-import Script from 'next/script'; // Import Script
+import Script from 'next/script';
 import GTMAnalytics from '@/components/gtm-analytics';
 import { Suspense } from 'react';
 import { Header } from '@/components/header';
@@ -29,6 +29,8 @@ const figtree = Figtree({
 });
 
 const GTM_ID = 'GTM-PQSWP4R8';
+const analyticsEnabled =
+  process.env.NODE_ENV === "production" && process.env.VERCEL_ENV !== "preview";
 
 export default function RootLayout({
   children,
@@ -40,8 +42,7 @@ export default function RootLayout({
       lang="en"
       className={`${dmserif.variable} ${figtree.variable} antialiased`}
     >
-      {/* GTM Script */}
-      <Script
+      {analyticsEnabled && <Script
         id="gtm-script"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -53,20 +54,19 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','${GTM_ID}');
           `,
         }}
-      />
+      />}
       <body className="flex min-h-screen flex-col">
-        {/* GTM Noscript */}
-        <noscript>
+        {analyticsEnabled && <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
-        </noscript>
+        </noscript>}
         
         <Suspense fallback={null}>
-          <GTMAnalytics />
+          {analyticsEnabled && <GTMAnalytics />}
           <HomeSectionScroll />
         </Suspense>
 

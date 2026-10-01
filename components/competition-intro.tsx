@@ -49,16 +49,17 @@ export function CompetitionIntro() {
           <span className="block">Join {COMPETITION_NAME}, a national competition for students in Years&nbsp;7&#8209;10, exploring media and health literacy, and the impact of AI.</span>
           <span className="block">In this hands-on challenge, student teams create and deploy their own AI agents in a simulated debate about health literacy, learning to combat dis- and misinformation, analyse information and sources, and strategically shape public opinion.</span>
         </p>
-        <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-[#FDC300] hover:bg-yellow-500 text-black rounded-none text-lg px-8 py-3"
-            >
+        <div className="flex justify-center">
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#FDC300] hover:bg-yellow-500 text-black rounded-none text-lg px-8 py-3"
+          >
+            <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
               JOIN THE COMPETITION
-            </Button>
-          </div>
-        </a>
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );

@@ -146,4 +146,9 @@ h6 {
   body {
     @apply bg-background text-foreground;
   }
+
+  button:not(:disabled),
+  [data-slot="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
 }

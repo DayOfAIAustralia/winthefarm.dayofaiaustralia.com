@@ -1,26 +1,23 @@
 'use client';
 
 import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
-
-const pageview = (url: string) => {
-  if (typeof window.dataLayer !== 'undefined') {
-    window.dataLayer.push({
-      event: 'pageview',
-      page: url,
-    });
-  }
-};
+import { useEffect, useRef } from 'react';
 
 export default function GTMAnalytics() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const lastPage = useRef<string | null>(null);
 
   useEffect(() => {
     const query = searchParams.toString();
     const url = query ? `${pathname}?${query}` : pathname;
-    pageview(url);
-  }, [pathname, searchParams]); // Fire effect on path or params change
+    if (lastPage.current === url) return;
+    lastPage.current = url;
+
+    // Queue the initial pageview even when the GTM script has not loaded yet.
+    window.dataLayer ??= [];
+    window.dataLayer.push({ event: 'pageview', page: url });
+  }, [pathname, searchParams]);
 
   return null;
 }

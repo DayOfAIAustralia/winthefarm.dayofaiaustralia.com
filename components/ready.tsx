@@ -18,14 +18,15 @@ export function ReadySection() {
         Years 7-10 who have completed the Day of AI Australia &quot;{LESSON_NAME}&quot;
         lesson with their registered teacher.
       </p>
-      <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
-        <Button
-          size="lg"
-          className="bg-[#FDC300] hover:bg-yellow-500 text-black text-lg px-8 py-3 rounded-none"
-        >
+      <Button
+        asChild
+        size="lg"
+        className="h-auto max-w-full whitespace-normal bg-[#FDC300] hover:bg-yellow-500 text-black text-lg px-8 py-3 rounded-none"
+      >
+        <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
           Register as a teacher now
-        </Button>
-      </a>
+        </a>
+      </Button>
     </div>
   );
 }

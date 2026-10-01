@@ -1,4 +1,6 @@
 import { COMPETITION_NAME, LESSON_NAME } from "@/lib/competition";
+import { Card } from "@/components/ui/card";
+import { PageHeading, pageLayoutClassName } from "@/components/page-heading";
 
 type CreditPersonProps = {
   name: string;
@@ -16,19 +18,17 @@ function CreditPerson({ name, role }: CreditPersonProps) {
 
 export function Credits() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-14 sm:py-20 lg:px-8">
-      <div className="grid gap-8 md:grid-cols-[1fr_2fr] md:gap-12">
-        <div>
-          <h1 className="text-5xl leading-tight tracking-tight text-gray-900 sm:text-6xl">
-            About Us
-          </h1>
-        </div>
-        <div className="space-y-5">
-          <p className="text-xl leading-8 text-gray-900">
+    <div className={pageLayoutClassName}>
+      <PageHeading description={
+        <>
             Day of AI Australia&apos;s &quot;{LESSON_NAME}&quot; lesson
             and {COMPETITION_NAME} wouldn&apos;t be possible without the hard work and
             dedication of an exceptional team.
-          </p>
+        </>
+      }>
+        About Us
+      </PageHeading>
+      <div className="max-w-3xl space-y-5">
           <p className="text-base leading-7 text-gray-600">
             The new Health literacy and AI lesson and {COMPETITION_NAME} game
             are a collaboration with UNSW School of Computer Science and Engineering,
@@ -40,10 +40,9 @@ export function Credits() {
             &apos;NextGen: AI Health Literacy&apos; and was made possible with support from
             Google.org as part of the GenAI Accelerator program.
           </p>
-        </div>
       </div>
 
-      <section aria-labelledby="credits-leads" className="mt-12 rounded-xl bg-[#FCF8EB] p-6 sm:mt-16 sm:p-8">
+      <Card role="region" aria-labelledby="credits-leads" className="mt-12 gap-0 border-0 rounded-xl bg-[#FCF8EB] p-6 shadow-none sm:mt-16 sm:p-8">
         <h2 id="credits-leads" className="mb-6 text-3xl leading-tight text-gray-900">
           Leads
         </h2>
@@ -51,7 +50,7 @@ export function Credits() {
           <CreditPerson name="Natasha Banks" role="Program Director, Day of AI Australia" />
           <CreditPerson name="Dr Jake Renzella" role="Senior Lecturer in Computer Science, UNSW Sydney" />
         </ul>
-      </section>
+      </Card>
 
       <div className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2 md:gap-y-12">
         <section aria-labelledby="credits-developers" className="border-t border-gray-200 pt-6">

@@ -46,8 +46,30 @@ The header and footer live in the root layout so they stay mounted between pages
 
 - **Framework:** Next.js 16
 - **Styling:** Tailwind CSS 4
-- **UI Components:** Radix UI
+- **UI Components:** shadcn/ui (New York style), backed by the unified Radix UI package
 - **Language:** TypeScript
+
+## UI components
+
+Reusable controls live in `components/ui` and use the current shadcn registry versions. Navigation uses `NavigationMenu` and `Collapsible`, actions use `Button`, content panels use `Card`, and scoring uses `Table`. The `cn` package provides class merging through `lib/utils.ts`.
+
+Page titles use `PageHeading` and `pageLayoutClassName` from `components/page-heading.tsx` for consistent typography, alignment and spacing. Homepage section routes use the same heading with `as="h2"`.
+
+To review upstream component updates before applying them:
+
+```bash
+pnpm dlx shadcn@latest add button card navigation-menu collapsible table --diff
+```
+
+All rendered images use Next.js `Image`; ESLint rejects raw `<img>` elements. Image optimization remains disabled in `next.config.mjs`.
+
+## Analytics
+
+GTM runs only in production builds, excluding Vercel preview deployments. Development runs do not load GTM or its Meta pixel. The app queues one `pageview` event for each path/query change, including the initial visit.
+
+The published container `GTM-PQSWP4R8` currently initializes Meta pixel `738248762698839` inside its `pageview` tag. That reinitializes the pixel on client-side navigation. In GTM, split this into a base tag that loads the pixel and calls `fbq("init", "738248762698839")` once per page load, and a separate `pageview` tag that only calls `fbq("track", "PageView")`. Sequence the base tag before the pageview tag so the initial event is also recorded. The app should continue emitting `pageview` on navigation; restricting the entire existing tag to once per page would lose those later views.
+
+In Meta Events Manager, ensure the deployed site domain is permitted under the pixel's traffic permissions. Those GTM and Meta account settings are managed outside this repository.
 
 ## License
 

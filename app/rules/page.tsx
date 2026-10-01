@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import ShadowHtml from "@/components/shadow-html";
+import { Card } from "@/components/ui/card";
+import { PageHeading, pageLayoutClassName } from "@/components/page-heading";
 
 export default function RulesPage() {
   const [termsHtml, setTermsHtml] = useState("");
@@ -14,17 +16,12 @@ export default function RulesPage() {
 
   return (
     <div className="flex-1 bg-gray-50 flex flex-col">
-      <main className="flex-grow container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">
-              Competition Terms & Conditions
-            </h1>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm border p-8">
+      <main className={pageLayoutClassName}>
+        <PageHeading>Competition Terms &amp; Conditions</PageHeading>
+        <div className="max-w-4xl">
+          <Card className="gap-0 bg-white rounded-lg shadow-sm border p-5 sm:p-8">
             <ShadowHtml html={termsHtml} />
-          </div>
+          </Card>
         </div>
       </main>
     </div>

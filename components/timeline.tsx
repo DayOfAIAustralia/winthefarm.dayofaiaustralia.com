@@ -1,5 +1,7 @@
-import { Calendar, Clock, Trophy, Users, Rocket, Flag } from "lucide-react"
+import { Clock, Trophy, Users, Rocket, Flag } from "lucide-react"
 import { LESSON_NAME, TOWN_NAME } from "@/lib/competition"
+import { Card } from "@/components/ui/card"
+import { PageHeading, pageLayoutClassName } from "@/components/page-heading"
 
 export function Timeline() {
   const timelineEvents = [
@@ -48,19 +50,13 @@ export function Timeline() {
   ]
 
   return (
-    <section id="timeline" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <Calendar className="w-8 h-8 text-gray-900 mr-3" />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Timeline</h2>
-          </div>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-            Mark your calendars! Here&apos;s everything you need to know about important dates and milestones
-          </p>
-        </div>
+    <section id="timeline" aria-labelledby="timeline-title" className="bg-gray-50">
+      <div className={pageLayoutClassName}>
+        <PageHeading as="h2" id="timeline-title" description="Mark your calendars! Here's everything you need to know about important dates and milestones.">
+          Timeline
+        </PageHeading>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           <div className="relative">
             {/* Vertical timeline */}
             <div className="absolute left-[28px] md:left-[32px] top-0 bottom-0 w-1 bg-gray-300" />
@@ -77,14 +73,14 @@ export function Timeline() {
                   
                   {/* Content */}
                   <div className="flex-1 pb-8 pt-2">
-                    <div className="bg-white rounded-lg shadow-md p-5 md:p-6 hover:shadow-lg transition-shadow duration-200">
+                    <Card className="gap-0 border-0 bg-white rounded-lg shadow-md p-5 md:p-6 hover:shadow-lg transition-shadow duration-200">
                       <div className={`font-bold ${item.color} text-sm md:text-base mb-2 font-dm-serif`}>
                         {item.date}
                       </div>
                       <p className="text-gray-800 text-base md:text-lg leading-relaxed">
                         {item.event}
                       </p>
-                    </div>
+                    </Card>
                   </div>
                 </div>
               ))}
