@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { COMPETITION_NAME } from "@/lib/competition";
 import { Card } from "@/components/ui/card";
 import { PageHeading, pageLayoutClassName } from "@/components/page-heading";
@@ -53,8 +54,8 @@ export function Credits() {
           </h2>
           <ul className="space-y-5">
             <CreditPerson name="Joel Paul" role="Software Developer, Day of AI Australia" />
-            <CreditPerson name="Oliver Xu" role="Software Developer, Day of AI Australia" />
             <CreditPerson name="Dr Hammond Pearce" role="Lead organiser and developer (Capture the Narrative), UNSW Sydney" />
+            <CreditPerson name="Oliver Xu" role="Software Developer, Day of AI Australia" />
           </ul>
         </section>
 
@@ -63,19 +64,30 @@ export function Credits() {
             Health Literacy Lesson
           </h2>
           <ul className="space-y-5">
-            <CreditPerson name="Jac Manison" role="Curriculum Lead, Day of AI Australia" />
             <CreditPerson name="Natasha Banks" role="Program Director, Day of AI Australia" />
+            <CreditPerson name="Jac Manison" role="Curriculum Lead, Day of AI Australia" />
           </ul>
         </section>
 
-        <section aria-labelledby="credits-illustrations" className="border-t border-gray-200 pt-6">
-          <h2 id="credits-illustrations" className="mb-6 text-2xl leading-snug text-gray-900">
-            Illustrations for {COMPETITION_NAME}
-          </h2>
-          <ul>
-            <CreditPerson name="Olivia Mack" />
-          </ul>
-        </section>
+        <div className="space-y-10 md:space-y-12">
+          <section aria-labelledby="credits-illustrations" className="border-t border-gray-200 pt-6">
+            <h2 id="credits-illustrations" className="mb-6 text-2xl leading-snug text-gray-900">
+              Illustrator
+            </h2>
+            <ul>
+              <CreditPerson name="Olivia Mack" />
+            </ul>
+          </section>
+
+          <section aria-labelledby="credits-writer" className="border-t border-gray-200 pt-6">
+            <h2 id="credits-writer" className="mb-6 text-2xl leading-snug text-gray-900">
+              Writer
+            </h2>
+            <ul>
+              <CreditPerson name="Hannah Samuel" />
+            </ul>
+          </section>
+        </div>
 
         <section aria-labelledby="credits-health-lab" className="border-t border-gray-200 pt-6">
           <h2 id="credits-health-lab" className="mb-6 text-2xl leading-snug text-gray-900">
@@ -88,26 +100,20 @@ export function Credits() {
             <CreditPerson name="Mariah Issa" role="Research Assistant, Sydney Health Literacy Lab" />
           </ul>
         </section>
-
-        <section aria-labelledby="credits-writer" className="border-t border-gray-200 pt-6">
-          <h2 id="credits-writer" className="mb-6 text-2xl leading-snug text-gray-900">
-            Writer
-          </h2>
-          <ul>
-            <CreditPerson name="Hannah Samuel" />
-          </ul>
-        </section>
       </div>
 
-      <section aria-labelledby="credits-special-thanks" className="mt-12 border-y border-gray-200 py-8 sm:mt-14">
-        <h2 id="credits-special-thanks" className="mb-6 text-2xl leading-snug text-gray-900">
-          With Special Thanks To
+      <section aria-labelledby="credits-powered-by" className="mt-12 border-y border-gray-200 py-8 sm:mt-14">
+        <h2 id="credits-powered-by" className="flex flex-col items-center justify-center gap-4 text-center text-2xl leading-snug text-gray-900 sm:flex-row sm:gap-6">
+          Powered by
+          <Image
+            src="/logos/ctn-logo.png"
+            alt="Capture the Narrative Competition"
+            width={608}
+            height={584}
+            sizes="176px"
+            className="h-auto w-44"
+          />
         </h2>
-        <ul className="grid gap-3 sm:grid-cols-3 sm:gap-6">
-          <CreditPerson name="Prof Debi Ashenden" />
-          <CreditPerson name="Dr Sue Keay" />
-          <CreditPerson name="Dr Rahat Masood" />
-        </ul>
       </section>
 
       <div className="mx-auto max-w-3xl pt-12 text-center sm:pt-14">

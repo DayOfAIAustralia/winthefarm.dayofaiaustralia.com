@@ -35,7 +35,7 @@ export function Timeline() {
     },
     {
       date: "Fri 13 Nov, 2026",
-      event: "Citizens vote! What do the animals decide to do? Opt for the new supplement? Or stick with the higher quality feed? Which team had the most effective strategy?",
+      event: "Citizens vote! What do the animals decide to do? Opt for the new EmuLabs SuperHealth product? Or stick with the higher quality feed? Which team had the most effective strategy?",
       icon: Flag,
       color: "text-red-700",
       bgColor: "bg-red-600",

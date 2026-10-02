@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "On the Fence | Day of AI Australia",
   description:
     "Register now for Australia's ultimate health information challenge. Students in Years 7-10 create AI agents to shape public opinion in a simulated health literacy debate.",
+  icons: {
+    icon: { url: "/logos/otf-logo.svg", type: "image/svg+xml", sizes: "any" },
+  },
 };
 
 const dmserif = DM_Serif_Text({

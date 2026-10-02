@@ -71,16 +71,21 @@ export function Header() {
               aria-label={`${COMPETITION_NAME} home`}
             >
               <Image
-                src="/logos/dayofai.webp"
+                src="/logos/doai-logo-colour.png"
                 alt="Day of AI Australia"
                 width={50}
-                height={50}
-                className="h-[50px] w-[50px] object-contain"
+                height={62}
+                className="h-[50px] w-auto object-contain"
                 preload
               />
-              <span className="font-dm-serif text-2xl font-bold text-gray-900">
-                {COMPETITION_NAME}
-              </span>
+              <Image
+                src="/logos/otf-logo.svg"
+                alt={COMPETITION_NAME}
+                width={90}
+                height={60}
+                className="h-[60px] w-[90px] object-contain"
+                preload
+              />
             </Link>
 
             <div className="hidden items-center gap-4 md:flex">

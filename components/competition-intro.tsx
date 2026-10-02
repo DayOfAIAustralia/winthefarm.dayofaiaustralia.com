@@ -47,7 +47,7 @@ export function CompetitionIntro() {
         <p className="text-base leading-6 text-center max-w-3xl mx-auto my-8 text-balance">
           <span className="block">Can your students tell what&apos;s real in an era of deepfakes and viral disinformation?</span>
           <span className="block">Join {COMPETITION_NAME}, a national competition for students in Years&nbsp;7&#8209;10, exploring media and health literacy, and the impact of AI.</span>
-          <span className="block">In this hands-on challenge, student teams create and deploy their own AI agents in a simulated debate about health literacy, learning to combat dis- and misinformation, analyse information and sources, and understand what shapes public opinion.</span>
+          <span className="block">In this hands-on challenge, student teams create and deploy their own AI agents in a simulated debate about health literacy, learning to combat disinformation and misinformation, analyse information and sources, and understand what shapes public opinion.</span>
         </p>
         <div className="flex justify-center">
           <Button

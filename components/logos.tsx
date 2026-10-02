@@ -5,6 +5,7 @@ type PartnerLogo = {
   src?: string;
   width: number;
   height: number;
+  compactOnMobile?: boolean;
 };
 
 const partnerLogoRows: PartnerLogo[][] = [
@@ -14,12 +15,14 @@ const partnerLogoRows: PartnerLogo[][] = [
       alt: "Day of AI Australia",
       width: 90,
       height: 112,
+      compactOnMobile: true,
     },
     {
       src: "/logos/new-UNSW-logo-png-vertical-crest.png",
       alt: "UNSW Sydney",
       width: 100,
       height: 100,
+      compactOnMobile: true,
     },
     {
       src: "/logos/sydney-health-literacy-lab.png",
@@ -74,7 +77,9 @@ export const Logos = () => (
                   alt={logo.alt}
                   width={logo.width}
                   height={logo.height}
-                  className="h-auto max-h-full w-auto max-w-full object-contain"
+                  className={`h-auto w-auto max-w-full object-contain ${
+                    logo.compactOnMobile ? "max-h-14 sm:max-h-full" : "max-h-full"
+                  }`}
                 />
               ) : (
                 <div className="flex h-20 w-full max-w-[200px] flex-col items-center justify-center gap-1 border border-dashed border-gray-300 bg-gray-50 px-1 text-center sm:h-24 sm:px-3">
@@ -86,6 +91,19 @@ export const Logos = () => (
           ))}
         </div>
       ))}
+      <div className="flex items-center justify-center gap-4 sm:gap-6">
+        <p className="font-dm-serif text-xl leading-snug text-gray-900 sm:text-2xl">
+          Powered by
+        </p>
+        <Image
+          src="/logos/ctn-logo.png"
+          alt="Capture the Narrative Competition"
+          width={608}
+          height={584}
+          sizes="(min-width: 640px) 128px, 96px"
+          className="h-auto w-24 sm:w-32"
+        />
+      </div>
     </div>
   </section>
 );
