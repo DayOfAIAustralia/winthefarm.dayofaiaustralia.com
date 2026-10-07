@@ -12,11 +12,11 @@ const debateCards = [
     id: "emulabs",
     thumbnail: "/story/emulabs-thumb.webp",
     position:
-      "Spend this season's resources on the new supplement, promising faster, bigger results.",
+      "Spend this season's resources on the new product, promising faster, bigger results.",
     theCase: [
       "Shinier feathers, more energy, fewer sick days",
-      "Costs the same as the premium feed everyone was going to buy anyway",
       "Backed by results (though nobody's asked whose results)",
+      "Costs the same as the quality feed everyone was going to buy anyway",
       "The old way is slow. Why wait?",
       "A smarter way to spend the same money",
     ],

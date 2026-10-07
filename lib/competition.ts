@@ -1,9 +1,8 @@
 export const COMPETITION_NAME = "On the Fence";
 export const LESSON_NAME = "Health Literacy and AI";
 export const REGISTER_URL = "https://dayofaiaustralia.com/register-2026/";
-// TODO: replace with the 2026 lesson page once Day of AI Australia publishes it.
 export const LESSON_URL =
-  "https://dayofaiaustralia.com/lessons/additional-lesson-media-literacy-week/";
+  "https://dayofaiaustralia.com/courses/years-7-10/lessons/y7-10-additional-lesson-health-literacy-and-ai/";
 export const TOWN_NAME = "Coolabah Creek";
 export const PLATFORM_NAME = "GumDrop";
 

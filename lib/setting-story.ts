@@ -33,7 +33,7 @@ export const settingStory = [
     image: "/story/the-emus-arrive.webp",
     thumbnail: "/story/the-emus-arrive-thumb.webp",
     alt: "An emu pitches a supplement to the other animals against a bright yellow sunburst.",
-    text: "Emus from the neighbouring farm EmuLabs have arrived with a new supplement SuperHealth, promising big results fast. Their leader, Ellie, does most of the talking. The supplement costs the same as the quality food the animals were planning to buy.",
+    text: "Emus from the neighbouring farm EmuLabs have arrived with a new product SuperHealth, promising big results fast. Their leader, Ellie, does most of the talking. The product costs the same as the quality food the animals were planning to buy.",
   },
   {
     id: "the-community-divides",
