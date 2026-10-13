@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Serif_Text, Figtree } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import GTMAnalytics from "@/components/gtm-analytics";
 import { Suspense } from "react";
 import { Header } from "@/components/header";
@@ -86,6 +87,7 @@ export default function RootLayout({
         <Header />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
