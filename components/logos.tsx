@@ -104,6 +104,16 @@ export const Logos = () => (
           className="h-auto w-24 sm:w-32"
         />
       </div>
+      <div className="flex items-center justify-center">
+        <Image
+          src="/logos/google-org-support.png"
+          alt="With support from Google.org"
+          width={528}
+          height={198}
+          sizes="(min-width: 640px) 240px, 200px"
+          className="h-auto w-[200px] sm:w-[240px]"
+        />
+      </div>
     </div>
   </section>
 );
