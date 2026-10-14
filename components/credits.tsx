@@ -32,7 +32,8 @@ export function Credits() {
           </p>
           <p className="text-base leading-7 text-gray-600">
             This initiative was supported as part of the NHMRC Synergy grant
-            &apos;NextGen: AI Health Literacy&apos;.
+            &apos;NextGen: AI Health Literacy&apos; and was made possible with support from
+            Google.org as part of the GenAI Accelerator program.
           </p>
       </div>
 
