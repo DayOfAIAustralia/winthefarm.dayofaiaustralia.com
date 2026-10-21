@@ -6,6 +6,7 @@ import GTMAnalytics from "@/components/gtm-analytics";
 import { Suspense } from "react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { HelpBanner } from "@/components/help-banner";
 import { HomeSectionScroll } from "@/components/site-link";
 import "./globals.css";
 
@@ -84,6 +85,7 @@ export default function RootLayout({
           <HomeSectionScroll />
         </Suspense>
 
+        <HelpBanner />
         <Header />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
