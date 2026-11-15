@@ -1,0 +1,300 @@
+new_rank,team_id,team_name,side,year_level,teacher,points_before,feed_delayed_and_trust_test_bonus,all_8_watched_bonus,new_total
+1,640,Cheerful Owls,Quality Feed,8,Brock Butler6,46888,20000,10000,76888
+2,706,Noble Falcons,Quality Feed,10,Vladimir Tosic2,43390,20000,10000,73390
+3,740,Silver Dolphins,Quality Feed,9,Vladimir Tosic2,43055,20000,10000,73055
+4,704,Peppy Dugongs,Quality Feed,10,Vladimir Tosic2,42852,20000,10000,72852
+5,711,Proud Stags,SuperHealth,10,Vladimir Tosic2,41764,20000,10000,71764
+6,741,Turbo Turtles,SuperHealth,9,Vladimir Tosic2,41634,20000,10000,71634
+7,737,Nimble Dugongs,SuperHealth,9,Vladimir Tosic2,41463,20000,10000,71463
+8,735,Shining Penguins,SuperHealth,,Vladimir Tosic2,41320,20000,10000,71320
+9,449,Crimson Rhinos,Quality Feed,9,Clodine Sweha3,71107,0,0,71107
+10,514,Golden Lions,Quality Feed,10,Mira Dokmanovic,66557,0,0,66557
+11,656,Eager Turtles,Quality Feed,8,Calsamarrie,46473,20000,0,66473
+12,716,Daring Eagles,Quality Feed,9,Vladimir Tosic2,43741,20000,0,63741
+13,685,Daring Stags,SuperHealth,9,Grant Odei,43286,20000,0,63286
+14,658,Sturdy Wolves,Quality Feed,8,Calsamarrie,42293,20000,0,62293
+15,715,Wise Ospreys,SuperHealth,9,Vladimir Tosic2,42039,20000,0,62039
+16,681,Brave Stags,Quality Feed,8,Calsamarrie,38420,20000,0,58420
+17,578,Quick Foxes,Quality Feed,9,Stacey Gill,58169,0,0,58169
+18,500,Silver Panthers,Quality Feed,9,Mcdonaldl,37334,20000,0,57334
+19,710,Sparky Bison,Quality Feed,10,Vladimir Tosic2,36621,20000,0,56621
+20,712,Clever Kestrels,Quality Feed,10,Vladimir Tosic2,36339,20000,0,56339
+21,457,Thunder Lynxes,Quality Feed,9,Clodine Sweha3,56253,0,0,56253
+22,618,Loyal Bears,Quality Feed,8,Stacey Gill,36077,20000,0,56077
+23,708,Blazing Quokkas,Quality Feed,10,Vladimir Tosic2,35702,20000,0,55702
+24,474,Cosmic Herons,Quality Feed,8,Cyuen,35177,20000,0,55177
+25,742,Noble Eagles,Quality Feed,9,Vladimir Tosic2,35115,20000,0,55115
+26,494,Sunny Sharks,Quality Feed,8,Michael Turner,54993,0,0,54993
+27,724,Zesty Possums,Quality Feed,7,Zack Pretlove,34284,20000,0,54284
+28,615,Sturdy Badgers,SuperHealth,8,Stacey Gill,33862,20000,0,53862
+29,713,Mighty Pandas,SuperHealth,9,Vladimir Tosic2,33853,20000,0,53853
+30,717,Merry Ravens,SuperHealth,9,Vladimir Tosic2,33806,20000,0,53806
+31,731,Zesty Sharks,SuperHealth,9,Vladimir Tosic2,33566,20000,0,53566
+32,498,Lucky Pelicans,Quality Feed,9,Mcdonaldl,30824,20000,0,50824
+33,736,Spirited Lynxes,Quality Feed,9,Vladimir Tosic2,27712,20000,0,47712
+34,694,Keen Geckos,Quality Feed,8,Stacey Gill,27536,20000,0,47536
+35,730,Fearless Dolphins,Quality Feed,9,Vladimir Tosic2,26433,20000,0,46433
+36,447,Gallant Dolphins,Quality Feed,9,Clodine Sweha3,44006,0,0,44006
+37,665,Happy Owls,SuperHealth,10,Stacey Gill,24000,20000,0,44000
+38,664,Wise Cockatoos,Quality Feed,8,Stacey Gill,40849,0,0,40849
+39,662,Rapid Quokkas,Quality Feed,8,Annie Patrick,39300,0,0,39300
+40,734,Blazing Panthers,Quality Feed,9,Vladimir Tosic2,19236,20000,0,39236
+41,738,Plucky Magpies,Quality Feed,9,Vladimir Tosic2,18561,20000,0,38561
+42,650,Zesty Panthers,Quality Feed,8,Calsamarrie,38330,0,0,38330
+43,743,Zesty Emus,SuperHealth,9,Vladimir Tosic2,18237,20000,0,38237
+44,733,Plucky Otters,SuperHealth,9,Vladimir Tosic2,18074,20000,0,38074
+45,690,Keen Kookaburras,Quality Feed,8,Calsamarrie,38044,0,0,38044
+46,749,Rusty Falcons,SuperHealth,10,Vladimir Tosic2,17307,20000,0,37307
+47,680,Crimson Cranes,Quality Feed,8,Calsamarrie,36696,0,0,36696
+48,580,Clever Lynxes,Quality Feed,9,Stacey Gill,35936,0,0,35936
+49,499,Gentle Lions,SuperHealth,9,Mcdonaldl,34716,0,0,34716
+50,683,Shining Bears,SuperHealth,8,Calsamarrie,34428,0,0,34428
+51,593,Turbo Pandas,Quality Feed,7,Stacey Gill,14286,20000,0,34286
+52,611,Emerald Foxes,Quality Feed,7,Stacey Gill,13930,20000,0,33930
+53,597,Roaring Sharks,Quality Feed,7,Stacey Gill,11387,20000,0,31387
+54,745,Loyal Narwhals,SuperHealth,8,Calsamarrie,10861,20000,0,30861
+55,739,Bold Cockatoos,SuperHealth,9,Vladimir Tosic2,606,20000,10000,30606
+56,609,Wise Kangaroos,Quality Feed,7,Stacey Gill,9496,20000,0,29496
+57,469,Fearless Owls,Quality Feed,9,Clodine Sweha3,29312,0,0,29312
+58,654,Sunny Wallabies,Quality Feed,8,Calsamarrie,28574,0,0,28574
+59,501,Fierce Dragons,SuperHealth,9,Mcdonaldl,28324,0,0,28324
+60,674,Swift Sharks,Quality Feed,8,Annie Patrick,27831,0,0,27831
+61,595,Shining Cockatoos,Quality Feed,7,Stacey Gill,27820,0,0,27820
+62,505,Witty Bilbies,SuperHealth,9,Calsamarrie,27263,0,0,27263
+63,726,Loyal Swans,Quality Feed,7,Zack Pretlove,27204,0,0,27204
+64,459,Fierce Rhinos,Quality Feed,9,Clodine Sweha3,27175,0,0,27175
+65,652,Emerald Magpies,Quality Feed,8,Calsamarrie,27166,0,0,27166
+66,591,Radiant Eagles,SuperHealth,8,Calsamarrie,27011,0,0,27011
+67,692,Rusty Lions,Quality Feed,8,Calsamarrie,26954,0,0,26954
+68,675,Witty Kangaroos,SuperHealth,8,Annie Patrick,26521,0,0,26521
+69,693,Happy Mustangs,SuperHealth,8,Stacey Gill,26251,0,0,26251
+70,709,Valiant Stingrays,SuperHealth,10,Vladimir Tosic2,25744,0,0,25744
+71,707,Breezy Geckos,SuperHealth,10,Vladimir Tosic2,25617,0,0,25617
+72,695,Merry Cougars,SuperHealth,8,Annie Patrick,25589,0,0,25589
+73,705,Zesty Cranes,SuperHealth,10,Vladimir Tosic2,25488,0,0,25488
+74,601,Loyal Panthers,Quality Feed,7,Stacey Gill,4280,20000,0,24280
+75,607,Swift Cougars,Quality Feed,7,Stacey Gill,3879,20000,0,23879
+76,599,Noble Dragons,Quality Feed,7,Stacey Gill,3842,20000,0,23842
+77,598,Rapid Magpies,SuperHealth,7,Stacey Gill,2197,20000,0,22197
+78,613,Fierce Rosellas,SuperHealth,7,Stacey Gill,2138,20000,0,22138
+79,461,Witty Tigers,Quality Feed,9,Clodine Sweha3,21980,0,0,21980
+80,596,Nimble Lions,SuperHealth,7,Stacey Gill,1793,20000,0,21793
+81,594,Lucky Cockatoos,SuperHealth,7,Stacey Gill,1747,20000,0,21747
+82,532,Zesty Lorikeets,Quality Feed,8,Bradley Gill,21137,0,0,21137
+83,744,Zesty Bears,Quality Feed,9,Vladimir Tosic2,625,20000,0,20625
+84,756,Scarlet Kangaroos,Quality Feed,9/10,Grant Odei,318,20000,0,20318
+85,755,Jade Dolphins,SuperHealth,8,Grant Odei,276,20000,0,20276
+86,758,Wild Magpies,Quality Feed,7,Xu Oliver8202,91,20000,0,20091
+87,526,Lucky Lynxes,Quality Feed,10,Mira Dokmanovic,19737,0,0,19737
+88,748,Crimson Badgers,Quality Feed,9,Vladimir Tosic2,19656,0,0,19656
+89,718,Dazzling Galahs,Quality Feed,9,Vladimir Tosic2,19483,0,0,19483
+90,522,Sunny Swans,Quality Feed,10,Mira Dokmanovic,19373,0,0,19373
+91,542,Lucky Foxes,Quality Feed,8,Bradley Gill,18940,0,0,18940
+92,684,Mighty Seals,Quality Feed,8,Stacey Gill,18793,0,0,18793
+93,725,Honest Ravens,SuperHealth,7,Zack Pretlove,18635,0,0,18635
+94,747,Shining Jaguars,SuperHealth,9,Vladimir Tosic2,18607,0,0,18607
+95,723,Golden Mustangs,SuperHealth,7,Zack Pretlove,18084,0,0,18084
+96,659,Silver Pandas,SuperHealth,8,Calsamarrie,18025,0,0,18025
+97,719,Peppy Yaks,SuperHealth,9,Vladimir Tosic2,17744,0,0,17744
+98,721,Lucky Echidnas,SuperHealth,7,Zack Pretlove,17521,0,0,17521
+99,524,Bold Zebras,Quality Feed,10,Mira Dokmanovic,16501,0,0,16501
+100,467,Thunder Dingoes,Quality Feed,9,Clodine Sweha3,15926,0,0,15926
+101,668,Cheerful Pelicans,Quality Feed,7,Annie Patrick,15919,0,0,15919
+102,660,Glowing Koalas,Quality Feed,8,Calsamarrie,13917,0,0,13917
+103,636,Clever Turtles,Quality Feed,9,Brock Butler6,13912,0,0,13912
+104,504,Curious Penguins,Quality Feed,9,Calsamarrie,13561,0,0,13561
+105,547,Blazing Jaguars,SuperHealth,8,Bradley Gill,13119,0,0,13119
+106,512,Amber Panthers,Quality Feed,10,Mira Dokmanovic,12388,0,0,12388
+107,672,Glowing Kangaroos,Quality Feed,8,Annie Patrick,11934,0,0,11934
+108,482,Shining Tigers,Quality Feed,8,Michael Turner,11121,0,0,11121
+109,687,Fierce Platypuses,SuperHealth,8,Stacey Gill,10989,0,0,10989
+110,554,Bold Yaks,SuperHealth,10,Calsamarrie,10831,0,0,10831
+111,667,Radiant Dragons,SuperHealth,9,Stacey Gill,10803,0,0,10803
+112,671,Merry Numbats,SuperHealth,8,Annie Patrick,10295,0,0,10295
+113,679,Golden Turtles,SuperHealth,8,Annie Patrick,10207,0,0,10207
+114,539,Thunder Platypuses,SuperHealth,8,Bradley Gill,9948,0,0,9948
+115,673,Noble Hawks,SuperHealth,8,Annie Patrick,9913,0,0,9913
+116,751,Cheerful Stags,SuperHealth,10,Vladimir Tosic2,9445,0,0,9445
+117,699,Gallant Cranes,SuperHealth,8,Stacey Gill,8000,0,0,8000
+118,486,Thunder Meerkats,Quality Feed,8,Michael Turner,7859,0,0,7859
+119,548,Stellar Kestrels,Quality Feed,8,Bradley Gill,7844,0,0,7844
+120,489,Wise Echidnas,SuperHealth,8,Michael Turner,7104,0,0,7104
+121,588,Noble Rhinos,Quality Feed,9,Stacey Gill,6728,0,0,6728
+122,626,Curious Dolphins,Quality Feed,8,Stacey Gill,6606,0,0,6606
+123,516,Sparky Geckos,Quality Feed,10,Mira Dokmanovic,6551,0,0,6551
+124,490,Cheerful Ravens,Quality Feed,8,Michael Turner,6380,0,0,6380
+125,638,Sunny Dragons,Quality Feed,9,Brock Butler6,6336,0,0,6336
+126,582,Jade Seals,Quality Feed,9,Stacey Gill,6227,0,0,6227
+127,620,Zesty Koalas,Quality Feed,8,Stacey Gill,5964,0,0,5964
+128,632,Jolly Dragons,Quality Feed,8,Brock Butler6,5861,0,0,5861
+129,642,Emerald Narwhals,Quality Feed,10,Brock Butler6,5588,0,0,5588
+130,563,Wild Falcons,Quality Feed,10,Steven Dewhurst,5568,0,0,5568
+131,584,Thunder Eagles,Quality Feed,9,Stacey Gill,5525,0,0,5525
+132,630,Radiant Panthers,Quality Feed,7,Brock Butler6,5456,0,0,5456
+133,488,Rapid Pandas,Quality Feed,8,Michael Turner,5416,0,0,5416
+134,571,Cosmic Pelicans,Quality Feed,10,Steven Dewhurst,5314,0,0,5314
+135,540,Dazzling Seals,Quality Feed,8,Bradley Gill,5239,0,0,5239
+136,557,Cosmic Pandas,Quality Feed,9,Steven Dewhurst,4760,0,0,4760
+137,622,Dazzling Swans,Quality Feed,8,Stacey Gill,4702,0,0,4702
+138,544,Rapid Koalas,Quality Feed,8,Bradley Gill,4683,0,0,4683
+139,520,Golden Hawks,Quality Feed,9,Mira Dokmanovic,4673,0,0,4673
+140,616,Brave Dragons,Quality Feed,8,Stacey Gill,4571,0,0,4571
+141,484,Stellar Turtles,Quality Feed,8,Michael Turner,4534,0,0,4534
+142,624,Golden Eagles,Quality Feed,8,Stacey Gill,4518,0,0,4518
+143,550,Glowing Turtles,Quality Feed,8,Bradley Gill,4345,0,0,4345
+144,534,Zesty Numbats,Quality Feed,,Bradley Gill,4233,0,0,4233
+145,463,Gallant Mustangs,Quality Feed,9,Clodine Sweha3,4187,0,0,4187
+146,492,Sunny Otters,Quality Feed,8,Michael Turner,4025,0,0,4025
+147,603,Dazzling Dolphins,Quality Feed,7,Stacey Gill,3883,0,0,3883
+148,508,Rusty Magpies,Quality Feed,9,Calsamarrie,3794,0,0,3794
+149,466,Silver Dragons,SuperHealth,10,Clodine Sweha3,3735,0,0,3735
+150,586,Cheerful Geckos,Quality Feed,9,Stacey Gill,3612,0,0,3612
+151,605,Merry Dragons,Quality Feed,7,Stacey Gill,3555,0,0,3555
+152,565,Zesty Echidnas,Quality Feed,9,Steven Dewhurst,3437,0,0,3437
+153,518,Merry Yaks,Quality Feed,10,Mira Dokmanovic,3358,0,0,3358
+154,546,Zesty Eagles,Quality Feed,8,Bradley Gill,3356,0,0,3356
+155,641,Brave Stingrays,SuperHealth,9,Brock Butler6,3158,0,0,3158
+156,510,Zesty Magpies,Quality Feed,10,Calsamarrie,3157,0,0,3157
+157,644,Lively Wolves,Quality Feed,9,Brock Butler6,3152,0,0,3152
+158,496,Witty Ravens,Quality Feed,8,Michael Turner,3123,0,0,3123
+159,635,Brave Cheetahs,SuperHealth,9,Brock Butler6,3067,0,0,3067
+160,559,Vivid Jaguars,Quality Feed,10,Steven Dewhurst,2920,0,0,2920
+161,629,Sturdy Echidnas,SuperHealth,10,Brock Butler6,2799,0,0,2799
+162,617,Rapid Otters,SuperHealth,8,Stacey Gill,2777,0,0,2777
+163,458,Scarlet Owls,SuperHealth,9,Jacqueline Hicks,2760,0,0,2760
+164,528,Gallant Platypuses,Quality Feed,10,Mira Dokmanovic,2699,0,0,2699
+165,639,Sturdy Magpies,SuperHealth,10,Brock Butler6,2663,0,0,2663
+166,579,Calm Falcons,SuperHealth,9,Stacey Gill,2571,0,0,2571
+167,507,Rapid Falcons,SuperHealth,9,Calsamarrie,2484,0,0,2484
+168,537,Stellar Platypuses,SuperHealth,8,Bradley Gill,2479,0,0,2479
+169,631,Gallant Penguins,SuperHealth,10,Brock Butler6,2467,0,0,2467
+170,495,Proud Bandicoots,SuperHealth,8,Michael Turner,2437,0,0,2437
+171,529,Mighty Wolves,SuperHealth,9,Mira Dokmanovic,2408,0,0,2408
+172,450,Peppy Kangaroos,SuperHealth,9,Jacqueline Hicks,2378,0,0,2378
+173,511,Zesty Badgers,SuperHealth,9,Calsamarrie,2377,0,0,2377
+174,487,Peppy Swans,SuperHealth,8,Michael Turner,2360,0,0,2360
+175,585,Zesty Foxes,SuperHealth,9,Stacey Gill,2341,0,0,2341
+176,513,Lucky Owls,SuperHealth,10,Mira Dokmanovic,2317,0,0,2317
+177,485,Cosmic Falcons,SuperHealth,8,Michael Turner,2297,0,0,2297
+178,515,Glowing Cougars,SuperHealth,10,Mira Dokmanovic,2285,0,0,2285
+179,525,Proud Magpies,SuperHealth,10,Mira Dokmanovic,2279,0,0,2279
+180,462,Valiant Bison,SuperHealth,9,Clodine Sweha3,2264,0,0,2264
+181,577,Bright Tigers,SuperHealth,9,Stacey Gill,2229,0,0,2229
+182,533,Glowing Bandicoots,SuperHealth,8,Bradley Gill,2210,0,0,2210
+183,637,Valiant Dragons,SuperHealth,10,Brock Butler6,2194,0,0,2194
+184,541,Amber Wallabies,SuperHealth,8,Bradley Gill,2183,0,0,2183
+185,481,Turbo Rosellas,SuperHealth,8,Michael Turner,2181,0,0,2181
+186,455,Fearless Bandicoots,Quality Feed,10,Jacqueline Hicks,2160,0,0,2160
+187,517,Thunder Pandas,SuperHealth,10,Mira Dokmanovic,2157,0,0,2157
+188,446,Spirited Geckos,SuperHealth,9,Clodine Sweha3,2124,0,0,2124
+189,643,Sturdy Wallabies,SuperHealth,10,Brock Butler6,2119,0,0,2119
+190,587,Bold Seals,SuperHealth,9,Stacey Gill,2118,0,0,2118
+191,610,Radiant Cougars,SuperHealth,7,Stacey Gill,2116,0,0,2116
+192,623,Curious Cockatoos,SuperHealth,8,Stacey Gill,2070,0,0,2070
+193,568,Glowing Jaguars,SuperHealth,10,Steven Dewhurst,2049,0,0,2049
+194,519,Peppy Quokkas,SuperHealth,9,Mira Dokmanovic,2021,0,0,2021
+195,545,Wild Dugongs,SuperHealth,8,Bradley Gill,2006,0,0,2006
+196,608,Witty Cougars,SuperHealth,7,Stacey Gill,1994,0,0,1994
+197,581,Brave Kangaroos,SuperHealth,9,Stacey Gill,1957,0,0,1957
+198,521,Sunny Bandicoots,SuperHealth,9,Mira Dokmanovic,1956,0,0,1956
+199,523,Hearty Bilbies,SuperHealth,10,Mira Dokmanovic,1904,0,0,1904
+200,491,Fierce Penguins,SuperHealth,8,Michael Turner,1883,0,0,1883
+201,606,Curious Cougars,SuperHealth,7,Stacey Gill,1873,0,0,1873
+202,560,Crimson Platypuses,SuperHealth,9/10,Steven Dewhurst,1831,0,0,1831
+203,600,Jolly Dolphins,SuperHealth,7,Stacey Gill,1767,0,0,1767
+204,619,Lively Rosellas,SuperHealth,8,Stacey Gill,1733,0,0,1733
+205,483,Jade Cranes,SuperHealth,8,Michael Turner,1686,0,0,1686
+206,583,Crimson Numbats,SuperHealth,9,Stacey Gill,1673,0,0,1673
+207,549,Sparky Platypuses,SuperHealth,8,Bradley Gill,1635,0,0,1635
+208,451,Thunder Stags,Quality Feed,9,Jacqueline Hicks,1438,0,0,1438
+209,621,Cheerful Falcons,SuperHealth,8,Stacey Gill,1421,0,0,1421
+210,460,Calm Otters,SuperHealth,9,Clodine Sweha3,1388,0,0,1388
+211,633,Fearless Penguins,SuperHealth,9,Brock Butler6,1310,0,0,1310
+212,493,Roaring Meerkats,SuperHealth,8,Michael Turner,1281,0,0,1281
+213,714,Thunder Stingrays,Quality Feed,,Xu Oliver8202,1275,0,0,1275
+214,556,Zesty Cheetahs,SuperHealth,9,Steven Dewhurst,1257,0,0,1257
+215,497,Cheerful Herons,SuperHealth,8,Michael Turner,1227,0,0,1227
+216,634,Crimson Hawks,Quality Feed,8,Brock Butler6,1217,0,0,1217
+217,564,Blazing Swans,SuperHealth,9,Steven Dewhurst,853,0,0,853
+218,452,Clever Quokkas,SuperHealth,10,Jacqueline Hicks,654,0,0,654
+219,570,Merry Herons,SuperHealth,9,Steven Dewhurst,639,0,0,639
+220,566,Golden Possums,SuperHealth,10,Steven Dewhurst,602,0,0,602
+221,464,Thunder Kookaburras,SuperHealth,9,Clodine Sweha3,591,0,0,591
+222,645,Cosmic Stags,SuperHealth,9,Brock Butler6,577,0,0,577
+223,729,Glowing Otters,SuperHealth,7,Zack Pretlove,561,0,0,561
+224,454,Cheerful Koalas,SuperHealth,10,Jacqueline Hicks,553,0,0,553
+225,697,Rusty Bears,SuperHealth,8,Annie Patrick,495,0,0,495
+226,669,Keen Rhinos,SuperHealth,7,Annie Patrick,17,0,0,17
+226,676,Sparky Sharks,Quality Feed,8,Annie Patrick,17,0,0,17
+228,677,Scarlet Lions,SuperHealth,8,Annie Patrick,3,0,0,3
+229,678,Plucky Badgers,Quality Feed,8,Annie Patrick,2,0,0,2
+229,670,Witty Cheetahs,Quality Feed,7,Annie Patrick,2,0,0,2
+229,689,Witty Pelicans,SuperHealth,8,Calsamarrie,2,0,0,2
+232,502,Amber Kestrels,Quality Feed,8,Bradley Gill,0,0,0,0
+232,700,Amber Lynxes,Quality Feed,8,Annie Patrick,0,0,0,0
+232,473,Amber Seals,SuperHealth,8,Bradley Gill,0,0,0,0
+232,465,Blazing Ospreys,Quality Feed,9,Clodine Sweha3,0,0,0,0
+232,648,Bold Bears,Quality Feed,9,Stacey Gill,0,0,0,0
+232,531,Bold Kookaburras,SuperHealth,8,Bradley Gill,0,0,0,0
+232,589,Bold Lions,SuperHealth,9,Stacey Gill,0,0,0,0
+232,722,Bold Narwhals,Quality Feed,7,Zack Pretlove,0,0,0,0
+232,543,Breezy Ravens,SuperHealth,8,Bradley Gill,0,0,0,0
+232,720,Bright Numbats,Quality Feed,7,Zack Pretlove,0,0,0,0
+232,752,Bright Otters,Quality Feed,8,Calsamarrie,0,0,0,0
+232,551,Cheerful Pandas,SuperHealth,8,Calsamarrie,0,0,0,0
+232,569,Cheerful Panthers,Quality Feed,10,Steven Dewhurst,0,0,0,0
+232,527,Clever Platypuses,SuperHealth,10,Mira Dokmanovic,0,0,0,0
+232,468,Cosmic Emus,SuperHealth,9,Clodine Sweha3,0,0,0,0
+232,647,Crimson Bandicoots,SuperHealth,9,Stacey Gill,0,0,0,0
+232,627,Curious Mustangs,SuperHealth,8,Inez Coutts,0,0,0,0
+232,661,Eager Cheetahs,SuperHealth,9,Annie Patrick,0,0,0,0
+232,552,Eager Koalas,Quality Feed,9,Calsamarrie,0,0,0,0
+232,628,Emerald Otters,SuperHealth,9,Brock Butler6,0,0,0,0
+232,682,Fearless Lions,Quality Feed,7,Stacey Gill,0,0,0,0
+232,536,Fearless Wombats,Quality Feed,8,Bradley Gill,0,0,0,0
+232,701,Gallant Bears,SuperHealth,8,Annie Patrick,0,0,0,0
+232,691,Gallant Rhinos,SuperHealth,8,Calsamarrie,0,0,0,0
+232,509,Golden Cranes,SuperHealth,9/10,Calsamarrie,0,0,0,0
+232,666,Golden Lynxes,Quality Feed,7,Stacey Gill,0,0,0,0
+232,530,Golden Otters,Quality Feed,10,Mira Dokmanovic,0,0,0,0
+232,727,Golden Panthers,SuperHealth,7,Zack Pretlove,0,0,0,0
+232,555,Happy Dragons,Quality Feed,9,Calsamarrie,0,0,0,0
+232,477,Happy Wolves,SuperHealth,8,Cyuen,0,0,0,0
+232,750,Jade Geckos,Quality Feed,10,Vladimir Tosic2,0,0,0,0
+232,479,Jade Kangaroos,SuperHealth,8,Cyuen,0,0,0,0
+232,703,Jolly Echidnas,SuperHealth,8,Annie Patrick,0,0,0,0
+232,503,Jolly Penguins,SuperHealth,9,Calsamarrie,0,0,0,0
+232,653,Keen Quokkas,SuperHealth,8,Calsamarrie,0,0,0,0
+232,562,Lively Pelicans,SuperHealth,9,Steven Dewhurst,0,0,0,0
+232,651,Lively Zebras,SuperHealth,8,Calsamarrie,0,0,0,0
+232,506,Loyal Kangaroos,Quality Feed,10,Calsamarrie,0,0,0,0
+232,702,Mighty Otters,Quality Feed,8,Annie Patrick,0,0,0,0
+232,732,Noble Geckos,Quality Feed,,Vladimir Tosic2,0,0,0,0
+232,686,Plucky Bears,Quality Feed,7,Stacey Gill,0,0,0,0
+232,696,Plucky Dingoes,Quality Feed,8,Annie Patrick,0,0,0,0
+232,754,Quick Seals,Quality Feed,,Calsamarrie,0,0,0,0
+232,590,Rapid Cranes,Quality Feed,9,Stacey Gill,0,0,0,0
+232,746,Rapid Dragons,Quality Feed,8,Calsamarrie,0,0,0,0
+232,688,Rapid Pelicans,Quality Feed,9,Stacey Gill,0,0,0,0
+232,535,Rusty Badgers,SuperHealth,8,Bradley Gill,0,0,0,0
+232,538,Silver Cougars,Quality Feed,8,Bradley Gill,0,0,0,0
+232,470,Sparky Lynxes,SuperHealth,10,Jacqueline Hicks,0,0,0,0
+232,663,Spirited Kookaburras,SuperHealth,7,Annie Patrick,0,0,0,0
+232,478,Spirited Owls,Quality Feed,8,Cyuen,0,0,0,0
+232,655,Stellar Cockatoos,SuperHealth,8,Calsamarrie,0,0,0,0
+232,448,Sturdy Cockatoos,SuperHealth,9,Clodine Sweha3,0,0,0,0
+232,646,Sturdy Lions,Quality Feed,10,Brock Butler6,0,0,0,0
+232,453,Sturdy Penguins,Quality Feed,9,Jacqueline Hicks,0,0,0,0
+232,728,Sunny Dolphins,Quality Feed,7,Zack Pretlove,0,0,0,0
+232,476,Swift Swans,Quality Feed,8,Cyuen,0,0,0,0
+232,475,Thunder Cranes,SuperHealth,8,Cyuen,0,0,0,0
+232,480,Turbo Badgers,Quality Feed,8,Cyuen,0,0,0,0
+232,649,Turbo Falcons,SuperHealth,8,Calsamarrie,0,0,0,0
+232,757,Valiant Ospreys,SuperHealth,8,Calsamarrie,0,0,0,0
+232,753,Vivid Herons,SuperHealth,8,Calsamarrie,0,0,0,0
+232,657,Vivid Pandas,SuperHealth,,Calsamarrie,0,0,0,0
+232,698,Wild Swans,Quality Feed,8,Annie Patrick,0,0,0,0
+232,561,Wise Platypuses,Quality Feed,9,Steven Dewhurst,0,0,0,0
+232,567,Wise Turtles,Quality Feed,9,Steven Dewhurst,0,0,0,0
+232,558,Zesty Quokkas,SuperHealth,9,Steven Dewhurst,0,0,0,0
+232,456,Zesty Rhinos,SuperHealth,10,Jacqueline Hicks,0,0,0,0

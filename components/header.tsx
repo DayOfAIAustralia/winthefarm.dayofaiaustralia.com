@@ -27,6 +27,7 @@ const allNavLinks = [
   { href: "/learning", text: "Learning & ethics" },
   { href: "/about", text: "About us" },
   { href: "/scoring", text: "Scoring" },
+  { href: "/leaderboard", text: "Leaderboard" },
 ];
 
 const linkClassName =
