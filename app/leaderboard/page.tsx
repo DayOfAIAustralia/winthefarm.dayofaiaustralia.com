@@ -16,10 +16,9 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `Leaderboard | ${COMPETITION_NAME} | Day of AI Australia`,
-  description: `Final top 10 teams from the 2026 ${COMPETITION_NAME} competition.`,
+  description: `Final standings for all teams in the 2026 ${COMPETITION_NAME} competition.`,
 };
 
-const TOP_N = 10;
 
 type LeaderboardEntry = {
   rank: number;
@@ -55,8 +54,7 @@ function getLeaderboard(): LeaderboardEntry[] {
       side: cells[sideCol],
       points: Number(cells[pointsCol]),
     }))
-    .sort((a, b) => a.rank - b.rank)
-    .slice(0, TOP_N);
+    .sort((a, b) => a.rank - b.rank);
 }
 
 function sideColors(side: string) {
@@ -76,8 +74,8 @@ export default function Leaderboard() {
           description={
             <>
               This year&apos;s {COMPETITION_NAME} competition is over.
-              Congratulations to every team that took part, and a special
-              shout-out to our top 10!
+              Thank you to every team that took part, and congratulations to
+              our winners!
             </>
           }
         >
@@ -87,7 +85,7 @@ export default function Leaderboard() {
         <div className="mx-auto max-w-4xl overflow-hidden rounded-lg border border-gray-200">
           <Table className="text-left text-base">
             <TableCaption className="sr-only">
-              Final top {TOP_N} teams by points
+              Final standings for all teams by points
             </TableCaption>
             <TableHeader className="bg-gray-100 text-gray-900">
               <TableRow>
